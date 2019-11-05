@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Quicksand:400,500&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a {
+    font-family: 'Quicksand', sans-serif !important;
+
+}
+
+.title_font {
+    font-family: 'Playfair Display', serif !important;
+}
+
+.u__no_margin {
+    margin: 0 !important;
+}
+
+.u__no_padding {
+    padding: 0 !important;
+}
+
+
+/* COLORS */
+.transparent_color {
+    background: transparent;
+}
+
+.white_color_text {
+    color: #ffffff;
+}
+
+.gray_color_text {
+    color: #B9B5B7;
+}
+
+.blue_light_color_text {
+    color: #3a4da7;
+}
+
+.blue_light_color {
+    background: #3a4da7;
+}
+
+.main_color {
+    background: #3A3856;
+}
+
+.main_color_text {
+    color: #3A3856;
+}

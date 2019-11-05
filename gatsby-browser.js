@@ -1,3 +1,6 @@
+import 'bootstrap-4-grid/css/grid.min.css'
+import "./src/css/global.css"
+
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
