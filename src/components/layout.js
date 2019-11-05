@@ -9,10 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
+import { Helmet } from "react-helmet"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title = "Agencia de marketing digital" }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,10 +22,13 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  // console.log(data.site.siteMetadata.title, "DATA")
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Helmet
+        title={`${data.site.siteMetadata.title} | ${title}`}
+        defer={false}
+      />
       <div
         style={{
           margin: `0 auto`,

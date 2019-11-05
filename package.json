@@ -5,10 +5,13 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "firebase": "^7.2.3",
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
+    "gatsby-plugin-firebase": "^0.2.0-rc",
     "gatsby-plugin-manifest": "^2.2.25",
     "gatsby-plugin-offline": "^3.0.17",
+    "gatsby-plugin-page-creator": "^2.1.28",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.34",
     "gatsby-source-filesystem": "^2.1.35",
@@ -19,6 +22,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "prettier": "^1.18.2"
   },
   "keywords": [
