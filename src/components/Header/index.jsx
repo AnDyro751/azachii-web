@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import React, { useEffect, useState } from "react"
 import styles from "./style.module.css"
 import { FaGift } from "react-icons/fa"
-// console.log(styles, "SS")
 import classnames from "classnames"
 
 const Header = ({ siteTitle }) => {
@@ -29,9 +28,9 @@ const Header = ({ siteTitle }) => {
     <header
       className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}
     >
-      <div className="col-xl-10 u__no_padding ">
+      <div className="col-12 col-xl-12 offset-xl-2 u__no_padding">
         <div className="row u__no_margin align-items-center">
-          <div className="col-xl-auto u__no_padding">
+          <div className="col-xl-auto col-auto u__no_padding">
             <h1 className="main_color_text u__no_margin">Azachii</h1>
           </div>
           <ItemHeader text="ACERCA DE" to="" />
@@ -44,7 +43,7 @@ const Header = ({ siteTitle }) => {
 }
 const ItemHeader = ({ text, to, featured = null }) => (
   <Link to="/">
-    <div className="col-xl-auto">
+    <div className="col-xl-auto col-auto d-none d-sm-block">
       <h5 className="main_color_text u__no_margin">
         {text}&#160;&#160;
         {featured && <FaGift className="main_color_text" size={10} />}

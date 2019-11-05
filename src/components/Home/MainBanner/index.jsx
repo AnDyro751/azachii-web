@@ -12,7 +12,6 @@ import android from "../../../images/android.svg"
 import ios from "../../../images/apple.svg"
 import Fade from "react-reveal/Fade"
 
-let last = 0
 const MainBanner = () => {
   const data = useStaticQuery(graphql`
     query Banner {
@@ -33,8 +32,8 @@ const MainBanner = () => {
   return (
     <div className={`${styles.main_banner} row u__no_margin`}>
       <div className="col-xl-12 u__no_padding">
-        <div className="row u__no_margin align-items-center justify-content-between">
-          <div className="col-xl-5 offset-1 u__no_padding">
+        <div className="row u__no_margin align-items-center justify-content-center">
+          <div className="col-xl-5 offset-xl-1 u__no_padding">
             <div className="row u__no_margin">
               <CodeIcons />
               <div className="col-xl-12 u__no_padding u__small_margin_horizontal">
@@ -44,7 +43,7 @@ const MainBanner = () => {
               </div>
               <div className="col-xl-12 u__no_padding u__small_margin_horizontal">
                 <button
-                  className={`blue_light_color white_color_text ${styles.button_services}`}
+                  className={`blue_light_color white_color_text u__main_box_shadow ${styles.button_services}`}
                 >
                   SERVICIOS
                 </button>
@@ -72,22 +71,39 @@ const MainBanner = () => {
 const CodeIcons = () => (
   <div className="col-xl-12 u__no_padding">
     <div className="row u__no_margin align-items-center">
-      <div className={`col-xl-auto ${styles.main_image}`}>
+      <div
+        data-tip="React js"
+        data-scroll-hide={true}
+        data-iscapture={false}
+        className={`col-xl-auto ${styles.main_image}`}
+      >
         <img src={reactSVG} />
       </div>
-      <div className={`col-xl-auto ${styles.main_image}`}>
+      <div data-tip="Firebase" className={`col-xl-auto ${styles.main_image}`}>
         <img src={firebaseSVG} />
       </div>
-      <div className={`col-xl-auto ${styles.main_image}`}>
+      <div
+        data-tip="Google Cloud"
+        className={`col-xl-auto ${styles.main_image}`}
+      >
         <img src={cloud} />
       </div>
-      <div className={`col-xl-auto ${styles.main_image}`}>
+      <div
+        data-tip="Ruby on Rails"
+        className={`col-xl-auto ${styles.main_image}`}
+      >
         <img src={rails} />
       </div>
-      <div className={`col-xl-auto ${styles.main_image}`}>
+      <div
+        data-tip="React Native Android Apps"
+        className={`col-xl-auto ${styles.main_image}`}
+      >
         <img src={android} />
       </div>
-      <div className={`col-xl-auto ${styles.main_image}`}>
+      <div
+        data-tip="React Native IOS Apps"
+        className={`col-xl-auto ${styles.main_image}`}
+      >
         <img
           src={ios}
           style={{
