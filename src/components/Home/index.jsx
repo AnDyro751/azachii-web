@@ -1,12 +1,112 @@
 import React from "react"
 import Header from "../Header"
-import MainBanner from './MainBanner/index';
+import MainBanner from "./MainBanner/index"
 
 const MainHome = () => (
   <div>
     <Header />
     <MainBanner />
     <p>HOLA 2</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
+    <p>HOLA</p>
   </div>
 )
 
