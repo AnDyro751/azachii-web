@@ -25,26 +25,8 @@ const MainBanner = () => {
       }
     }
   `)
-  const [reverse, setReverse] = useState(false)
-  const [paused, setPaused] = useState(true)
-  const [scroll, setScroll] = useState(0)
-  const [direction, setDirection] = useState("")
-
-  useEffect(() => {
-    window.addEventListener("scroll", e => {
-      var st = window.pageYOffset || document.documentElement.scrollTop
-      if (st > last) {
-        setDirection("down")
-      } else {
-        setDirection("up")
-      }
-      last = st <= 0 ? 0 : st
-      setScroll(last)
-    })
-  }, [])
 
   const imageContainerClass = classnames({
-    // [styles.blured]: toAnimated,
     "col-xl-6 u__no_padding": true,
     [styles.main_image_container]: true,
   })
@@ -71,15 +53,6 @@ const MainBanner = () => {
           </div>
           <Fade right>
             <div className={imageContainerClass}>
-              {/* <TweenOne
-              resetStyle={true}
-              animation={[
-                { marginLeft: `${scroll}px`, duration: 0 },
-                // { y: scroll, duration: 0 },
-              ]}
-              paused={scroll === 0 || scroll > window.innerHeight}
-              // reverse={direction === "up"}
-            > */}
               <BackgroundImage
                 Tag="section"
                 style={{
@@ -88,8 +61,6 @@ const MainBanner = () => {
                 fluid={data.placeholderImage.childImageSharp.fluid}
                 backgroundColor={`#040e18`}
               ></BackgroundImage>
-
-              {/* </TweenOne> */}
             </div>
           </Fade>
         </div>
