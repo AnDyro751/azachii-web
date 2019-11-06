@@ -36,7 +36,7 @@ const Layout = ({ children, title = "Desarrollo web y móvil" }) => {
         }}
       >
         <main>{children}</main>
-        <footer>© {new Date().getFullYear()}, Built with</footer>
+        {/* <footer>© {new Date().getFullYear()}, Built with</footer> */}
       </div>
     </>
   )

@@ -38,9 +38,12 @@ a {
 .u__small_margin_horizontal {
     margin: 1em 0;
 }
+.u__small_padding{
+    padding: 1em;
+}
 
 .u__main_box_shadow {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* COLORS */
@@ -66,6 +69,22 @@ a {
 
 .blue_light_color {
     background: #3a4da7;
+}
+
+.red_color_text {
+    color: #e53935;
+}
+
+.red_light_color_color {
+    color: #ff6f60;
+}
+
+.red_light_color {
+    background: #ff6f60;
+}
+
+.red_light_color_rgba {
+    background: #ff6f606b;
 }
 
 .main_color {

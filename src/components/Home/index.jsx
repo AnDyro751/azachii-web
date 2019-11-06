@@ -1,125 +1,14 @@
 import React, { useEffect } from "react"
 import Header from "../Header"
 import MainBanner from "./MainBanner/index"
-import { useFirebase } from "gatsby-plugin-firebase"
-const MainHome = () => {
-  // useFirebase(firebase => {
-  //   let a = firebase
-  //     .firestore()
-  //     .collection("users")
-  //     .where("status", "==", "active")
-  //     .get()
-  //   console.log(a, "FIRE")
-  // }, [])
+import HelpYou from "../HelpYou/index"
 
-  // useEffect(() => {
-  //   console.log("HOLA")
-  // }, [])
+const MainHome = () => {
   return (
     <div>
       <Header />
       <MainBanner />
-      <p>HOLA 2</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
-      <p>HOLA</p>
+      <HelpYou />
     </div>
   )
 }

@@ -24,6 +24,7 @@ const Header = ({ siteTitle }) => {
     [styles.header_box]: white,
     white_color: white,
   })
+
   return (
     <header
       className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}
@@ -31,10 +32,10 @@ const Header = ({ siteTitle }) => {
       <div className="col-12 col-xl-12 offset-xl-2 u__no_padding">
         <div className="row u__no_margin align-items-center">
           <div className="col-xl-auto col-auto u__no_padding">
-            <h1 className="main_color_text u__no_margin">Azachii</h1>
+            <h1 className="main_color_text u__no_margin">Aza<span className="red_color_text" >C</span>hii</h1>
           </div>
-          <ItemHeader text="ACERCA DE" to="" />
           <ItemHeader text="SERVICIOS" to="" />
+          <ItemHeader text="CONTACTO" to="" />
           <ItemHeader text="WEB GRATIS" to="" />
         </div>
       </div>
