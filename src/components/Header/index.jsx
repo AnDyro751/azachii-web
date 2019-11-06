@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => {
           </div>
           <ItemHeader text="ACERCA DE" to="" />
           <ItemHeader text="SERVICIOS" to="" />
-          <ItemHeader text="WEB GRATIS" featured to="" />
+          <ItemHeader text="WEB GRATIS" to="" />
         </div>
       </div>
     </header>
@@ -44,10 +44,7 @@ const Header = ({ siteTitle }) => {
 const ItemHeader = ({ text, to, featured = null }) => (
   <Link to="/">
     <div className="col-xl-auto col-auto d-none d-sm-block">
-      <h5 className="main_color_text u__no_margin">
-        {text}&#160;&#160;
-        {featured && <FaGift className="main_color_text" size={10} />}
-      </h5>
+      <h5 className="main_color_text u__no_margin">{text}&#160;&#160;</h5>
     </div>
   </Link>
 )
