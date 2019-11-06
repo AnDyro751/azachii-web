@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "azachii-web": "azachii-develop",
+    "default": "azachii-develop"
+  }
+}
