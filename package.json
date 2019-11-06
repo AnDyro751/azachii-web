@@ -11,7 +11,7 @@
     "gatsby": "^2.17.6",
     "gatsby-background-image": "^0.8.17",
     "gatsby-image": "^2.2.30",
-    "gatsby-plugin-firebase": "^0.2.0-rc",
+    "gatsby-plugin-firebase": "^0.1.3",
     "gatsby-plugin-manifest": "^2.2.25",
     "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-page-creator": "^2.1.28",

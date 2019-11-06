@@ -27,11 +27,11 @@ module.exports = {
       options: {
         features: {
           auth: true,
-          database: true,
-          firestore: false,
+          database: false,
+          firestore: true,
           storage: false,
           messaging: false,
-          functions: true,
+          functions: false,
         },
       },
     },
