@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 import { Helmet } from "react-helmet"
-
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 const Layout = ({ children, title = "Desarrollo web y móvil" }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -33,11 +33,17 @@ const Layout = ({ children, title = "Desarrollo web y móvil" }) => {
         style={{
           margin: `0 auto`,
           paddingTop: 0,
+          overflow: "hidden",
         }}
       >
         <main>{children}</main>
         {/* <footer>© {new Date().getFullYear()}, Built with</footer> */}
       </div>
+      <MessengerCustomerChat
+        pageId="329666941258229"
+        version="5.0"
+        appId="641527279645625"
+      />
     </>
   )
 }

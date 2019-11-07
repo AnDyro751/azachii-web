@@ -33,23 +33,28 @@ const MainBanner = () => {
     <div className={`${styles.main_banner} row u__no_margin`}>
       <div className="col-xl-12 u__no_padding">
         <div className="row u__no_margin align-items-center justify-content-center">
-          <div className="col-xl-5 offset-xl-1 u__no_padding">
-            <div className="row u__no_margin">
-              <CodeIcons />
-              <div className="col-xl-12 u__no_padding u__small_margin_horizontal">
-                <h1 className={`${styles.description_text}`}>
-                  Desarrollo web & móvil
-                </h1>
-              </div>
-              <div className="col-xl-12 u__no_padding u__small_margin_horizontal">
-                <button
-                  className={`blue_light_color white_color_text u__main_box_shadow ${styles.button_services}`}
-                >
-                  SERVICIOS
-                </button>
+          <Fade right>
+            <div className="col-xl-5 offset-xl-1 u__no_padding">
+              <div className="row u__no_margin">
+                <CodeIcons />
+                <div className="col-xl-12 u__no_padding u__small_margin_vertical">
+                  <h1
+                    className={`${styles.description_text} black_color_text main_font`}
+                  >
+                    Desarrollo web & móvil
+                  </h1>
+                </div>
+                <div className="col-xl-12 u__no_padding u__small_margin_vertical">
+                  <button
+                    className={`black_color white_color_text u__main_box_shadow ${styles.button_services}`}
+                  >
+                    SERVICIOS
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+          </Fade>
+
           <Fade right>
             <div className={imageContainerClass}>
               <BackgroundImage

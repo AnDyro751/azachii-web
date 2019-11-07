@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Quicksand:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
 
 html,
 body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Heebo', sans-serif;
     overflow-x: hidden;
 }
 
@@ -18,13 +18,13 @@ h5,
 h6,
 button,
 a {
-    font-family: 'Quicksand', sans-serif !important;
+    font-family: 'Heebo', sans-serif;
     margin: 0 !important;
 
 }
 
-.title_font {
-    font-family: 'Playfair Display', serif !important;
+.main_font {
+    font-family: 'Heebo', sans-serif;
 }
 
 .u__no_margin {
@@ -35,10 +35,15 @@ a {
     padding: 0 !important;
 }
 
-.u__small_margin_horizontal {
+.u__small_margin_vertical {
     margin: 1em 0;
 }
-.u__small_padding{
+
+.u__big_margin_vertical {
+    margin: 3em 0;
+}
+
+.u__small_padding {
     padding: 1em;
 }
 
@@ -71,12 +76,28 @@ a {
     background: #3a4da7;
 }
 
+.accent_color {
+    background: #5174d1;
+}
+
+.blue_light_color_rgba {
+    background: #3a4da76b;
+}
+
 .red_color_text {
     color: #e53935;
 }
 
 .red_light_color_color {
     color: #ff6f60;
+}
+
+.black_color {
+    background: #181818;
+}
+
+.black_color_text {
+    color: #181818;
 }
 
 .red_light_color {

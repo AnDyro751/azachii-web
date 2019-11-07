@@ -32,7 +32,7 @@ const Header = ({ siteTitle }) => {
       <div className="col-12 col-xl-12 offset-xl-2 u__no_padding">
         <div className="row u__no_margin align-items-center">
           <div className="col-xl-auto col-auto u__no_padding">
-            <h1 className="main_color_text u__no_margin">Aza<span className="red_color_text" >C</span>hii</h1>
+            <h1 className="black_color_text u__no_margin">Aza<span className="red_color_text" >C</span>hii</h1>
           </div>
           <ItemHeader text="SERVICIOS" to="" />
           <ItemHeader text="CONTACTO" to="" />
@@ -45,7 +45,7 @@ const Header = ({ siteTitle }) => {
 const ItemHeader = ({ text, to, featured = null }) => (
   <Link to="/">
     <div className="col-xl-auto col-auto d-none d-sm-block">
-      <h5 className="main_color_text u__no_margin">{text}&#160;&#160;</h5>
+      <h5 className="black_color_text u__no_margin">{text}&#160;&#160;</h5>
     </div>
   </Link>
 )

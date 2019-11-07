@@ -1,44 +1,27 @@
-.help_text {
+.main_title{
     font-size: 2.5em;
 }
-
-.main_component {
-    min-height: 10vh;
-}
-
-.main_icon {
-    height: 3em;
-    width: 3em;
-    border-radius: 100px;
+.main_icon{
+    height: 50px;
+    width: 50px;
     justify-content: center;
+    align-content: center;
     align-items: center;
     display: flex;
+    border-radius: 100px;
+}
+
+.main_item_title{
+    font-size: 1.2em;
+}
+.main_item{
     cursor: pointer;
     transition: all .4s;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, 0);
+    margin: 2em 0;
 }
 
-.main_icon:hover {
-    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1), 2px 3px 6px rgba(0, 0, 0, 0.2);
+.main_item:hover{
+    transform: translateY(-2px);
 }
 
-.phone {
-    /* height: 400px;
-    width: auto;
-    z-index: 1000;
-    position: absolute;
-    bottom: 0;
-    top: 0; */
-}
 
-.main_phone_container {
-    position: absolute;
-    width: 400px;
-    /* justify-content: center;
-    align-items: center;
-    align-content: center;
-    display: flex;
-    margin: auto;
-    width: 100%; */
-
-}
