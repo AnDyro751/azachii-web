@@ -77,7 +77,7 @@ a {
 }
 
 .accent_color {
-    background: #5174d1;
+    background: #caf7f2;
 }
 
 .blue_light_color_rgba {
@@ -110,6 +110,9 @@ a {
 
 .main_color {
     background: #3A3856;
+}
+.dark_color{
+    background: #030303;
 }
 
 .main_color_text {
