@@ -20,6 +20,7 @@
 
 .main_item {
     cursor: pointer;
+
     transition: all .4s;
     margin: 3em 0;
 }
@@ -42,11 +43,12 @@
     display: flex;
 }
 
-.main_data_container img{
+.main_data_container img {
     transition: all 5s;
     background: transparent;
     /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
 }
-.main{
+
+.main {
     transition: all 1s;
 }

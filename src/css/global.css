@@ -17,6 +17,8 @@ h4,
 h5,
 h6,
 button,
+input,
+textarea,
 a {
     font-family: 'Heebo', sans-serif;
     margin: 0 !important;
@@ -51,6 +53,10 @@ a {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+.u__normal_font {
+    font-weight: normal;
+}
+
 /* COLORS */
 .transparent_color {
     background: transparent;
@@ -77,7 +83,7 @@ a {
 }
 
 .accent_color {
-    background: #caf7f2;
+    background: #f8f6f5;
 }
 
 .blue_light_color_rgba {
@@ -111,7 +117,8 @@ a {
 .main_color {
     background: #3A3856;
 }
-.dark_color{
+
+.dark_color {
     background: #030303;
 }
 

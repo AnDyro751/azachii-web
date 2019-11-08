@@ -1,28 +1,15 @@
 import React, { useEffect, useState } from "react"
 import styles from "./styles.module.css"
-import Modal from "react-modal"
 import { useFirebase } from "gatsby-plugin-firebase"
-
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-}
-
 const WebPage = ({}) => {
-
   const [benefits, setBenefits] = useState([])
   const [loading, setLoading] = useState(true)
   useFirebase(firebase => {
     firebase
       .firestore()
       .collection("benefits")
-      .where("kind", "array-contains", "web")
+      .orderBy("name", "asc")
+      //   .where("kind", "array-contains", "web")
       .get()
       .then(data => {
         let newBenefits = []
@@ -38,9 +25,6 @@ const WebPage = ({}) => {
       })
     // console.log(firebase, "firebase")
   })
-  useEffect(() => {
-    Modal.setAppElement("#modal_data")
-  }, [])
 
   return (
     <div
@@ -64,55 +48,28 @@ const WebPage = ({}) => {
       <div className="col-xl-6">
         <div className="row u__no_mrgin justify-content-start">
           <div className="col-xl-6 u__no_padding">
-            {benefits.slice(0.6).map((benefit, i) => (
-              <ItemTag text={benefit.name} key={i} />
+            {benefits.slice(0, 7).map((benefit, i) => (
+              <ItemTag benefit={benefit} key={i} />
             ))}
-            {loading}
-            {/* <ItemTag text="Pagos" />
-            <ItemTag text="Suscripciones" />
-            <ItemTag text="Referidos" />
-            <ItemTag text="Certificado SSL" />
-            <ItemTag text="Productos ilimitados" />
-            <ItemTag text="Google Maps" />
-            <ItemTag text="Multi Idioma" /> */}
           </div>
           <div className="col-xl-6">
-            <ItemTag text="Cupones" />
-            <ItemTag text="Tarjeta de regalos" />
-            <ItemTag text="50GB ancho de banda" />
-            <ItemTag text="Google Analytics" />
-            <ItemTag text="Facebook Pixel" />
-            <ItemTag text="Formulario de contacto" />
-            <ItemTag text="Actualizaciones en tiempo real" />
+            {benefits.slice(7).map((benefit, i) => (
+              <ItemTag benefit={benefit} key={i} />
+            ))}
           </div>
         </div>
       </div>
     </div>
   )
 }
-const ItemTag = ({ text, description = null, image = null }) => {
-  const [open, setOpen] = useState(false)
+const ItemTag = ({ benefit }) => {
   return (
     <>
-      <div id="modal_data">
-        <Modal
-          isOpen={open}
-          onRequestClose={() => {
-            setOpen(false)
-          }}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
-          <div>I am a modal</div>
-        </Modal>
-      </div>
       <div
-        onClick={() => {
-          setOpen(true)
-        }}
+       
         className={`col-xl-12 u__no_padding ${styles.main_item}`}
       >
-        <p className="main_font black_color_text">{text}</p>
+        <p className="main_font black_color_text">{benefit.name}</p>
       </div>
     </>
   )

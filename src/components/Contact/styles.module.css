@@ -1,0 +1,108 @@
+.label {
+    font-size: .8em;
+    font-weight: normal;
+    margin-bottom: .5em !important;
+    color: #8e8e8e;
+}
+
+.main_input input {
+    border: none;
+    width: 100%;
+    padding: 1em .6em;
+    outline: none;
+    background: #f6f9fc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: normal;
+    color: #8898aa;
+    border: 1px solid transparent;
+}
+
+.main_input input:focus {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main_input input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    font-weight: normal;
+}
+
+.box_container textarea::placeholder{
+    color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    font-weight: normal;   
+}
+
+.main_input {
+    margin: 1em 0 !important;
+}
+
+.form_container {
+    box-shadow: 1px -3px 100px -20px rgba(50, 50, 93, .25), 0 30px 60px -30px rgba(0, 0, 0, .3), 0 -18px 60px -10px rgba(0, 0, 0, .025);
+    border-radius: 4px;
+    padding: 1em 0 !important;
+    transition: all .6s;
+    z-index: 1000;
+    background: white;
+}
+
+.form_container:hover {
+    box-shadow: 14px 15px 100px -20px rgba(50, 50, 93, .25), -16px -6px 60px -30px rgba(0, 0, 0, .3), 18px 20px 60px -10px rgba(0, 0, 0, .025);
+}
+
+.box_container {
+    padding: 2em 0;
+    transition: all .5s;
+    position: relative;
+}
+
+.box_container:hover .form_container {
+    transform: translateX(10px)
+}
+
+.white {
+    color: white !important;
+}
+
+.linear {
+    background: linear-gradient(90deg, rgba(58, 77, 167, 1), rgba(58, 77, 167, 1));
+    transform: skewY(-12deg);
+    overflow-x: hidden;
+    opacity: 1;
+    transition: opacity 1s ease;
+    height: 100%;
+    width: 100%;
+    bottom: -0%;
+    top: 80%;
+    position: absolute;
+    z-index: 100;
+
+}
+
+.message {
+    border: none;
+    width: 100%;
+    padding: 1em .6em;
+    outline: none;
+    background: #f6f9fc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: normal;
+    color: #8898aa;
+    border: 1px solid transparent;
+    resize: none;
+    margin-bottom: 1em;
+}
+
+.send_button {
+    border: none;
+    padding: .6em 1.4em;
+    font-size: 1em;
+    font-weight: normal;
+    cursor: pointer;
+    margin-top: 1em !important;
+    border-radius: 4px;
+    outline: none;
+}

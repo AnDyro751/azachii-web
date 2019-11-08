@@ -1,0 +1,17 @@
+.main_container{
+    min-height: 20vh;
+    padding: 1em;
+}
+
+.item_description{
+    font-size: 1em;
+}
+.item{
+    font-size: 3em;
+    margin-top: .3em !important;
+}
+.main_description{
+    font-weight: normal;
+    font-size: 1.2em;
+    margin: 1em 0 !important;
+}
