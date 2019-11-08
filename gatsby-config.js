@@ -23,10 +23,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-mixpanel",
       options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-214504656-1",
+        apiToken: "37e1f139e0e83b2a589375cdfe7eab0e",
+        enableOnDevMode: true, // required
       },
     },
     {
@@ -39,6 +39,7 @@ module.exports = {
           storage: false,
           messaging: false,
           functions: false,
+          remoteConfig: true,
         },
       },
     },

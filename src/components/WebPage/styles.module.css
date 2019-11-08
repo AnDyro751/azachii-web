@@ -34,7 +34,7 @@
 .main_item::after{
     content: "";
     width: 30px;
-    background: white;
+    background: #181818;
     height: 2px;
     position: absolute;
     left: 0;
