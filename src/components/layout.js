@@ -11,8 +11,17 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 import { Helmet } from "react-helmet"
-import MessengerCustomerChat from 'react-messenger-customer-chat';
-const Layout = ({ children, title = "Desarrollo web y móvil" }) => {
+import MessengerCustomerChat from "react-messenger-customer-chat-beta"
+// import firebase from "firebase/app"
+
+import Header from "./Header/index"
+
+
+const Layout = ({
+  children,
+  title = "Desarrollo web y móvil",
+  light = false,
+}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,6 +38,8 @@ const Layout = ({ children, title = "Desarrollo web y móvil" }) => {
         title={`${data.site.siteMetadata.title} | ${title}`}
         defer={false}
       />
+      <Header light={light} />
+
       <div
         style={{
           margin: `0 auto`,
@@ -43,6 +54,7 @@ const Layout = ({ children, title = "Desarrollo web y móvil" }) => {
         pageId="329666941258229"
         version="5.0"
         appId="641527279645625"
+        minimized={true}
       />
     </>
   )

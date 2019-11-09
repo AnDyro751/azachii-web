@@ -29,6 +29,7 @@ const SimplePayments = () => {
                 width: "auto",
                 userSelect: "none",
               }}
+              loading="lazy"
               fluid={data.placeholderImage.childImageSharp.fluid}
             />
           </div>

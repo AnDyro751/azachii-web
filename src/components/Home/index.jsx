@@ -15,7 +15,6 @@ const MainHome = () => {
   }, [])
   return (
     <div>
-      <Header />
       <MainBanner />
       <HelpYou />
       <WebPage />

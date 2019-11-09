@@ -7,29 +7,36 @@ const WebPage = ({}) => {
   const [loading, setLoading] = useState(true)
   const [hidden_more, setHidden] = useState(true)
   useFirebase(firebase => {
-    firebase
-      .firestore()
-      .collection("benefits")
+    firebase.firestore().settings({
+      cacheSizeBytes: firebase.firestore.CACHE_SIZE_UNLIMITED,
+    })
+    const todoRef = firebase.firestore().collection("benefits")
+    todoRef
       .orderBy("name", "asc")
-      //   .where("kind", "array-contains", "web")
-      .get()
-      .then(data => {
+      // .where("kind", "array-contains", "web")
+      .onSnapshot(snapshot => {
         let newBenefits = []
-        data.docs.forEach(doc => {
+        snapshot.docs.forEach(doc => {
           newBenefits.push({ ...doc.data(), id: doc.id })
         })
         setBenefits(newBenefits)
-        setLoading(false)
-        // console.log("DATA", data.docs)
       })
-      .catch(e => {
-        console.log("ERROR", e)
-      })
+    // console.log("a", a)
+    // .onSnapshot(data => {
+    //   console.log(data.docs)
+    //   // let newBenefits = []
+    //   // data.docs.forEach(doc => {
+    //   //   newBenefits.push({ ...doc.data(), id: doc.id })
+    //   // })
+    //   // setBenefits(newBenefits)
+    //   // setLoading(false)
+    //   // console.log("DATA", data.docs)
+    // })
     // console.log(firebase, "firebase")
   })
 
   const class_more = classnames({
-    "col-xl-6 col-12 u__no_padding_in_mobile": true,
+    "col-xl-6 col-12 u__no_padding_in_mobile d-block d-sm-none": true,
     [styles.invisible]: hidden_more,
   })
 
@@ -60,6 +67,11 @@ const WebPage = ({}) => {
             ))}
           </div>
 
+          <div className="col-xl-6 col-12 u__no_padding_in_mobile d-none d-sm-block">
+            {benefits.slice(7).map((benefit, i) => (
+              <ItemTag benefit={benefit} key={i} />
+            ))}
+          </div>
           <div className={class_more}>
             {benefits.slice(7).map((benefit, i) => (
               <ItemTag benefit={benefit} key={i} />
@@ -69,7 +81,9 @@ const WebPage = ({}) => {
             onClick={() => setHidden(!hidden_more)}
             className="d-block d-sm-none col-12 u__no_padding"
           >
-            <p className="main_color_text" >{hidden_more ? "Ver más": "Ver menos"}</p>
+            <p className="main_color_text">
+              {hidden_more ? "Ver más" : "Ver menos"}
+            </p>
           </div>
         </div>
       </div>

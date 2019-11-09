@@ -86,15 +86,20 @@ a {
 }
 
 .accent_color {
-    background: #f8f6f5;
+    background: #d5eeed;
 }
-
+.accent_color_text_dark{
+    color: #05363c;
+}
+.accent_color_text_light{
+    color: #3cc5b9;
+}
 .blue_light_color_rgba {
     background: #3a4da76b;
 }
 
 .red_color_text {
-    color: #e53935;
+    color: #b71c1c;
 }
 
 .red_light_color_color {

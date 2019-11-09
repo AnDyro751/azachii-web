@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+.main {
+    min-height: 100vh;
+}
+
+.title {
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Playfair Display', serif;
+}
