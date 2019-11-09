@@ -34,15 +34,64 @@
 }
 
 .main_banner {
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .main_image_container {
     transition: all 2s;
 }
 
+.bg {
+    height: 110vh;
+}
+
 .blured {
     filter: blur(2px);
     opacity: .6;
     transform: translateX(100vw)
+}
+
+
+/* RESPONSIVE DESIGN */
+
+
+
+@media screen and (max-width: 768px) {
+    .description_text {
+        font-size: 2em;
+    }
+
+    .button_services {
+        /* display: none; */
+    }
+
+    .responsive_button {
+        padding: .5em 0;
+        user-select: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .responsive_button::after {
+        content: "";
+        width: 50px;
+        position: absolute;
+        height: 2px;
+        background: #181818;
+        bottom: 0;
+        left: 0;
+        /* margin-bottom: 1em; */
+    }
+
+    .bg {
+        height: 30vh;
+    }
+
+    .main_banner {
+        height: auto;
+    }
+
+    body {
+        margin-top: 4em;
+    }
 }

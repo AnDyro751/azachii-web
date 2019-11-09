@@ -9,6 +9,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: all .5s;
+    text-align: center;
 }
 
 .button:hover {
@@ -18,4 +19,13 @@
 .description {
     text-align: center;
     font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+    .main_title{
+        font-size: 2em;
+    }
+    .button{
+        padding: 1em;
+    }
 }

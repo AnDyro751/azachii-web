@@ -1,17 +1,37 @@
-.main_container{
+.main_container {
     min-height: 20vh;
     padding: 1em;
 }
 
-.item_description{
+.item_description {
     font-size: 1em;
 }
-.item{
+
+.item {
     font-size: 3em;
     margin-top: .3em !important;
 }
-.main_description{
+
+.main_description {
     font-weight: normal;
     font-size: 1.2em;
     margin: 1em 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .item_description {
+        margin-top: 2em !important;
+    }
+
+    .item {
+        font-size: 2em;
+    }
+
+    .main_description {
+        font-size: 1em;
+    }
+    .header {
+        font-size: 1em;
+
+    }
 }

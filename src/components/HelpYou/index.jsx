@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import phone from "../../images/phone_component.png"
 import mac from "../../images/web_mac.png"
-import camera from '../../images/camera-2030726_1920.jpg'
+import camera from "../../images/camera-2030726_1920.jpg"
 import Fade from "react-reveal/Fade"
 import classnames from "classnames"
 const HelpYou = () => {
@@ -22,11 +22,13 @@ const HelpYou = () => {
   })
   return (
     <div className="row u__no_margin justify-content-center">
-      <div className="col-xl-12 u__no_padding">
-        <div className="row u__no_margin">
-          <div className="col-xl-5 offset-1 u__no_padding">
-            <h1 className={`main_color_text main_font ${styles.main_title}`}>
-              Estamos aquí para <br />
+      <div className="col-xl-12 col-12 u__no_padding">
+        <div className="row u__no_margin justify-content-center">
+          <div className="col-xl-5 col-11 offset-xl-1 u__no_padding">
+            <h1
+              className={`main_color_text main_font ${styles.main_title}`}
+            >
+              Estamos aquí para <br className="d-none d-xl-block" />
               ayudarte con
             </h1>
             <ItemHelpYou
@@ -62,15 +64,15 @@ const HelpYou = () => {
           </div>
           <div className={class_container}>
             <div className={styles.main_data_container}>
-            <Fade right>
-            <LazyLoadImage
-              style={{
-                height: "400px",
-                width: "auto",
-              }}
-              src={currentImage}
-            />
-          </Fade>
+              <Fade right>
+                <LazyLoadImage
+                  style={{
+                    height: "400px",
+                    width: "auto",
+                  }}
+                  src={currentImage}
+                />
+              </Fade>
             </div>
           </div>
         </div>
@@ -90,14 +92,14 @@ const ItemHelpYou = ({ children, text, name, handleEnter }) => (
       }}
       className={`${styles.main_item} row`}
     >
-      <div className="col-xl-12 u__no_padding">
+      <div className="col-xl-12 col-12 u__no_padding">
         <div className="row u__no_margin align-items-center">
-          <div className="col-xl-auto u__no_padding">
+          <div className="col-xl-auto col-auto u__no_padding">
             <div className={`${styles.main_icon} blue_light_color_rgba`}>
               {children}
             </div>
           </div>
-          <div className="col-xl-auto">
+          <div className="col-xl-auto col-auto">
             <h1 className={`main_color_text ${styles.main_item_title}`}>
               {text}
             </h1>

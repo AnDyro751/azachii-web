@@ -26,7 +26,7 @@ const MainBanner = () => {
   `)
 
   const imageContainerClass = classnames({
-    "col-xl-6 u__no_padding": true,
+    "col-xl-6 u__no_padding col-12": true,
     [styles.main_image_container]: true,
   })
   return (
@@ -34,22 +34,28 @@ const MainBanner = () => {
       <div className="col-xl-12 u__no_padding">
         <div className="row u__no_margin align-items-center justify-content-center">
           <Fade right>
-            <div className="col-xl-5 offset-xl-1 u__no_padding">
-              <div className="row u__no_margin">
+            <div className="col-xl-5 col-12 offset-xl-1 u__no_padding">
+              <div className="row u__no_margin justify-content-center">
                 <CodeIcons />
-                <div className="col-xl-12 u__no_padding u__small_margin_vertical">
+                <div className="col-xl-12 u__no_padding col-11 u__small_margin_vertical">
                   <h1
                     className={`${styles.description_text} black_color_text main_font`}
                   >
                     Desarrollo web & móvil
                   </h1>
                 </div>
-                <div className="col-xl-12 u__no_padding u__small_margin_vertical">
+               
+                <div className="col-xl-12 u__no_padding d-none d-sm-block col-11 u__small_margin_vertical">
                   <button
                     className={`black_color white_color_text u__main_box_shadow ${styles.button_services}`}
                   >
                     SERVICIOS
                   </button>
+                </div>
+                <div className="col-11 u__no_padding d-block d-sm-none u__small_margin_bottom">
+                  <div className={styles.responsive_button}>
+                    Nuestros servicios
+                  </div>
                 </div>
               </div>
             </div>
@@ -59,9 +65,7 @@ const MainBanner = () => {
             <div className={imageContainerClass}>
               <BackgroundImage
                 Tag="section"
-                style={{
-                  minHeight: "110vh",
-                }}
+                className={styles.bg}
                 fluid={data.placeholderImage.childImageSharp.fluid}
                 backgroundColor={`#040e18`}
               ></BackgroundImage>

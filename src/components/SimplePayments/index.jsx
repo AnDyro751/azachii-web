@@ -47,7 +47,7 @@ const SimplePayments = () => {
                   Acepta tarjetas de crédito de forma rápida y segura en tu
                   tienda en online.
                 </h4>
-                <h3 className="black_color_text" >Opciones de pago</h3>
+                <h3 className={`${styles.header} black_color_text`} >Opciones de pago</h3>
                 <p className={`${styles.main_description} black_color_text`} >Crea suscripciones para tus membresías o acepta meses sin intereses.</p>
               </div>
             </div>

@@ -7,17 +7,17 @@ const Contact = () => {
       className={`row u__big_margin_vertical justify-content-center ${styles.box_container}`}
     >
       <div className={styles.linear}></div>
-      <div className="col-xl-10 u__no_padding">
+      <div className="col-xl-10 col-11 u__no_padding">
         <div className="row u__no_margin justify-content-between align-items-start">
-          <div className="col-xl-5 u__no_padding">
+          <div className="col-xl-5 col-11 u__no_padding">
             <h1 className="black_color_text">Estamos para ayudarte</h1>
-            <h4 className="black_color_text u__normal_font">
+            <h4 className={`${styles.send} black_color_text u__normal_font`}>
               Responderemos todas tus preguntas con brevedad.
               <br />
               No dudes en contactarnos.
             </h4>
           </div>
-          <div className={`col-xl-7 u__no_padding ${styles.form_container}`}>
+          <div className={`col-xl-7 col-12 u__no_padding ${styles.form_container}`}>
             <FormContact />
           </div>
         </div>
@@ -32,14 +32,14 @@ const FormContact = () => {
       <div className="col-xl-12">
         <h1 className="black_color_text">Contáctanos</h1>
       </div>
-      <div className="col-xl-6">
+      <div className="col-xl-6 col-12">
         <InputType
           autoComplete="name"
           label="Nombre"
           placeholder="Juan López"
         />
       </div>
-      <div className="col-xl-6">
+      <div className="col-xl-6 col-12">
         <InputType
           label="Email"
           type="email"
@@ -47,7 +47,7 @@ const FormContact = () => {
           placeholder="juanlopez@correo.com"
         />
       </div>
-      <div className="col-xl-6">
+      <div className="col-xl-6 col-12">
         <InputType
           label="Télefoto"
           type="phone"
@@ -55,7 +55,7 @@ const FormContact = () => {
           placeholder="juanlopez@correo.com"
         />
       </div>
-      <div className="col-xl-6">
+      <div className="col-xl-6 col-12">
         <InputType
           autoComplete="subject"
           label="Asunto"
@@ -63,7 +63,7 @@ const FormContact = () => {
           placeholder="Asunto"
         />
       </div>
-      <div className="col-xl-12">
+      <div className="col-xl-12 col-12">
         <p className={`${styles.label}`}>Mensaje</p>
         <textarea placeholder="Tu mensaje..." className={styles.message} />
         <button className={`${styles.send_button} blue_light_color white_color_text u__main_box_shadow`}>

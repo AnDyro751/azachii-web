@@ -52,3 +52,11 @@
 .main {
     transition: all 1s;
 }
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .main_title {
+        font-size: 2em;
+        margin: 1em 0 !important;
+    }
+}

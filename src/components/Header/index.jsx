@@ -30,7 +30,7 @@ const Header = ({ siteTitle }) => {
     <header
       className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}
     >
-      <div className="col-12 col-xl-12 offset-xl-2 u__no_padding">
+      <div className="col-11 col-xl-12 offset-xl-2 u__no_padding">
         <div className="row u__no_margin align-items-center">
           <div className="col-xl-auto col-auto u__no_padding">
             <h1 className="black_color_text u__no_margin">

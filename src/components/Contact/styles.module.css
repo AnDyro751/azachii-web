@@ -29,10 +29,10 @@
     font-weight: normal;
 }
 
-.box_container textarea::placeholder{
+.box_container textarea::placeholder {
     color: rgba(0, 0, 0, 0.3);
     opacity: 1;
-    font-weight: normal;   
+    font-weight: normal;
 }
 
 .main_input {
@@ -105,4 +105,14 @@
     margin-top: 1em !important;
     border-radius: 4px;
     outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    .send {
+        margin: 1em 0 !important;
+    }
+
+    .box_container:hover .form_container {
+        transform: translateY(10px)
+    }
 }

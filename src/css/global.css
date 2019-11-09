@@ -46,9 +46,12 @@ a {
 }
 
 .u__small_padding {
-    padding: 1em;
+    padding: 1em 0;
 }
 
+.u__small_margin_bottom{
+    margin: 0 0 1em 0;
+}
 .u__main_box_shadow {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
@@ -124,4 +127,12 @@ a {
 
 .main_color_text {
     color: #3A3856;
+}
+
+/* REPONSIVE */
+@media screen and (max-width: 768px) {
+    .u__no_padding_in_mobile{
+        padding: 0 !important;
+    }
+
 }
