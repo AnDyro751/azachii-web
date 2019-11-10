@@ -4,11 +4,13 @@ import MainFreePage from "../components/Freepage/MainFreePage/index"
 import { useMixpanel } from "gatsby-plugin-mixpanel"
 import How from "../components/How/index"
 import Contact from "../components/Contact/index"
-import HelpYou from '../components/HelpYou/index';
-import WebPage from '../components/WebPage/index';
+import WebPage from "../components/WebPage/index"
+import GetFreePage from "../components/GetFreePage/index"
+import Promo from "../components/Promo/index"
 
 const FreePage = () => {
   const mixpanel = useMixpanel()
+  
   useEffect(() => {
     mixpanel.track("free_page")
   }, [])
@@ -16,8 +18,10 @@ const FreePage = () => {
     <Layout>
       <MainFreePage />
       <How />
-      <WebPage />
 
+      <WebPage />
+      <Promo />
+      <GetFreePage />
       <Contact />
     </Layout>
   )

@@ -17,7 +17,7 @@ const SimplePayments = () => {
   `)
   return (
     <div
-      className={`${styles.main_container} row u__no_margin justify-content-center accent_color`}
+      className={`${styles.main_container} row u__no_margin justify-content-center accent_light_color`}
     >
       <div className="col-xl-10 u__no_padding">
         <div className="row u__no_margin justify-content-between">

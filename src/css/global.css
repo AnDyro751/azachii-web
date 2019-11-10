@@ -47,9 +47,10 @@ a {
     padding: 1em 0;
 }
 
-.u__small_margin_bottom{
+.u__small_margin_bottom {
     margin: 0 0 1em 0;
 }
+
 .u__main_box_shadow {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
@@ -57,8 +58,16 @@ a {
 .u__normal_font {
     font-weight: normal;
 }
-.u__pointer{
+
+.u__pointer {
     cursor: pointer;
+}
+
+.u__default_bg {
+    background-size: 120%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: white;
 }
 
 /* COLORS */
@@ -89,27 +98,37 @@ a {
 .accent_color {
     background-color: #d5eeed;
 }
-.accent_color_dark{
+
+.accent_color_dark {
     background: #05363c;
 }
-.accent_color_text_dark{
+
+.accent_color_text_dark {
     color: #05363c;
 }
-.accent_color_text_light{
+
+.accent_color_text_light {
     color: #3cc5b9;
 }
+
 .blue_light_color_rgba {
     background: #3a4da76b;
 }
-.accent_light_color{
-    background: #f7fcfc;
+
+.accent_light_color {
+    background: #fbfaf9;
 }
+
 .red_color_text {
     color: #b71c1c;
 }
 
 .red_light_color_color {
     color: #ff6f60;
+}
+
+.accent_color_light {
+    background-color: #f4e3d7;
 }
 
 .black_color {
@@ -142,8 +161,12 @@ a {
 
 /* REPONSIVE */
 @media screen and (max-width: 768px) {
-    .u__no_padding_in_mobile{
+    .u__no_padding_in_mobile {
         padding: 0 !important;
+    }
+
+    .u__default_bg {
+        background-size: cover !important;
     }
 
 }

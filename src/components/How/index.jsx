@@ -1,18 +1,18 @@
 import React from "react"
 import styles from "./styles.module.css"
 import { GoPencil } from "react-icons/go"
-import { FaInfo, FaStar } from "react-icons/fa"
+import { FaInfo, FaStar, FaHeart } from "react-icons/fa"
 import Fade from "react-reveal/Fade"
 
 const How = ({}) => (
   <div
-    className={`row u__no_margin justify-content-center accent_light_color ${styles.main}`}
+    className={`row u__no_margin justify-content-center ${styles.main}`}
   >
     <div className="col-xl-11 u__no_padding">
       <div className="row u__no_margin">
         <div className="col-xl-12 u__no_padding">
           <Fade left>
-            <h1 className={`accent_color_text_dark ${styles.title}`}>
+            <h1 className={`black_color_text ${styles.title}`}>
               ¿Cómo funciona?
             </h1>
           </Fade>
@@ -32,18 +32,15 @@ const How = ({}) => (
         <HowItem
           step={2}
           title="Aceptamos tu proyecto"
-          text="Después que nuestro equipo toma la decisión de aceptar tu proyecto"
-          more="En esta fase nuestro equipo decide sí tu negocio aplica para el
-        sitio web gratuito."
+          text="Después que nuestro equipo acepta tu proyecto nos ponemos en contacto contigo para solicitar información acerca de tu nuevo sitio web."
+          more="Paleta de colores, logo, qué servicios ofreces.Cuánta más información, mejor podemos crear tu web."
         >
-          <GoPencil className="accent_color_text_dark" size={14} />
+          <FaHeart className="white_color_text" size={14} />
         </HowItem>
         <HowItem
           step={1}
-          text="Al rellenar el formulario te pedimos algunos datos sobre tu negocio,
-        que nos ayudarán a conocer mejor tu negocio."
-          more="En esta fase nuestro equipo decide sí tu negocio aplica para el
-        sitio web gratuito."
+          text="Y ya es todo, a partir del primer día te envíamos un link donde puedes ver el progreso de tu página en tiempo real."
+          more="Después que nos des luz verde tu sitio estará en línea en menos de 7 días."
           title="Tu sitio está listo"
         >
           <FaStar className="white_color_text" size={15} />
@@ -60,18 +57,20 @@ const HowItem = ({ children, step, text, more = null, title }) => (
         <div className="row u__no_margin">
           <div className="col-xl-12 u__no_padding">
             <div className="row u__no_margin justify-content-between align-items-center">
-              <div className="col-xl-auto u__no_padding">
-                <p className={`accent_color_text_dark ${styles.item_step}`}>
+              <div className="col-xl-auto col-auto u__no_padding">
+                <p className={`black_color_text ${styles.item_step}`}>
                   Paso {step}
                 </p>
               </div>
-              <div className="col-xl-auto u__no_padding">
-                <div className={`${styles.children} accent_color_dark u__main_box_shadow`}>
+              <div className="col-xl-auto col-auto u__no_padding">
+                <div
+                  className={`${styles.children} blue_light_color u__main_box_shadow`}
+                >
                   {children}
                 </div>
               </div>
             </div>
-            <h1 className={`accent_color_text_dark ${styles.item_title}`}>
+            <h1 className={`black_color_text ${styles.item_title}`}>
               {title}
             </h1>
             <h5 className={`black_color_text ${styles.description}`}>{text}</h5>
