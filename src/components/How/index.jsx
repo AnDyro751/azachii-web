@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./styles.module.css"
 import { GoPencil } from "react-icons/go"
-import { FaInfo } from "react-icons/fa"
+import { FaInfo, FaStar } from "react-icons/fa"
 import Fade from "react-reveal/Fade"
 
 const How = ({}) => (
@@ -25,7 +25,7 @@ const How = ({}) => (
         que nos ayudarán a conocer mejor tu negocio."
           more="En esta fase nuestro equipo decide sí tu negocio aplica para el
         sitio web gratuito."
-          title="Solicitamos información de tu negocio"
+          title="Solicitamos información"
         >
           <FaInfo className="white_color_text" size={14} />
         </HowItem>
@@ -44,9 +44,9 @@ const How = ({}) => (
         que nos ayudarán a conocer mejor tu negocio."
           more="En esta fase nuestro equipo decide sí tu negocio aplica para el
         sitio web gratuito."
-          title="Solicitamos información de tu negocio"
+          title="Tu sitio está listo"
         >
-          <GoPencil className="white_color_text" size={15} />
+          <FaStar className="white_color_text" size={15} />
         </HowItem>
       </div>
     </div>
@@ -66,7 +66,7 @@ const HowItem = ({ children, step, text, more = null, title }) => (
                 </p>
               </div>
               <div className="col-xl-auto u__no_padding">
-                <div className={`${styles.children} accent_color_dark`}>
+                <div className={`${styles.children} accent_color_dark u__main_box_shadow`}>
                   {children}
                 </div>
               </div>

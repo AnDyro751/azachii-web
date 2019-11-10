@@ -11,7 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="theme-color" content="#181818" />
+        <meta name="theme-color" content="#f7fcfc" />
         <meta
           name="description"
           content="Desarrollo web & móvil. Empieza tu negocio en línea hoy mismo"

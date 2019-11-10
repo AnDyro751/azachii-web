@@ -57,6 +57,9 @@ a {
 .u__normal_font {
     font-weight: normal;
 }
+.u__pointer{
+    cursor: pointer;
+}
 
 /* COLORS */
 .transparent_color {

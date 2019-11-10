@@ -12,6 +12,7 @@ const Header = ({ siteTitle, light = false }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
+      setScroll(window.scrollY)
       if (!light) {
         if (window.scrollY >= 40) {
           setWhite(true)
@@ -21,6 +22,21 @@ const Header = ({ siteTitle, light = false }) => {
       }
     })
   }, [])
+
+  const getToContact = () => {
+    let newScroll = 0
+    let element = document.querySelector(".contact_form")
+    if (element) {
+      newScroll = element.getBoundingClientRect().y
+      let height = 16 * 5
+      window.scrollTo({
+        top: newScroll - height,
+        left: 0,
+        bottom: 0,
+        behavior: "smooth",
+      })
+    }
+  }
 
   const headerClass = classnames({
     [styles.main_header]: true,
@@ -42,27 +58,27 @@ const Header = ({ siteTitle, light = false }) => {
             </Link>
           </div>
           <ItemHeader text="SERVICIOS" to="/" />
-          <ItemHeader text="CONTACTO" to="/" />
+          <ItemHeader onContact={getToContact} text="CONTACTO" />
           <ItemHeader text="WEB GRATIS" featured={1} to="/free" />
         </div>
       </div>
     </header>
   )
 }
-const ItemHeader = ({ text, to, featured = 0 }) => (
-  <Link to={to}>
-    <div className="col-xl-auto col-auto d-none d-sm-block">
+const ItemHeader = ({ text, to = null, featured = 0, onContact }) =>
+  to ? (
+    <Link to={to}>
+      <div className="col-xl-auto col-auto d-none d-sm-block u__pointer">
+        <h5 className="black_color_text u__no_margin">{text}&#160;&#160;</h5>
+      </div>
+    </Link>
+  ) : (
+    <div
+      onClick={onContact}
+      className="col-xl-auto col-auto d-none d-sm-block u__pointer"
+    >
       <h5 className="black_color_text u__no_margin">{text}&#160;&#160;</h5>
     </div>
-  </Link>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
+  )
 
 export default Header

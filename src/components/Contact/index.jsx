@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md"
 const Contact = () => {
   return (
     <div
-      className={`row u__big_margin_vertical justify-content-center ${styles.box_container}`}
+      className={`row u__big_margin_vertical justify-content-center contact_form ${styles.box_container}`}
     >
       <div className={styles.linear}></div>
       <div className="col-xl-10 col-11 u__no_padding">
@@ -17,7 +17,9 @@ const Contact = () => {
               No dudes en contactarnos.
             </h4>
           </div>
-          <div className={`col-xl-7 col-12 u__no_padding ${styles.form_container}`}>
+          <div
+            className={`col-xl-7 col-12 u__no_padding ${styles.form_container}`}
+          >
             <FormContact />
           </div>
         </div>
@@ -66,7 +68,9 @@ const FormContact = () => {
       <div className="col-xl-12 col-12">
         <p className={`${styles.label}`}>Mensaje</p>
         <textarea placeholder="Tu mensaje..." className={styles.message} />
-        <button className={`${styles.send_button} blue_light_color white_color_text u__main_box_shadow`}>
+        <button
+          className={`${styles.send_button} blue_light_color white_color_text u__main_box_shadow`}
+        >
           ENVIAR
         </button>
       </div>
