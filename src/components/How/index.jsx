@@ -8,7 +8,7 @@ const How = ({}) => (
   <div
     className={`row u__no_margin justify-content-center ${styles.main}`}
   >
-    <div className="col-xl-11 col-12 u__no_padding">
+    <div className="col-xl-10 col-12 u__no_padding">
       <div className="row u__no_margin justify-content-center">
         <div className="col-xl-12 col-11 u__no_padding">
           <Fade left>
