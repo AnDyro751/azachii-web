@@ -46,7 +46,7 @@ const Footer = ({
           </div>
         </div>
         <div className="col-xl-2 col-6 u__no_padding">
-          <div className="row u__no_margin justify-content-xl-end justify-content-start align-items-center">
+          <div className="row u__no_margin justify-content-xl-end justify-content-end align-items-center">
             <div
               data-tip="Repositorios de Github"
               className="col-xl-auto col-auto u__no_padding u__pointer"
