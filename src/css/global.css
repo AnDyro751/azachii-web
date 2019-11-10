@@ -86,6 +86,9 @@ a {
 .accent_color {
     background-color: #d5eeed;
 }
+.accent_color_dark{
+    background: #05363c;
+}
 .accent_color_text_dark{
     color: #05363c;
 }

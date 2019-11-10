@@ -20,7 +20,7 @@ const MainFreePage = () => {
   `)
   return (
     <BackgroundImage
-    className="accent_color"
+      className="accent_color"
       style={{
         backgroundPosition: "right bottom",
         backgroundSize: "50%",
@@ -37,6 +37,12 @@ const MainFreePage = () => {
             SOLICITA TU WEB{" "}
             <span className="accent_color_text_light">GRATIS</span>
           </h1>
+        </div>
+        <div className="col-xl-auto u__no_padding">
+          <div className={`${styles.button} accent_color_dark white_color_text u__main_box_shadow`}>
+            Rellena el formulario de registro
+          </div>
+          <small className="accent_color_text_dark" >Google Docs</small>
         </div>
       </div>
     </BackgroundImage>
