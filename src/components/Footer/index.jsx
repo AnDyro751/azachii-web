@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./styles.module.css"
 import { Link } from "gatsby"
-import { FaInstagram, FaFacebookF, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa"
+import { FaInstagram, FaFacebookF, FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa"
 
 const Footer = ({
   custom_class = "white_color",
@@ -80,15 +80,12 @@ const Footer = ({
               data-tip="Siguenos en LinkedIn"
               className="col-xl-auto col-auto u__no_padding u__pointer"
             >
-              <FaLinkedin className={text_color} size={20} />
+              <FaLinkedinIn className={text_color} size={20} />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <style>{`
-      @media()
-    `}</style>
   </div>
 )
 
