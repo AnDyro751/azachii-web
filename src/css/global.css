@@ -163,7 +163,9 @@ a {
 .red_color_text {
 	color: #b71c1c;
 }
-
+.u__no_outline{
+	outline: none !important;
+}
 .red_light_color_color {
 	color: #ff6f60;
 }

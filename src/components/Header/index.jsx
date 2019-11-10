@@ -3,13 +3,14 @@ import React, { useEffect, useState } from "react"
 import styles from "./style.module.css"
 import { FaBars } from "react-icons/fa"
 import classnames from "classnames"
-import Sidebar from './Sidebar';
-import { IoMdClose } from "react-icons/io";
+import Sidebar from "./Sidebar"
+import { IoMdClose } from "react-icons/io"
+import { HamburgerElastic } from "react-animated-burgers"
 
 const Header = ({ siteTitle, light = false }) => {
   const [scrollX, setScroll] = useState(0)
   const [white, setWhite] = useState(light)
-  const [openSidebar, setOpenSidebar] = useState(false);
+  const [openSidebar, setOpenSidebar] = useState(false)
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -45,9 +46,16 @@ const Header = ({ siteTitle, light = false }) => {
     white_color: white,
   })
 
+  const toggle = () => {
+    setOpenSidebar(!openSidebar)
+    document.documentElement.style.overflowY = "auto"
+  }
+
   return (
     <>
-      <header className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}>
+      <header
+        className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}
+      >
         <div className="col-11 col-xl-12 offset-xl-2 u__no_padding">
           <div className="row u__no_margin align-items-center justify-content-between justify-content-sm-start">
             <div className="col-xl-auto col-auto u__no_padding">
@@ -60,35 +68,23 @@ const Header = ({ siteTitle, light = false }) => {
             <ItemHeader text="SERVICIOS" to="/" />
             <ItemHeader onContact={getToContact} text="CONTACTO" />
             <ItemHeader text="WEB GRATIS" featured={1} to="/free" />
-            {openSidebar ? (
-              <IoMdClose
-                className="only_on_mobile"
-                style={{float: 'right', cursor: 'pointer'}}
-                size={35}
-                onClick={() => {
-                  setOpenSidebar(false);
-                  document.documentElement.style.overflowY = 'auto';
-                }}
-                fill="rgb(24, 24, 24)" />
-            ) : (
-              <FaBars
-                className="only_on_mobile"
-                style={{float: 'right', cursor: 'pointer'}}
-                size={30}
-                onClick={() => {
-                  setOpenSidebar(true);
-                  document.documentElement.style.overflowY = 'hidden';
-                }}
-                fill="rgb(24, 24, 24)" />
-            )}
+            <HamburgerElastic
+              buttonWidth={25}
+              className="d-block d-sm-none u__no_outline"
+              isActive={openSidebar}
+              toggleButton={toggle}
+            />
           </div>
         </div>
       </header>
-      <Sidebar isOpen={openSidebar} moveToContact={() => {
-        setOpenSidebar(false);
-        document.documentElement.style.overflowY = 'auto';
-        getToContact();
-      }} />
+      <Sidebar
+        isOpen={openSidebar}
+        moveToContact={() => {
+          setOpenSidebar(false)
+          document.documentElement.style.overflowY = "auto"
+          getToContact()
+        }}
+      />
     </>
   )
 }

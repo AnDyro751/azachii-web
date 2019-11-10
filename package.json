@@ -30,6 +30,7 @@
     "prop-types": "^15.7.2",
     "rc-tween-one": "^2.6.5",
     "react": "^16.11.0",
+    "react-animated-burgers": "^1.2.7",
     "react-dom": "^16.11.0",
     "react-ga": "^2.7.0",
     "react-helmet": "^5.2.1",
