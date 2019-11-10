@@ -55,11 +55,11 @@ const FormContact = () => {
   };
 
   return (
-    <div className="row u__no_margin">
+    <div className="row u__no_margin contact_form">
       {contact ? (
         <div className='col-xl-12' style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: contact ? document.getElementById('contact_form').clientHeight : 0}}>
           <p style={{fontWeight: 'bold', color: '#4e4e4e', fontSize: '2em'}}>
-            {fields.name.split(' ')[0]} gracias por contactarnos.
+            Gracias por contactarnos.
             <p>Te atenderemos en breve.</p>
           </p>
         </div>

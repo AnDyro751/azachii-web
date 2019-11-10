@@ -49,6 +49,7 @@
 }
 
 .form_container:hover {
+    transform: translateX(10px);
     box-shadow: 14px 15px 100px -20px rgba(50, 50, 93, .25), -16px -6px 60px -30px rgba(0, 0, 0, .3), 18px 20px 60px -10px rgba(0, 0, 0, .025);
 }
 
@@ -58,9 +59,6 @@
     position: relative;
 }
 
-.box_container:hover .form_container {
-    transform: translateX(10px)
-}
 
 .white {
     color: white !important;
@@ -113,6 +111,6 @@
     }
 
     .box_container:hover .form_container {
-        transform: translateY(10px)
+        /* transform: translateY(10px) */
     }
 }
