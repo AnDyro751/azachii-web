@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import styles from "./styles.module.css"
 import { useFirebase } from "gatsby-plugin-firebase"
 import classnames from "classnames"
+
 const WebPage = ({}) => {
   const [benefits, setBenefits] = useState([])
   const [loading, setLoading] = useState(true)

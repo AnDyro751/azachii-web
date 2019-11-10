@@ -99,7 +99,7 @@ const ItemHelpYou = ({ children, text, name, handleEnter }) => (
               {children}
             </div>
           </div>
-          <div className="col-xl-auto col-auto">
+          <div className="col-xl-auto col-auto" style={{paddingRight: 0}}>
             <h1 className={`main_color_text ${styles.main_item_title}`}>
               {text}
             </h1>
