@@ -37,7 +37,7 @@ const WebPage = ({}) => {
   })
 
   const class_more = classnames({
-    "col-xl-6 col-12 u__no_padding_in_mobile d-block d-sm-none": true,
+    "col-xl-6 col-12 u__no_padding_in_tablet d-block d-sm-none": true,
     [styles.invisible]: hidden_more,
   })
 
@@ -66,7 +66,7 @@ const WebPage = ({}) => {
             ))}
           </div>
 
-          <div className="col-xl-6 col-12 u__no_padding_in_mobile d-none d-sm-block">
+          <div className="col-xl-6 col-12 u__no_padding_in_tablet d-none d-sm-block">
             {benefits.slice(7).map((benefit, i) => (
               <ItemTag benefit={benefit} key={i} />
             ))}

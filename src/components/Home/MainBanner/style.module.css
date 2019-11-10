@@ -53,10 +53,11 @@
 
 
 /* RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px) {
+    .bg {
+        height: 30vh;
+    }
 
-
-
-@media screen and (max-width: 768px) {
     .description_text {
         font-size: 2em;
     }
@@ -77,10 +78,6 @@
         bottom: 0;
         left: 0;
         /* margin-bottom: 1em; */
-    }
-
-    .bg {
-        height: 30vh;
     }
 
     .main_banner {

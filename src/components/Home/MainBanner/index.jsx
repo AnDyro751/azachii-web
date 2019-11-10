@@ -51,7 +51,7 @@ const MainBanner = () => {
                   SERVICIOS
                 </button>
               </div>
-              <div className="col-11 u__no_padding d-block d-sm-none u__small_margin_bottom">
+              <div className="col-11 u__no_padding d-block d-xl-none u__small_margin_bottom">
                 <div className={styles.responsive_button}>
                   Nuestros servicios
                 </div>

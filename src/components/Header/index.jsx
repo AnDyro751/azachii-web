@@ -1,10 +1,8 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, { useEffect, useState } from "react"
 import styles from "./style.module.css"
-import { FaGift } from "react-icons/fa"
+import { FaBars } from "react-icons/fa"
 import classnames from "classnames"
-import HeadShake from "react-reveal/HeadShake"
 
 const Header = ({ siteTitle, light = false }) => {
   const [scrollX, setScroll] = useState(0)
@@ -45,11 +43,9 @@ const Header = ({ siteTitle, light = false }) => {
   })
 
   return (
-    <header
-      className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}
-    >
+    <header className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}>
       <div className="col-11 col-xl-12 offset-xl-2 u__no_padding">
-        <div className="row u__no_margin align-items-center">
+        <div className="row u__no_margin align-items-center justify-content-between justify-content-sm-start">
           <div className="col-xl-auto col-auto u__no_padding">
             <Link to="/">
               <h1 className="black_color_text u__no_margin">
@@ -60,6 +56,7 @@ const Header = ({ siteTitle, light = false }) => {
           <ItemHeader text="SERVICIOS" to="/" />
           <ItemHeader onContact={getToContact} text="CONTACTO" />
           <ItemHeader text="WEB GRATIS" featured={1} to="/free" />
+          <FaBars className="only_on_mobile" style={{float: 'right', cursor: 'pointer'}} size={30} fill="rgb(24, 24, 24)" />
         </div>
       </div>
     </header>
