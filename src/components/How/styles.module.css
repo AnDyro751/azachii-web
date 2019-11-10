@@ -3,11 +3,12 @@
     font-family: 'Playfair Display', serif;
 }
 .main{
-    padding: 2em 0;
+    /* padding: 2em 0; */
 }
 .main_item{
     padding: 1em !important;
     border-radius: 4px;
+    margin: 1em 0 !important;
     /* margin-right: 1em; */
 }
 .item_step{

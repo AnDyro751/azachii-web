@@ -61,10 +61,6 @@
         font-size: 2em;
     }
 
-    .button_services {
-        /* display: none; */
-    }
-
     .responsive_button {
         padding: .5em 0;
         user-select: none;
@@ -89,9 +85,10 @@
 
     .main_banner {
         height: auto;
+        margin-top: 4em !important;
     }
-
+/* 
     body {
         margin-top: 4em;
-    }
+    } */
 }

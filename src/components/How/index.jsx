@@ -2,6 +2,8 @@ import React from "react"
 import styles from "./styles.module.css"
 import { GoPencil } from "react-icons/go"
 import { FaInfo } from "react-icons/fa"
+import Fade from "react-reveal/Fade"
+
 const How = ({}) => (
   <div
     className={`row u__no_margin justify-content-center accent_light_color ${styles.main}`}
@@ -9,9 +11,11 @@ const How = ({}) => (
     <div className="col-xl-11 u__no_padding">
       <div className="row u__no_margin">
         <div className="col-xl-12 u__no_padding">
-          <h1 className={`accent_color_text_dark ${styles.title}`}>
-            ¿Cómo funciona?
-          </h1>
+          <Fade left>
+            <h1 className={`accent_color_text_dark ${styles.title}`}>
+              ¿Cómo funciona?
+            </h1>
+          </Fade>
         </div>
       </div>
       <div className="row u__big_margin_vertical">
@@ -50,33 +54,37 @@ const How = ({}) => (
 )
 
 const HowItem = ({ children, step, text, more = null, title }) => (
-  <div className={`col-xl-4`}>
-    <div className={` ${styles.main_item} white_color u__main_box_shadow`}>
-      <div className="row u__no_margin">
-        <div className="col-xl-12 u__no_padding">
-          <div className="row u__no_margin justify-content-between align-items-center">
-            <div className="col-xl-auto u__no_padding">
-              <p className={`accent_color_text_dark ${styles.item_step}`}>
-                Paso {step}
-              </p>
-            </div>
-            <div className="col-xl-auto u__no_padding">
-              <div className={`${styles.children} accent_color_dark`}>
-                {children}
+  <Fade right>
+    <div className={`col-xl-4`}>
+      <div className={` ${styles.main_item} white_color u__main_box_shadow`}>
+        <div className="row u__no_margin">
+          <div className="col-xl-12 u__no_padding">
+            <div className="row u__no_margin justify-content-between align-items-center">
+              <div className="col-xl-auto u__no_padding">
+                <p className={`accent_color_text_dark ${styles.item_step}`}>
+                  Paso {step}
+                </p>
+              </div>
+              <div className="col-xl-auto u__no_padding">
+                <div className={`${styles.children} accent_color_dark`}>
+                  {children}
+                </div>
               </div>
             </div>
+            <h1 className={`accent_color_text_dark ${styles.item_title}`}>
+              {title}
+            </h1>
+            <h5 className={`black_color_text ${styles.description}`}>{text}</h5>
+            {more && (
+              <h5 className={`black_color_text ${styles.description}`}>
+                {more}
+              </h5>
+            )}
           </div>
-          <h1 className={`accent_color_text_dark ${styles.item_title}`}>
-            {title}
-          </h1>
-          <h5 className={`black_color_text ${styles.description}`}>{text}</h5>
-          {more && (
-            <h5 className={`black_color_text ${styles.description}`}>{more}</h5>
-          )}
         </div>
       </div>
     </div>
-  </div>
+  </Fade>
 )
 
 export default How
