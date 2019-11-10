@@ -1,0 +1,36 @@
+.title {
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+}
+.main{
+    padding: 2em 0;
+}
+.main_item{
+    padding: 1em !important;
+    border-radius: 4px;
+    /* margin-right: 1em; */
+}
+.item_step{
+    font-size: .8em;
+    font-weight: bold;
+    margin: 0 !important;
+}
+.item_title{
+    font-size: 1.7em;
+    margin: .8em 0 0 0 !important;
+    /* font-family: 'Playfair Display', serif; */
+}
+.description{
+    margin: 1.5em 0 !important;
+    font-weight: normal;
+    font-size: .9em;
+}
+
+.children{
+    height: 2.5em;
+    width: 2.5em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 100px;
+}

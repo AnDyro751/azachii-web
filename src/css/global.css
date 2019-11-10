@@ -98,7 +98,9 @@ a {
 .blue_light_color_rgba {
     background: #3a4da76b;
 }
-
+.accent_light_color{
+    background: #f7fcfc;
+}
 .red_color_text {
     color: #b71c1c;
 }
