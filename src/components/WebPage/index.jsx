@@ -42,9 +42,7 @@ const WebPage = ({}) => {
   })
 
   return (
-    <div
-      className={`row u__small_margin_vertical white_color ${styles.main_container} justify-content-center`}
-    >
+    <div className={`row u__small_margin_vertical white_color ${styles.main_container} justify-content-center justify-content-xl-between`}>
       <div className="col-xl-5 offset-xl-1 col-11 u__no_padding">
         <h2 className="black_color_text">Páginas web & E-commerce</h2>
         <h1 className={`${styles.main_title} black_color_text`}>
@@ -53,16 +51,14 @@ const WebPage = ({}) => {
         <div className="row u__big_margin_vertical">
           <div className="col-xl-auto col-12 u__no_padding">
             <a href="https://forms.gle/jGBNpCnUEoURBPTC7" target="_blank">
-              <div
-                className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
-              >
+              <div className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}>
                 QUIERO UNA WEB GRATIS
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div className="col-xl-6 col-11">
+      <div className="col-xl-5 col-11">
         <div className="row u__no_mrgin justify-content-start">
           <div className="col-xl-6 col-12 u__no_padding">
             {benefits.slice(0, 7).map((benefit, i) => (
@@ -90,6 +86,9 @@ const WebPage = ({}) => {
           </div>
         </div>
       </div>
+      <style>{`
+
+      `}</style>
     </div>
   )
 }

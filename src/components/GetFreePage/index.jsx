@@ -12,7 +12,7 @@ const GetFreePage = ({}) => {
         </h4>
         <div className="row u__no_margin justify-content-center">
             <div className={`col-xl-auto col-12 u__big_margin_vertical ${styles.button} blue_light_color white_color_text u__main_box_shadow`}>
-                Quiero mi web gratis
+              QUIERO MI WEB GRATIS
             </div>
         </div>
       </div>

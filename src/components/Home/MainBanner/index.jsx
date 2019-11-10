@@ -76,13 +76,13 @@ const MainBanner = () => {
 }
 
 const CodeIcons = () => (
-  <div className="col-xl-12 u__no_padding">
+  <div className="col-xl-12 col-sm-11 u__no_padding">
     <div className="row u__no_margin align-items-center">
       <div
         data-tip="React js"
         data-scroll-hide={true}
         data-iscapture={false}
-        className={`col-xl-auto ${styles.main_image}`}
+        className={`col-xl-auto ${styles.main_image} react-icon`}
       >
         <img src={reactSVG} />
       </div>
@@ -119,6 +119,14 @@ const CodeIcons = () => (
         />
       </div>
     </div>
+    <style>{`
+      @media(min-width: 576px) and (max-width: 768px) {
+        .react-icon {
+          padding-left: 0;
+          width: calc(50px - 15px) !important;
+        }
+      }
+    `}</style>
   </div>
 )
 
