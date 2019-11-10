@@ -51,11 +51,13 @@ const WebPage = ({}) => {
         </h1>
         <div className="row u__big_margin_vertical">
           <div className="col-xl-auto col-12 u__no_padding">
-            <div
-              className={`blue_light_color white_color_text ${styles.button}`}
-            >
-              QUIERO UNA WEB GRATIS
-            </div>
+            <a href="https://forms.gle/jGBNpCnUEoURBPTC7" target="_blank">
+              <div
+                className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
+              >
+                QUIERO UNA WEB GRATIS
+              </div>
+            </a>
           </div>
         </div>
       </div>

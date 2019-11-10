@@ -39,10 +39,14 @@ const MainFreePage = () => {
           </h1>
         </div>
         <div className="col-xl-auto u__no_padding">
-          <div className={`${styles.button} accent_color_dark white_color_text u__main_box_shadow`}>
-            Rellena el formulario de registro
-          </div>
-          <small className="accent_color_text_dark" >Google Docs</small>
+          <a href="https://forms.gle/jGBNpCnUEoURBPTC7" target="_blanl">
+            <div
+              className={`${styles.button} accent_color_dark white_color_text u__main_box_shadow`}
+            >
+              Rellena el formulario de registro
+            </div>
+          </a>
+          <small className="accent_color_text_dark">Google Docs</small>
         </div>
       </div>
     </BackgroundImage>
