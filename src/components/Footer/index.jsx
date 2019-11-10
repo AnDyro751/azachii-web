@@ -1,7 +1,8 @@
 import React from "react"
 import styles from "./styles.module.css"
 import { Link } from "gatsby"
-import { FaInstagram, FaFacebookF, FaGithub } from "react-icons/fa"
+import { FaInstagram, FaFacebookF, FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa"
+
 const Footer = ({
   custom_class = "white_color",
   text_color = "black_color_text",
@@ -13,57 +14,73 @@ const Footer = ({
     <div className="col-xl-10 col-11 u__no_padding">
       <div className={`${styles.divider} ${divider}`}></div>
 
-      <div className="row u__no_margin align-items-xl-center align-items-start">
+      <div className="row u__no_margin align-items-center">
         <div className="col-xl-2 col-12 u__no_padding u__small_margin_vertical">
           <h1 className={`${text_color} ${styles.title}`}>Azachii</h1>
         </div>
-        <div className="col-xl-8 col-6 u__no_padding align-items-xl-start align-items-start">
+        <div className="col-xl-7 col-5 u__no_padding align-items-xl-start align-items-center">
           <div className="row u__no_margin justify-content-xl-center justify-content-start align-items-center">
             <Link
               to="/"
-              className={`col-xl-auto col-12 u__no_padding_in_mobile ${text_color} ${styles.item}`}
+              className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
+              style={{fontSize: '1.2em'}}
             >
               Servicios
             </Link>
             <Link
               to="/"
-              className={`col-xl-auto col-12 u__no_padding_in_mobile ${text_color} ${styles.item}`}
+              className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
+              style={{fontSize: '1.2em'}}
             >
               Contacto
             </Link>
             <Link
               to="/"
-              className={`col-xl-auto col-12 u__no_padding_in_mobile ${text_color} ${styles.item}`}
+              className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
+              style={{fontSize: '1.2em'}}
             >
               Equipo
             </Link>
             <Link
               to="/"
-              className={`col-xl-auto col-12 u__no_padding_in_mobile ${text_color} ${styles.item}`}
+              className={`col-xl-auto col-12 u__no_padding_in_tablet ${text_color} ${styles.item}`}
+              style={{fontSize: '1.2em'}}
             >
               Términos y Condiciones
             </Link>
           </div>
         </div>
-        <div className="col-xl-2 col-6 u__no_padding">
-          <div className="row u__no_margin justify-content-xl-end justify-content-end align-items-center">
+        <div className="col-xl col-7 u__no_padding">
+          <div className="row u__no_margin justify-content-end align-items-center">
             <div
               data-tip="Repositorios de Github"
               className="col-xl-auto col-auto u__no_padding u__pointer"
             >
-              <FaGithub className={text_color} />
+              <FaGithub className={text_color} size={20} />
             </div>
             <div
-              data-tip="Síguenos por facebook"
+              data-tip="Síguenos en Facebook"
               className="col-xl-auto col-auto u__pointer"
             >
-              <FaFacebookF className={text_color} />
+              <FaFacebookF size={20} className={text_color} />
             </div>
             <div
-              data-tip="Síguenos por instagram"
+              data-tip="Síguenos en Instagram"
+              className="col-xl-auto col-auto u__pointer u__no_padding"
+            >
+              <FaInstagram className={text_color} size={20} />
+            </div>
+            <div
+              data-tip="Síguenos en Twitter"
+              className="col-xl-auto col-auto u__pointer"
+            >
+              <FaTwitter className={text_color} size={20} />
+            </div>
+            <div
+              data-tip="Siguenos en LinkedIn"
               className="col-xl-auto col-auto u__no_padding u__pointer"
             >
-              <FaInstagram className={text_color} />
+              <FaLinkedinIn className={text_color} size={20} />
             </div>
           </div>
         </div>
