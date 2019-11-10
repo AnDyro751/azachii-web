@@ -10,7 +10,7 @@ import Promo from "../components/Promo/index"
 
 const FreePage = () => {
   const mixpanel = useMixpanel()
-  
+
   useEffect(() => {
     mixpanel.track("free_page")
   }, [])
@@ -20,7 +20,7 @@ const FreePage = () => {
       <How />
 
       <WebPage />
-      <Promo />
+      {/* <Promo /> */}
       <GetFreePage />
       <Contact />
     </Layout>

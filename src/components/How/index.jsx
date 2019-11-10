@@ -8,9 +8,9 @@ const How = ({}) => (
   <div
     className={`row u__no_margin justify-content-center ${styles.main}`}
   >
-    <div className="col-xl-11 u__no_padding">
-      <div className="row u__no_margin">
-        <div className="col-xl-12 u__no_padding">
+    <div className="col-xl-11 col-12 u__no_padding">
+      <div className="row u__no_margin justify-content-center">
+        <div className="col-xl-12 col-11 u__no_padding">
           <Fade left>
             <h1 className={`black_color_text ${styles.title}`}>
               ¿Cómo funciona?
@@ -52,10 +52,10 @@ const How = ({}) => (
 
 const HowItem = ({ children, step, text, more = null, title }) => (
   <Fade right>
-    <div className={`col-xl-4`}>
+    <div className={`col-xl-4 col-12`}>
       <div className={` ${styles.main_item} white_color u__main_box_shadow`}>
         <div className="row u__no_margin">
-          <div className="col-xl-12 u__no_padding">
+          <div className="col-xl-12 col-12 u__no_padding">
             <div className="row u__no_margin justify-content-between align-items-center">
               <div className="col-xl-auto col-auto u__no_padding">
                 <p className={`black_color_text ${styles.item_step}`}>
