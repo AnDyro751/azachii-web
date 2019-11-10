@@ -1,20 +1,21 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, { useEffect, useState } from "react"
 import styles from "./style.module.css"
-import { FaGift } from "react-icons/fa"
+import { FaBars } from "react-icons/fa"
 import classnames from "classnames"
-import HeadShake from "react-reveal/HeadShake"
+import Sidebar from './Sidebar';
+import { IoMdClose } from "react-icons/io";
 
 const Header = ({ siteTitle, light = false }) => {
   const [scrollX, setScroll] = useState(0)
   const [white, setWhite] = useState(light)
+  const [openSidebar, setOpenSidebar] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY)
       if (!light) {
-        if (window.scrollY >= 40) {
+        if (window.scrollY >= 20) {
           setWhite(true)
         } else {
           setWhite(false)
@@ -45,24 +46,50 @@ const Header = ({ siteTitle, light = false }) => {
   })
 
   return (
-    <header
-      className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}
-    >
-      <div className="col-11 col-xl-12 offset-xl-2 u__no_padding">
-        <div className="row u__no_margin align-items-center">
-          <div className="col-xl-auto col-auto u__no_padding">
-            <Link to="/">
-              <h1 className="black_color_text u__no_margin">
-                Aza<span className="red_color_text">C</span>hii
-              </h1>
-            </Link>
+    <>
+      <header className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}>
+        <div className="col-11 col-xl-12 offset-xl-2 u__no_padding">
+          <div className="row u__no_margin align-items-center justify-content-between justify-content-sm-start">
+            <div className="col-xl-auto col-auto u__no_padding">
+              <Link to="/">
+                <h1 className="black_color_text u__no_margin">
+                  Aza<span className="red_color_text">C</span>hii
+                </h1>
+              </Link>
+            </div>
+            <ItemHeader text="SERVICIOS" to="/" />
+            <ItemHeader onContact={getToContact} text="CONTACTO" />
+            <ItemHeader text="WEB GRATIS" featured={1} to="/free" />
+            {openSidebar ? (
+              <IoMdClose
+                className="only_on_mobile"
+                style={{float: 'right', cursor: 'pointer'}}
+                size={35}
+                onClick={() => {
+                  setOpenSidebar(false);
+                  document.documentElement.style.overflowY = 'auto';
+                }}
+                fill="rgb(24, 24, 24)" />
+            ) : (
+              <FaBars
+                className="only_on_mobile"
+                style={{float: 'right', cursor: 'pointer'}}
+                size={30}
+                onClick={() => {
+                  setOpenSidebar(true);
+                  document.documentElement.style.overflowY = 'hidden';
+                }}
+                fill="rgb(24, 24, 24)" />
+            )}
           </div>
-          <ItemHeader text="SERVICIOS" to="/" />
-          <ItemHeader onContact={getToContact} text="CONTACTO" />
-          <ItemHeader text="WEB GRATIS" featured={1} to="/free" />
         </div>
-      </div>
-    </header>
+      </header>
+      <Sidebar isOpen={openSidebar} moveToContact={() => {
+        setOpenSidebar(false);
+        document.documentElement.style.overflowY = 'auto';
+        getToContact();
+      }} />
+    </>
   )
 }
 const ItemHeader = ({ text, to = null, featured = 0, onContact }) =>

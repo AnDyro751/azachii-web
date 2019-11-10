@@ -202,18 +202,23 @@ a {
 
 /* REPONSIVE */
 @media screen and (max-width: 768px) {
-<<<<<<< HEAD
-    .u__no_padding_in_mobile {
-        padding: 0 !important;
-    }
-=======
-	.u__no_padding_in_mobile{
+	.u__no_padding_in_mobile {
 		padding: 0 !important;
 	}
->>>>>>> fcf8f8ea92e373f1ff34ee18a76a8694968ca833
 
-    .u__default_bg {
-        background-size: cover !important;
-    }
+	.u__default_bg {
+		background-size: cover !important;
+	}
+}
 
+@media screen and (min-width: 767px) {
+	.only_on_mobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.u__no_padding_in_tablet {
+		padding: 0 !important;
+	}
 }
