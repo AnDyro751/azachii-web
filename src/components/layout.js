@@ -15,12 +15,15 @@ import MessengerCustomerChat from "react-messenger-customer-chat-beta"
 // import firebase from "firebase/app"
 
 import Header from "./Header/index"
-
+import Footer from "./Footer/index"
+import ReactTooltip from 'react-tooltip'
 
 const Layout = ({
   children,
   title = "Desarrollo web y móvil",
   light = false,
+  footer_color = "white_color",
+  footer_text = "black_color_text",
 }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -56,6 +59,8 @@ const Layout = ({
         appId="641527279645625"
         minimized={true}
       />
+      <Footer custom_class={footer_color} text_color={footer_text} />
+      <ReactTooltip />
     </>
   )
 }

@@ -40,6 +40,7 @@
     "react-messenger-customer-chat-beta": "git+https://github.com/AnDyro751/react-messenger-customer-chat.git",
     "react-modal": "^3.11.1",
     "react-reveal": "^1.2.2",
+    "react-scroll": "^1.7.14",
     "react-tooltip": "^3.11.1",
     "styled-components": "^4.4.1"
   },

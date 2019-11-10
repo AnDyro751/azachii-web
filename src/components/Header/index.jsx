@@ -6,7 +6,7 @@ import classnames from "classnames"
 import Sidebar from "./Sidebar"
 import { IoMdClose } from "react-icons/io"
 import { HamburgerElastic } from "react-animated-burgers"
-
+import { Link as LS } from "react-scroll"
 const Header = ({ siteTitle, light = false }) => {
   const [scrollX, setScroll] = useState(0)
   const [white, setWhite] = useState(light)
@@ -30,13 +30,17 @@ const Header = ({ siteTitle, light = false }) => {
     let element = document.querySelector(".contact_form")
     if (element) {
       newScroll = element.getBoundingClientRect().y
-      let height = 16 * 5
-      window.scrollTo({
-        top: newScroll - height,
-        left: 0,
-        bottom: 0,
-        behavior: "smooth",
-      })
+      console.log(newScroll)
+      if (newScroll > 0) {
+        window.scrollTo(0, newScroll)
+      }
+      // let height = 16 * 5
+      // window.scrollTo({
+      //   top: newScroll,
+      //   left: 0,
+      //   bottom: 0,
+      //   behavior: "smooth",
+      // })
     }
   }
 
@@ -96,12 +100,22 @@ const ItemHeader = ({ text, to = null, featured = 0, onContact }) =>
       </div>
     </Link>
   ) : (
-    <div
-      onClick={onContact}
-      className="col-xl-auto col-auto d-none d-sm-block u__pointer"
+    <LS
+      activeClass="blue_light_color_text"
+      to="contact_form"
+      spy={true}
+      smooth={false}
+      offset={50}
+      duration={500}
+      // delay={1000}
     >
-      <h5 className="black_color_text u__no_margin">{text}&#160;&#160;</h5>
-    </div>
+      <div
+        onClick={onContact}
+        className="col-xl-auto col-auto d-none d-sm-block u__pointer"
+      >
+        <h5 className="black_color_text u__no_margin">{text}&#160;&#160;</h5>
+      </div>
+    </LS>
   )
 
 export default Header

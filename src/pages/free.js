@@ -15,7 +15,7 @@ const FreePage = () => {
     mixpanel.track("free_page")
   }, [])
   return (
-    <Layout>
+    <Layout footer_color="blue_light_color" footer_text="white_color_text">
       <MainFreePage />
       <How />
 
