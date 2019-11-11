@@ -202,6 +202,14 @@ a {
 	color: #3A3856;
 }
 
+.separator {
+	background-color: #181818;
+	height: 5px;
+	width: 50px;
+	margin: 1em 0;
+	border-radius: 10px;
+}
+
 /* REPONSIVE */
 @media screen and (max-width: 768px) {
 	.u__no_padding_in_mobile {

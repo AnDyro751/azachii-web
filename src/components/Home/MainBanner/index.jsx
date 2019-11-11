@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
@@ -10,7 +10,7 @@ import reactSVG from "../../../images/react.svg"
 import rails from "../../../images/rails-1.svg"
 import android from "../../../images/android.svg"
 import ios from "../../../images/apple.svg"
-import Fade from "react-reveal/Fade"
+import { Link } from "gatsby"
 
 const MainBanner = () => {
   const data = useStaticQuery(graphql`
@@ -45,11 +45,11 @@ const MainBanner = () => {
               </div>
 
               <div className="col-xl-12 u__no_padding d-none d-sm-block col-11 u__small_margin_vertical">
-                <button
-                  className={`black_color white_color_text u__main_box_shadow ${styles.button_services}`}
-                >
-                  SERVICIOS
-                </button>
+                <Link to="/services">
+                  <button className={`black_color white_color_text u__main_box_shadow ${styles.button_services}`}>
+                    SERVICIOS
+                  </button>
+                </Link>
               </div>
               <div className="col-11 u__no_padding d-block d-xl-none u__small_margin_bottom">
                 <div className={styles.responsive_button}>

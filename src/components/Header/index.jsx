@@ -6,7 +6,8 @@ import classnames from "classnames"
 import Sidebar from "./Sidebar"
 import { IoMdClose } from "react-icons/io"
 import { HamburgerElastic } from "react-animated-burgers"
-import { Link as LS } from "react-scroll"
+import { Link as LS } from "react-scroll";
+
 const Header = ({ siteTitle, light = false }) => {
   const [scrollX, setScroll] = useState(0)
   const [white, setWhite] = useState(light)
@@ -51,8 +52,7 @@ const Header = ({ siteTitle, light = false }) => {
   })
 
   const toggle = () => {
-    setOpenSidebar(!openSidebar)
-    document.documentElement.style.overflowY = "auto"
+    setOpenSidebar(!openSidebar);
   }
 
   return (
@@ -69,7 +69,7 @@ const Header = ({ siteTitle, light = false }) => {
                 </h1>
               </Link>
             </div>
-            <ItemHeader text="SERVICIOS" to="/" />
+            <ItemHeader text="SERVICIOS" to="/services" />
             <ItemHeader onContact={getToContact} text="CONTACTO" />
             <ItemHeader text="WEB GRATIS" featured={1} to="/free" />
             <HamburgerElastic
