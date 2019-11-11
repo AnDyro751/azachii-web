@@ -6,6 +6,7 @@ import { useMixpanel } from "gatsby-plugin-mixpanel"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import CollaborationTeam from "../components/CollaborationTeam"
+import Value from "../components/Value/index"
 
 const ServicesPage = () => {
   const mixpanel = useMixpanel()
@@ -37,73 +38,30 @@ const ServicesPage = () => {
           fluid={data.placeholderImage.childImageSharp.fluid}
         >
           <CollaborationTeam />
-          <div className="row u__no_margin justify-content-center service_step">
-            <div className="col-11 col-lg-10 u__no_padding">
-              <div className="row u__no_margin">
-                <div className="col-md-6 u__no_padding">
-                  <div className="row u__no_margin">
-                    <div className="col-md-11 u__no_padding">
-                      <h2 className="service_step_title black_color_text">
-                        Siempre aportamos valor
-                      </h2>
-                      <p className="service_step_description black_color_text">
-                        Comenzamos haciendo preguntas estrategicas y haciendo
-                        una lluvia de ideas contigo. Despues armamos un plan
-                        para llevar a cabo tu proyecto, ahorrando tiempo y
-                        dinero.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 u__no_padding"></div>
-              </div>
-            </div>
-          </div>
+          <Value
+            title="Siempre aportamos valor"
+            text="Comenzamos haciendo preguntas estrategicas y haciendo una lluvia
+          de ideas contigo. Despues armamos un plan para llevar a cabo tu
+          proyecto, ahorrando tiempo y dinero."
+          />
         </BackgroundImage>
 
-        <div className="row u__no_margin justify-content-center service_step service_step_grey">
-          <div className="col-11 col-lg-10 u__no_padding">
-            <div className="row u__no_margin">
-              <div className="col-md-6 u__no_padding"></div>
-              <div className="col-md-6 u__no_padding">
-                <div className="row u__no_margin justify-content-end">
-                  <div className="col-md-11 u__no_padding">
-                    <h2 className="service_step_title black_color_text">
-                      Diseñado para personas
-                    </h2>
-                    <p className="service_step_description black_color_text">
-                      Cualquiera puede crear una aplicación. Nosotros hacemos
-                      más. Al diseñar pensando en los usuarios, contemplamos sus
-                      necesidades y construimos algo que amarán usar.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row u__no_margin justify-content-center service_step">
-          <div className="col-11 col-lg-10 u__no_padding">
-            <div className="row u__no_margin">
-              <div className="col-md-6 u__no_padding">
-                <div className="row u__no_margin">
-                  <div className="col-md-11 u__no_padding">
-                    <h2 className="service_step_title black_color_text">
-                      Nuestro trabajo nunca termina
-                    </h2>
-                    <p className="service_step_description black_color_text">
-                      El lanzamiento del producto no es el fin de la aventura.
-                      Recopilamos la información y comportamiento de los
-                      usuarios para comprender que funciona y que no. Así
-                      podemos seguir mejorando el producto.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 u__no_padding"></div>
-            </div>
-          </div>
-        </div>
+        <Value
+          image="design"
+          left={false}
+          title="Diseñado para personas"
+          text="Cualquiera puede crear una aplicación. Nosotros hacemos
+          más. Al diseñar pensando en los usuarios, contemplamos sus
+          necesidades y construimos algo que amarán usar."
+        />
+        <Value
+          image="work"
+          title="Nuestro trabajo nunca termina"
+          text="El lanzamiento del producto no es el fin de la aventura.
+          Recopilamos la información y comportamiento de los
+          usuarios para comprender que funciona y que no. Así
+          podemos seguir mejorando el producto."
+        />
         <Contact />
         <style>{`
           .service_step_grey {
@@ -133,6 +91,11 @@ const ServicesPage = () => {
             }
             .service_step_description {
               font-size: 1.3em;
+            }
+          }
+          @media screen and (max-width: 768px) {
+            .service_step{
+              padding: 1em 0 !important;
             }
           }
         `}</style>
