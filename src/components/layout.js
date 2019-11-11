@@ -11,12 +11,13 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 import { Helmet } from "react-helmet"
-import MessengerCustomerChat from "react-messenger-customer-chat-beta"
+// import MessengerCustomerChat from "react-messenger-customer-chat-beta"
 // import firebase from "firebase/app"
 
 import Header from "./Header/index"
 import Footer from "./Footer/index"
 import ReactTooltip from 'react-tooltip'
+import WhatsAppCustomer from './WhatsAppCustomer/index';
 
 const Layout = ({
   children,
@@ -53,12 +54,13 @@ const Layout = ({
         <main>{children}</main>
         {/* <footer>© {new Date().getFullYear()}, Built with</footer> */}
       </div>
-      <MessengerCustomerChat
+      <WhatsAppCustomer />
+      {/* <MessengerCustomerChat
         pageId="329666941258229"
         version="5.0"
         appId="641527279645625"
         minimized={true}
-      />
+      /> */}
       <Footer custom_class={footer_color} text_color={footer_text} />
       <ReactTooltip />
     </>

@@ -132,7 +132,7 @@ const FormContact = () => {
                 autoComplete="subject"
                 label="Asunto"
                 type="text"
-                placeholder="Quiero mi página"
+                placeholder="Tu mensaje..."
                 onChange={handleChange}
                 name="subject"
                 minLength={4}

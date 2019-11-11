@@ -2,8 +2,11 @@ import React, { useState } from "react"
 import styles from "./styles.module.css"
 import { useFirebase } from "gatsby-plugin-firebase"
 import classnames from "classnames"
+import { useMixpanel } from 'gatsby-plugin-mixpanel';
 
 const WebPage = ({}) => {
+  const mixpanel = useMixpanel()
+
   const [benefits, setBenefits] = useState([])
   const [loading, setLoading] = useState(true)
   const [hidden_more, setHidden] = useState(true)
@@ -22,18 +25,7 @@ const WebPage = ({}) => {
         })
         setBenefits(newBenefits)
       })
-    // console.log("a", a)
-    // .onSnapshot(data => {
-    //   console.log(data.docs)
-    //   // let newBenefits = []
-    //   // data.docs.forEach(doc => {
-    //   //   newBenefits.push({ ...doc.data(), id: doc.id })
-    //   // })
-    //   // setBenefits(newBenefits)
-    //   // setLoading(false)
-    //   // console.log("DATA", data.docs)
-    // })
-    // console.log(firebase, "firebase")
+
   })
 
   const class_more = classnames({
@@ -42,7 +34,9 @@ const WebPage = ({}) => {
   })
 
   return (
-    <div className={`row u__small_margin_vertical white_color ${styles.main_container} justify-content-center justify-content-xl-between`}>
+    <div
+      className={`row u__small_margin_vertical white_color ${styles.main_container} justify-content-center justify-content-xl-between`}
+    >
       <div className="col-xl-5 offset-xl-1 col-11 u__no_padding">
         <h2 className="black_color_text">Páginas web & E-commerce</h2>
         <h1 className={`${styles.main_title} black_color_text`}>
@@ -50,11 +44,18 @@ const WebPage = ({}) => {
         </h1>
         <div className="row u__big_margin_vertical">
           <div className="col-xl-auto col-12 u__no_padding">
-            <a href="https://forms.gle/jGBNpCnUEoURBPTC7" target="_blank">
-              <div className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}>
-                QUIERO UNA WEB GRATIS
-              </div>
-            </a>
+            <div
+              onClick={() => {
+                window.open("https://forms.gle/jGBNpCnUEoURBPTC7", "_blank")
+                mixpanel.track("go_to_free_form")
+                if (window.fbq) {
+                  window.fbq("track", "CompleteRegistration")
+                }
+              }}
+              className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
+            >
+              QUIERO UNA WEB GRATIS
+            </div>
           </div>
         </div>
       </div>

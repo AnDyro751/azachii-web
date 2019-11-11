@@ -17,6 +17,7 @@ const MainFreePage = () => {
       }
     }
   `)
+
   return (
     <div
       className={`row u__no_margin justify-content-center align-items-center align-content-center ${styles.main}`}
@@ -27,13 +28,17 @@ const MainFreePage = () => {
         </h1>
         <div className="row u__no_margin">
           <div className="col-xl-auto u__no_padding">
-            <a href="https://forms.gle/jGBNpCnUEoURBPTC7" target="_blanl">
-              <div
-                className={`${styles.button} blue_light_color white_color_text u__main_box_shadow`}
-              >
-                Rellena el formulario de registro
-              </div>
-            </a>
+            <div
+              onClick={() => {
+                if (window.fbq) {
+                  window.fbq("track", "CompleteRegistration")
+                }
+                window.open("https://forms.gle/jGBNpCnUEoURBPTC7","_blank")
+              }}
+              className={`${styles.button} blue_light_color white_color_text u__main_box_shadow`}
+            >
+              Rellena el formulario de registro
+            </div>
             <small className="black_color_text">Google Docs</small>
           </div>
         </div>
