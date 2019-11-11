@@ -1,6 +1,6 @@
 .service_page_title {
-    font-size: 5em;
-    line-height: 1.2em;
+    font-size: 4.5em;
+    line-height: 1.5em;
 }
 
 .service_page_message {
@@ -9,6 +9,21 @@
     margin: 1em 0 !important;
 }
 
+.collaboration {
+    background: #3c4ea854;
+    padding: 0 .1em;
+    border-radius: 4px;
+}
+
+.image{
+    border-radius: 10px;
+    transform: rotate3d(.5, .866, 0, 16deg) rotateZ(-2deg);
+}
+.image img {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    border-radius: 10px;
+    transition: all .5s;
+}
 
 @media screen and (max-width: 1024px) {
     .service_page_message {

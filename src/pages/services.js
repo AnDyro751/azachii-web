@@ -13,7 +13,7 @@ const ServicesPage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "services/background.png" }) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -30,7 +30,8 @@ const ServicesPage = () => {
         <SEO title="Servicios" />
         <BackgroundImage
           style={{
-            backgroundSize: "70%",
+            backgroundSize: "100%",
+            backgroundAttachment: "fixed",
           }}
           // className={styles.bg}
           fluid={data.placeholderImage.childImageSharp.fluid}
@@ -42,10 +43,10 @@ const ServicesPage = () => {
                 <div className="col-md-6 u__no_padding">
                   <div className="row u__no_margin">
                     <div className="col-md-11 u__no_padding">
-                      <h2 className="service_step_title">
+                      <h2 className="service_step_title black_color_text">
                         Siempre aportamos valor
                       </h2>
-                      <p className="service_step_description">
+                      <p className="service_step_description black_color_text">
                         Comenzamos haciendo preguntas estrategicas y haciendo
                         una lluvia de ideas contigo. Despues armamos un plan
                         para llevar a cabo tu proyecto, ahorrando tiempo y
@@ -67,10 +68,10 @@ const ServicesPage = () => {
               <div className="col-md-6 u__no_padding">
                 <div className="row u__no_margin justify-content-end">
                   <div className="col-md-11 u__no_padding">
-                    <h2 className="service_step_title">
+                    <h2 className="service_step_title black_color_text">
                       Diseñado para personas
                     </h2>
-                    <p className="service_step_description">
+                    <p className="service_step_description black_color_text">
                       Cualquiera puede crear una aplicación. Nosotros hacemos
                       más. Al diseñar pensando en los usuarios, contemplamos sus
                       necesidades y construimos algo que amarán usar.
@@ -87,10 +88,10 @@ const ServicesPage = () => {
               <div className="col-md-6 u__no_padding">
                 <div className="row u__no_margin">
                   <div className="col-md-11 u__no_padding">
-                    <h2 className="service_step_title">
+                    <h2 className="service_step_title black_color_text">
                       Nuestro trabajo nunca termina
                     </h2>
-                    <p className="service_step_description">
+                    <p className="service_step_description black_color_text">
                       El lanzamiento del producto no es el fin de la aventura.
                       Recopilamos la información y comportamiento de los
                       usuarios para comprender que funciona y que no. Así
@@ -114,12 +115,13 @@ const ServicesPage = () => {
             padding: 3em 0;
           }
           .service_step_title {
+            font-family: 'Playfair Display', serif; 
             font-size: 2.5em;
             line-height: 1.2em;
             margin-bottom: 1.5em !important;
           }
           .service_step_description {
-            font-size: 2em;
+            font-size: 1.2em;
           }
           @media screen and (max-width: 1024px) {
             .service_page_title {
