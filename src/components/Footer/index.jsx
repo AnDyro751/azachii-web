@@ -21,30 +21,30 @@ const Footer = ({
         <div className="col-xl-7 col-5 u__no_padding align-items-xl-start align-items-center">
           <div className="row u__no_margin justify-content-xl-center justify-content-start align-items-center">
             <Link
-              to="/"
+              to="/services"
               className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
-              style={{fontSize: '1.2em'}}
+              style={{fontSize: '1.1em'}}
             >
               Servicios
             </Link>
             <Link
               to="/"
               className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
-              style={{fontSize: '1.2em'}}
+              style={{fontSize: '1.1em'}}
             >
               Contacto
             </Link>
             <Link
               to="/"
               className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
-              style={{fontSize: '1.2em'}}
+              style={{fontSize: '1.1em'}}
             >
               Equipo
             </Link>
             <Link
               to="/"
               className={`col-xl-auto col-12 u__no_padding_in_tablet ${text_color} ${styles.item}`}
-              style={{fontSize: '1.2em'}}
+              style={{fontSize: '1.1em'}}
             >
               Términos y Condiciones
             </Link>

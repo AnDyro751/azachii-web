@@ -43,7 +43,6 @@ const Layout = ({
         defer={false}
       />
       <Header light={light} />
-
       <div
         style={{
           margin: `0 auto`,
