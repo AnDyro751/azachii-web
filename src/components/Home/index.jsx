@@ -6,7 +6,6 @@ import { useMixpanel } from "gatsby-plugin-mixpanel"
 import SimplePayments from '../SimplePayments/index';
 import GetFreePage from '../GetFreePage/index';
 import Contact from '../Contact/index';
-
 const MainHome = () => {
   const mixpanel = useMixpanel();
 

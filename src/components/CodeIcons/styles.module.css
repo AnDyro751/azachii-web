@@ -1,0 +1,20 @@
+.main_image {
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    filter: grayscale(1) brightness(0.9);
+}
+
+.main_image:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+.main_image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 30px;
+    height: 30px;
+    transition: all .3s;
+}

@@ -4,13 +4,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import styles from "./style.module.css"
 import classnames from "classnames"
-import firebaseSVG from "../../../images/firebase-1.svg"
-import cloud from "../../../images/google-cloud.svg"
-import reactSVG from "../../../images/react.svg"
-import rails from "../../../images/rails-1.svg"
-import android from "../../../images/android.svg"
-import ios from "../../../images/apple.svg"
+
 import { Link } from "gatsby"
+import CodeIcons from '../../CodeIcons/index';
 
 const MainBanner = () => {
   const data = useStaticQuery(graphql`
@@ -75,60 +71,7 @@ const MainBanner = () => {
   )
 }
 
-const CodeIcons = () => (
-  <div className="col-xl-12 col-sm-11 u__no_padding">
-    <div className="row u__no_margin align-items-center">
-      <div
-        data-tip="React js"
-        data-scroll-hide={true}
-        data-iscapture={false}
-        className={`col-xl-auto ${styles.main_image} react-icon`}
-      >
-        <img src={reactSVG} />
-      </div>
-      <div data-tip="Firebase" className={`col-xl-auto ${styles.main_image}`}>
-        <img src={firebaseSVG} />
-      </div>
-      <div
-        data-tip="Google Cloud"
-        className={`col-xl-auto ${styles.main_image}`}
-      >
-        <img src={cloud} />
-      </div>
-      <div
-        data-tip="Ruby on Rails"
-        className={`col-xl-auto ${styles.main_image}`}
-      >
-        <img src={rails} />
-      </div>
-      <div
-        data-tip="React Native Android Apps"
-        className={`col-xl-auto ${styles.main_image}`}
-      >
-        <img src={android} />
-      </div>
-      <div
-        data-tip="React Native IOS Apps"
-        className={`col-xl-auto ${styles.main_image}`}
-      >
-        <img
-          src={ios}
-          style={{
-            height: "30px",
-          }}
-        />
-      </div>
-    </div>
-    <style>{`
-      @media(min-width: 576px) and (max-width: 768px) {
-        .react-icon {
-          padding-left: 0;
-          width: calc(50px - 15px) !important;
-        }
-      }
-    `}</style>
-  </div>
-)
+
 
 const StyledBackgroundSection = styled(MainBanner)`
   width: 100%;

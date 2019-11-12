@@ -2,6 +2,9 @@ import React from "react"
 import styles from "./styles.module.css"
 import { FaAndroid, FaApple, FaShoppingBag } from "react-icons/fa"
 import { AiFillShopping } from "react-icons/ai"
+import MainBanner from "../Home/MainBanner"
+import CodeIcons from "../CodeIcons/index"
+
 const OurProducts = () => (
   <div className="row u__big_margin_vertical justify-content-center">
     <div className="col-xl-11 col-12 u__no_padding">
@@ -14,7 +17,10 @@ const OurProducts = () => (
           </h1>
         </div>
         {/* <div className="col-xl-12 u__no_padding"> */}
-        <ItemService title="Tienda en línea" bgColor="#3a4da7">
+        <div className="row u__no_margin justify-content-center">
+          <CodeIcons big />
+        </div>
+        {/* <ItemService title="Tienda en línea" bgColor="#3a4da7">
           <AiFillShopping color="#181818" size={50} />
         </ItemService>
         <ItemService title="Android App" bgColor="#388e3c">
@@ -22,7 +28,7 @@ const OurProducts = () => (
         </ItemService>
         <ItemService title="iOS App" bgColor="#181818">
           <FaApple color="#181818" size={50} />
-        </ItemService>
+        </ItemService> */}
       </div>
       {/* </div> */}
     </div>
@@ -35,7 +41,7 @@ const ItemService = ({ title, children, bgColor }) => (
       //   style={{
       //     backgroundColor: bgColor,
       //   }}
-      className={` ${styles.main_service} white_color u__main_box_shadow`}
+      className={` ${styles.main_service} white_color`}
     >
       <div className="row u__no_margin">
         <div className="col-xl-12 u__no_padding">
