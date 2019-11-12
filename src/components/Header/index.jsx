@@ -31,7 +31,6 @@ const Header = ({ siteTitle, light = false }) => {
     let element = document.querySelector(".contact_form")
     if (element) {
       newScroll = element.getBoundingClientRect().y
-      console.log(newScroll)
       if (newScroll > 0) {
         window.scrollTo(0, newScroll)
       }

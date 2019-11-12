@@ -79,8 +79,6 @@ const DATA = {
 }
 const ItemPrice = ({ pricing, currentLapse }) => {
   // const firebase = React.useContext(FirebaseContext)
-
-  // console.log(pricing)
   return (
     <div className="col-xl-4 col-12 u__small_margin_bottom">
       <div className="row u__no_margin">
