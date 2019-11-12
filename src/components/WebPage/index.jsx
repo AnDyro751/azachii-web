@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styles from "./styles.module.css"
 import { useFirebase } from "gatsby-plugin-firebase"
 import classnames from "classnames"
-import { useMixpanel } from 'gatsby-plugin-mixpanel';
+import { useMixpanel } from "gatsby-plugin-mixpanel"
 
 const WebPage = ({}) => {
   const mixpanel = useMixpanel()
@@ -11,21 +11,14 @@ const WebPage = ({}) => {
   const [loading, setLoading] = useState(true)
   const [hidden_more, setHidden] = useState(true)
   useFirebase(firebase => {
-    firebase.firestore().settings({
-      cacheSizeBytes: firebase.firestore.CACHE_SIZE_UNLIMITED,
-    })
     const todoRef = firebase.firestore().collection("benefits")
-    todoRef
-      .orderBy("name", "asc")
-      // .where("kind", "array-contains", "web")
-      .onSnapshot(snapshot => {
-        let newBenefits = []
-        snapshot.docs.forEach(doc => {
-          newBenefits.push({ ...doc.data(), id: doc.id })
-        })
-        setBenefits(newBenefits)
+    todoRef.orderBy("name", "asc").onSnapshot(snapshot => {
+      let newBenefits = []
+      snapshot.docs.forEach(doc => {
+        newBenefits.push({ ...doc.data(), id: doc.id })
       })
-
+      setBenefits(newBenefits)
+    })
   })
 
   const class_more = classnames({

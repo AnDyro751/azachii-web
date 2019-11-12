@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styles from "./styles.module.css"
 import SwitchPrice from "../SwitchPrice/index"
+import MainPriceItems from "../MainPriceItems/index"
 const MainPricing = () => {
   const [defaultLapse, setDefault] = useState("month")
   return (
@@ -38,6 +39,11 @@ const MainPricing = () => {
             </div>
           )}
         </div>
+      </div>
+      <div
+        className={`col-xl-12 u__no_padding blue_light_color ${styles.main_items}`}
+      >
+        <MainPriceItems currentLapse={defaultLapse} />
       </div>
     </div>
   )
