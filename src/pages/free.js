@@ -17,7 +17,7 @@ const FreePage = () => {
   }, [])
   return (
     <Layout footer_color="blue_light_color" footer_text="white_color_text">
-      <SEO title="Servicios" />
+      <SEO title="Página web gratis" />
 
       <MainFreePage />
       <How />
