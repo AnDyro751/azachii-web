@@ -1,7 +1,13 @@
 import React from "react"
 import styles from "./styles.module.css"
 import { Link } from "gatsby"
-import { FaInstagram, FaFacebookF, FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa"
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaGithub,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa"
 
 const Footer = ({
   custom_class = "white_color",
@@ -23,28 +29,28 @@ const Footer = ({
             <Link
               to="/services"
               className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
-              style={{fontSize: '1.1em'}}
+              style={{ fontSize: "1.1em" }}
             >
               Servicios
             </Link>
             <Link
               to="/"
               className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
-              style={{fontSize: '1.1em'}}
+              style={{ fontSize: "1.1em" }}
             >
               Contacto
             </Link>
             <Link
               to="/"
               className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
-              style={{fontSize: '1.1em'}}
+              style={{ fontSize: "1.1em" }}
             >
               Equipo
             </Link>
             <Link
               to="/"
               className={`col-xl-auto col-12 u__no_padding_in_tablet ${text_color} ${styles.item}`}
-              style={{fontSize: '1.1em'}}
+              style={{ fontSize: "1.1em" }}
             >
               Términos y Condiciones
             </Link>
@@ -54,33 +60,27 @@ const Footer = ({
           <div className="row u__no_margin justify-content-end align-items-center">
             <div
               data-tip="Repositorios de Github"
-              className="col-xl-auto col-auto u__no_padding u__pointer"
+              className="col-xl-auto col-auto u__pointer"
             >
               <FaGithub className={text_color} size={20} />
             </div>
             <div
               data-tip="Síguenos en Facebook"
-              className="col-xl-auto col-auto u__pointer"
+              className="col-xl-auto col-auto u__pointer u__no_padding"
             >
               <FaFacebookF size={20} className={text_color} />
             </div>
             <div
               data-tip="Síguenos en Instagram"
-              className="col-xl-auto col-auto u__pointer u__no_padding"
+              className="col-xl-auto col-auto u__pointer "
             >
               <FaInstagram className={text_color} size={20} />
             </div>
             <div
               data-tip="Síguenos en Twitter"
-              className="col-xl-auto col-auto u__pointer"
-            >
-              <FaTwitter className={text_color} size={20} />
-            </div>
-            <div
-              data-tip="Siguenos en LinkedIn"
               className="col-xl-auto col-auto u__no_padding u__pointer"
             >
-              <FaLinkedinIn className={text_color} size={20} />
+              <FaTwitter className={text_color} size={20} />
             </div>
           </div>
         </div>

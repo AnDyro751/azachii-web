@@ -7,6 +7,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import CollaborationTeam from "../components/CollaborationTeam"
 import Value from "../components/Value/index"
+import OurProducts from "../components/OurProducts/index"
+import OurServices from "../components/OurServices/index"
 
 const ServicesPage = () => {
   const mixpanel = useMixpanel()
@@ -38,14 +40,15 @@ const ServicesPage = () => {
           fluid={data.placeholderImage.childImageSharp.fluid}
         >
           <CollaborationTeam />
-          <Value
-            title="Siempre aportamos valor"
-            text="Comenzamos haciendo preguntas estrategicas y haciendo una lluvia
+          <OurProducts />
+          <OurServices />
+        </BackgroundImage>
+        <Value
+          title="Siempre aportamos valor"
+          text="Comenzamos haciendo preguntas estrategicas y haciendo una lluvia
           de ideas contigo. Despues armamos un plan para llevar a cabo tu
           proyecto, ahorrando tiempo y dinero."
-          />
-        </BackgroundImage>
-
+        />
         <Value
           image="design"
           left={false}
