@@ -3,7 +3,7 @@ import styles from "./styles.module.css"
 import SwitchPrice from "../SwitchPrice/index"
 import MainPriceItems from "../MainPriceItems/index"
 const MainPricing = () => {
-  const [defaultLapse, setDefault] = useState("month")
+  const [defaultLapse, setDefault] = useState("anual")
   return (
     <div
       className={`row u__no_margin justify-content-center align-items-center white_color ${styles.main}`}

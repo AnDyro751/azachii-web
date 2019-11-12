@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./styles.module.css"
 import { FaCheck } from "react-icons/fa"
-import { FirebaseContext } from "gatsby-plugin-firebase"
+// import { FirebaseContext } from "gatsby-plugin-firebase"
 
 const DATA = {
   analytics: { name: "Google Analytics" },
@@ -77,8 +77,8 @@ const DATA = {
   },
   widgets: { name: "Widgets premium" },
 }
-const ItemPrice = ({ pricing }) => {
-  const firebase = React.useContext(FirebaseContext)
+const ItemPrice = ({ pricing, currentLapse }) => {
+  // const firebase = React.useContext(FirebaseContext)
 
   // console.log(pricing)
   return (
@@ -93,7 +93,11 @@ const ItemPrice = ({ pricing }) => {
                 {pricing.name}
               </h1>
               <h3 className={`${styles.pricing} black_color_text`}>
-                {pricing.pricing === 0 ? "GRATIS" : `${pricing.pricing}`}
+                {pricing.pricing === 0
+                  ? "GRATIS"
+                  : currentLapse === "anual"
+                  ? ((pricing.pricing / 100) * 80)
+                  : pricing.pricing}
                 {pricing.pricing > 0 && <span>&#160;USD</span>}
                 {/* {pricing.pricing === 0 && (
                   <button

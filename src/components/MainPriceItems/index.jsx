@@ -23,7 +23,7 @@ const MainPriceItems = ({ currentLapse = "month" }) => {
   return (
     <div className="row u__no_margin justify-content-center">
       {pricings.map((pricing, i) => (
-        <ItemPrice key={i} pricing={pricing} />
+        <ItemPrice currentLapse={currentLapse} key={i} pricing={pricing} />
       ))}
     </div>
   )
