@@ -89,11 +89,11 @@ const ServicesPage = () => {
               font-size: 2em;
             }
             .service_step_title {
-              font-size: 1.7em;
+              font-size: 1.3em;
               margin-bottom: 1.2em !important;
             }
             .service_step_description {
-              font-size: 1.3em;
+              font-size: 1em;
             }
           }
           @media screen and (max-width: 768px) {

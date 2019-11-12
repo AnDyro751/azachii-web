@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.6.1",
     "bootstrap-4-grid": "^3.1.1",
     "classnames": "^2.2.6",
     "firebase": "^7.2.3",

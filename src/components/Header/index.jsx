@@ -70,7 +70,8 @@ const Header = ({ siteTitle, light = false }) => {
               </Link>
             </div>
             <ItemHeader text="SERVICIOS" to="/services" />
-            <ItemHeader onContact={getToContact} text="CONTACTO" />
+            <ItemHeader text="PRECIOS" to="/pricing" />
+            {/* <ItemHeader onContact={getToContact} text="CONTACTO" /> */}
             <ItemHeader text="WEB GRATIS" featured={1} to="/free" />
             <HamburgerElastic
               buttonWidth={25}
