@@ -8,9 +8,9 @@ const MainPricing = () => {
     <div
       className={`row u__no_margin justify-content-center align-items-center white_color ${styles.main}`}
     >
-      <div className="col-xl-12 u__no_padding">
+      <div className="col-xl-12 col-11 u__no_padding">
         <div className="row u__no_margin justify-content-center">
-          <div className="col-xl-10 u__no_padding">
+          <div className="col-xl-10 col-12 u__no_padding">
             <h1
               className={`black_color_text u__text_center ${styles.main_title}`}
             >
@@ -27,12 +27,12 @@ const MainPricing = () => {
             />
           </div>
           {defaultLapse === "month" && (
-            <div className="col-xl-auto">
+            <div className="col-xl-auto col-auto">
               <p
                 onClick={() => {
                   setDefault("anual")
                 }}
-                className={`${styles.offert} blue_light_color white_color_text`}
+                className={`${styles.offert} blue_light_color white_color_text u__text_center`}
               >
                 Ahorra hasta un 20% con el plan anual
               </p>

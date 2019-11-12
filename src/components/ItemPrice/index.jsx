@@ -82,13 +82,13 @@ const ItemPrice = ({ pricing, currentLapse }) => {
 
   // console.log(pricing)
   return (
-    <div className="col-xl-4">
+    <div className="col-xl-4 col-12 u__small_margin_bottom">
       <div className="row u__no_margin">
-        <div className="col-xl-12 u__no_padding">
+        <div className="col-xl-12 col-12 u__no_padding">
           <div
             className={`white_color ${styles.main_item} row u__no_margin justify-content-center`}
           >
-            <div className="col-xl-12 u__no_padding">
+            <div className="col-xl-12 col-12 u__no_padding">
               <h1 className={`main_color_text ${styles.main_title}`}>
                 {pricing.name}
               </h1>
@@ -128,14 +128,14 @@ const ItemPrice = ({ pricing, currentLapse }) => {
                 {pricing.description}
               </h4>
             </div>
-            <div className="col-xl-12">
+            <div className="col-xl-12 col-12">
               <button
                 className={`${styles.button} blue_light_color u__main_box_shadow`}
               >
                 Seleccionar {pricing.name}
               </button>
             </div>
-            <div className="col-xl-12 u__no_padding">
+            <div className="col-xl-12 u__no_padding col-12">
               <Benefits benefits={pricing.benefits} />
             </div>
           </div>
@@ -160,10 +160,10 @@ const Benefits = ({ benefits }) => {
 
 const BenefitItem = ({ benefit }) => (
   <div className="row u__small_margin_bottom align-items-start">
-    <div className="col-xl-2 u__no_padding u__text_center">
+    <div className="col-xl-2 col-2 u__no_padding u__text_center">
       <FaCheck color="#2e7d32" size={20} />
     </div>
-    <div className="col-xl-10">
+    <div className="col-xl-10 col-10">
       <p className={`black_color_text ${styles.main_benefit}`}>
         {benefit.name}
       </p>

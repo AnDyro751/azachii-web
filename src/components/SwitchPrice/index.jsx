@@ -4,14 +4,13 @@ const SwitchPrice = ({ defaultLapse, handlePrice }) => {
   const [currentItem, setCurrent] = useState(defaultLapse)
 
   useEffect(() => {
-    console.log("CHANGE", defaultLapse)
     setCurrent(defaultLapse)
   }, [defaultLapse])
   return (
     <div className="row u__no_margin justify-content-center">
-      <div className="col-xl-8 u__no_padding">
+      <div className="col-xl-8 col-11 u__no_padding">
         <div className="row u__small_margin_vertical justify-content-center">
-          <div className="col-xl-auto">
+          <div className="col-xl-auto col-auto">
             <SwitchItem
               handleChange={() => {
                 handlePrice("month")
@@ -22,7 +21,7 @@ const SwitchPrice = ({ defaultLapse, handlePrice }) => {
               id="month"
             />
           </div>
-          <div className="col-xl-auto">
+          <div className="col-xl-auto col-auto">
             <SwitchItem
               handleChange={() => {
                 handlePrice("anual")
