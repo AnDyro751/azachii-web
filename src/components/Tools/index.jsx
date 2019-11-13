@@ -82,7 +82,7 @@ const Tools = ({ limit = 3, showDescription = true }) => {
             </div>
             {process.env.NODE_ENV === "development" && (
               <div className="row u__big_margin_vertical justify-content-center">
-                <div className="col-xl-2 u__no_padding">
+                <div className="col-xl-2 col-11 u__no_padding">
                   <button
                     className={`blue_light_color u__main_box_shadow white_color_text ${styles.button}`}
                   >
@@ -99,23 +99,23 @@ const Tools = ({ limit = 3, showDescription = true }) => {
 }
 
 const ToolItem = ({ tool: { image_url, name, description } }) => (
-  <div className="col-xl-4 u__no_padding">
+  <div className="col-xl-4 col-12 u__no_padding">
     <div
       className={`row u__no_margin justify-content-center ${styles.main_item}`}
     >
-      <div className="col-xl-2 u__no_padding">
+      <div className="col-xl-2 col-2 u__no_padding">
         <LazyLoadImage
           className={`${styles.item_image} u__main_box_shadow`}
           src={image_url}
         />
       </div>
-      <div className="col-xl-9 offset-xl-1 u__no_padding">
+      <div className="col-xl-9 col-9 offset-1 offset-xl-1 u__no_padding">
         <h1 className={`black_color_text u__normal_font ${styles.title_item}`}>
           {name}
         </h1>
         <div className="separator"></div>
 
-        <p className={` black_color_text`}>{description}</p>
+        <p className={`gray_color_text`}>{description}</p>
       </div>
       {/* <div className="col-xl-12 u__no_padding">
         <div className="row u__no_margin align-items-center">
