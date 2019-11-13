@@ -31,18 +31,9 @@ const ServicesPage = () => {
     <Layout footer_color="blue_light_color" footer_text="white_color_text">
       <>
         <SEO title="Servicios" />
-        <BackgroundImage
-          style={{
-            backgroundSize: "100%",
-            backgroundAttachment: "fixed",
-          }}
-          // className={styles.bg}
-          fluid={data.placeholderImage.childImageSharp.fluid}
-        >
-          <CollaborationTeam />
-          <OurProducts />
-          <OurServices />
-        </BackgroundImage>
+        <CollaborationTeam />
+        <OurProducts />
+        <OurServices />
         <Value
           title="Siempre aportamos valor"
           text="Comenzamos haciendo preguntas estrategicas y haciendo una lluvia

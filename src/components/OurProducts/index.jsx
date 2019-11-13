@@ -17,7 +17,7 @@ const OurProducts = () => (
           </h1>
         </div>
         {/* <div className="col-xl-12 u__no_padding"> */}
-        <div className="row u__no_margin justify-content-center">
+        <div className="col-xl-12 u__no_padding">
           <CodeIcons big />
         </div>
         {/* <ItemService title="Tienda en línea" bgColor="#3a4da7">

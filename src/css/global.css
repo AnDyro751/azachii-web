@@ -223,17 +223,24 @@ a {
 }
 
 /* REPONSIVE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .u__no_padding_in_mobile {
         padding: 0 !important;
     }
-
     .u__default_bg {
         background-size: cover !important;
     }
+    .hide_on_mobile {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 374px) {
+    .hide_on_small_mobile {
+        display: none !important;
+    }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
     .only_on_mobile {
         display: none;
     }
