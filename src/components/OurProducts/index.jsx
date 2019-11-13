@@ -6,7 +6,7 @@ import MainBanner from "../Home/MainBanner"
 import CodeIcons from "../CodeIcons/index"
 
 const OurProducts = () => (
-  <div className="row u__big_margin_vertical justify-content-center">
+  <div className="row u__no_margin our_producs_margin_from_big_tablet justify-content-center">
     <div className="col-xl-11 col-12 u__no_padding">
       <div
         className={`${styles.main} align-items-center justify-content-center row u__no_margin`}
@@ -32,6 +32,18 @@ const OurProducts = () => (
       </div>
       {/* </div> */}
     </div>
+    <style>{`
+      @media screen and (min-width: 767px) and (max-width: 1025px) {
+        .our_producs_margin_from_big_tablet {
+          margin: 0.5em 0 !important;
+        }
+      }
+      @media screen and (min-width: 1025px) {
+        .our_producs_margin_from_big_tablet {
+          margin: 2em 0 !important;
+        }
+      }
+    `}</style>
   </div>
 )
 
