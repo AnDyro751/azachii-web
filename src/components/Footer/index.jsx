@@ -15,7 +15,7 @@ const Footer = ({
   divider = "white_color",
 }) => (
   <div
-    className={`row u__no_margin justify-content-center popodeperro ${custom_class} ${styles.footer}`}
+    className={`row u__no_margin justify-content-center ${custom_class} ${styles.footer}`}
   >
     <div className="col-xl-10 col-11 u__no_padding">
       <div className={`${styles.divider} ${divider}`}></div>
@@ -34,14 +34,7 @@ const Footer = ({
               Servicios
             </Link>
             <Link
-              to="/"
-              className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
-              style={{ fontSize: "1.1em" }}
-            >
-              Contacto
-            </Link>
-            <Link
-              to="/"
+              to="/team"
               className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
               style={{ fontSize: "1.1em" }}
             >
