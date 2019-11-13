@@ -38,6 +38,7 @@ const FormContact = () => {
   const firebase = React.useContext(FirebaseContext)
   const [valid, setValid] = useState(false)
   const [valid_fields, setValidFields] = useState(new Array(5).fill(false))
+  const [edited_fields, setEditedFields] = useState(new Array(5).fill(false));
 
   const handleChange = ({ target }) => {
     setFields(
@@ -46,6 +47,13 @@ const FormContact = () => {
         [target.name]: target.value,
       })
     )
+    if (!edited_fields[Number.parseInt(target.id)]) {
+      if (target.value !== '') {
+        const new_edited_fields = edited_fields;
+        new_edited_fields[Number.parseInt(target.id)] = true;
+        setEditedFields(new_edited_fields);
+      }
+    }
     const new_valid_fields = valid_fields
     switch (target.type) {
       case "email":
@@ -65,7 +73,8 @@ const FormContact = () => {
           target.value.length >= Number.parseInt(target.minLength) &&
           target.value.length <= Number.parseInt(target.maxLength)
     }
-    setValid(new_valid_fields.filter(item => item === false).length === 0)
+    setValidFields(new_valid_fields);
+    setValid(new_valid_fields.filter(item => item === false).length === 0);
   }
 
   return (
@@ -103,6 +112,8 @@ const FormContact = () => {
                 id={0}
                 minLength={3}
                 maxLength={20}
+                valid={valid_fields[0]}
+                edited={edited_fields[0]}
               />
             </div>
             <div className="col-xl-6 col-12">
@@ -114,6 +125,8 @@ const FormContact = () => {
                 onChange={handleChange}
                 name="email"
                 id={1}
+                valid={valid_fields[1]}
+                edited={edited_fields[1]}
               />
             </div>
             <div className="col-xl-6 col-12">
@@ -125,6 +138,8 @@ const FormContact = () => {
                 onChange={handleChange}
                 name="phone"
                 id={2}
+                valid={valid_fields[2]}
+                edited={edited_fields[2]}
               />
             </div>
             <div className="col-xl-6 col-12">
@@ -138,6 +153,8 @@ const FormContact = () => {
                 minLength={4}
                 maxLength={30}
                 id={3}
+                valid={valid_fields[3]}
+                edited={edited_fields[3]}
               />
             </div>
             <div className="col-xl-12 col-12">
@@ -149,7 +166,7 @@ const FormContact = () => {
                 onChange={handleChange}
                 name="message"
                 placeholder="¿Como ingreso mi negocio al mundo digital?"
-                className={styles.message}
+                className={`${styles.message} ${(!valid_fields[4] && edited_fields[4]) ? styles.main_input_wrong : ''}`}
               />
               <button
                 disabled={loading || !valid}
@@ -202,6 +219,8 @@ const InputType = ({
   id,
   minLength,
   maxLength,
+  valid,
+  edited,
 }) => (
   <div className={`row u__no_margin ${styles.main_input}`}>
     <div className="col-xl-12 u__no_padding">
@@ -218,6 +237,7 @@ const InputType = ({
         onChange={onChange}
         minLength={minLength}
         maxLength={maxLength}
+        className={`${(!valid && edited) ? styles.main_input_wrong : ''}`}
       />
     </div>
   </div>
