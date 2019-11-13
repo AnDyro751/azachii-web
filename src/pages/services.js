@@ -3,8 +3,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/Contact"
 import { useMixpanel } from "gatsby-plugin-mixpanel"
-import { useStaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 import CollaborationTeam from "../components/CollaborationTeam"
 import Value from "../components/Value/index"
 import OurProducts from "../components/OurProducts/index"
@@ -12,17 +10,6 @@ import OurServices from "../components/OurServices/index"
 
 const ServicesPage = () => {
   const mixpanel = useMixpanel()
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "services/background.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   useEffect(() => {
     mixpanel.track("services_page")
   }, [])

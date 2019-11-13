@@ -27,8 +27,7 @@ const CollaborationTeam = () => {
             <h1
               className={`${styles.service_page_title} black_color_text main_font`}
             >
-              Un proceso basado en{" "}
-              <span className={styles.collaboration}>colaboración</span>
+              Un proceso basado en colaboración
             </h1>
             <div className="separator" />
             <p className={`${styles.service_page_message} black_color_text`}>
@@ -38,8 +37,8 @@ const CollaborationTeam = () => {
           </div>
           <div className="col-xl-5 u__no_padding">
             <Img 
-            className={styles.image}
-            fluid={data.placeholderImage.childImageSharp.fluid} />
+              className={styles.image}
+              fluid={data.placeholderImage.childImageSharp.fluid} />
           </div>
         </div>
       </div>
