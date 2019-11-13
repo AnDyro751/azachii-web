@@ -62,6 +62,14 @@
     border-radius: 10px;
     transition: all .5s;
 }
-.item_image:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+.item_image:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+@media screen and (max-width: 767px) {
+    .main_title {
+        font-size: 1.4em;
+        font-weight: bold;
+    }
 }
