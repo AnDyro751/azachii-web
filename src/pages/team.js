@@ -66,6 +66,9 @@ const TeamPage = () => {
           .team_page_message {
             font-size: 1.5em;
           }
+          .team_page_section_title {
+            font-size: 2em;
+          }
         }
         @media(max-width: 375px) {
           .team_page_title {
@@ -73,6 +76,9 @@ const TeamPage = () => {
           }
           .team_page_message {
             font-size: 1.3em;
+          }
+          .team_page_section_title {
+            font-size: 1.5em;
           }
         }
       `}</style>
