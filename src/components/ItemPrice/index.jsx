@@ -91,10 +91,11 @@ const ItemPrice = ({ pricing, currentLapse }) => {
                 {pricing.name}
               </h1>
               <h3 className={`${styles.pricing} black_color_text`}>
+                {pricing.pricing > 0 && <span>Desde &#160;</span>}
                 {pricing.pricing === 0
                   ? "GRATIS"
                   : currentLapse === "anual"
-                  ? ((pricing.pricing / 100) * 80)
+                  ? (pricing.pricing / 100) * 80
                   : pricing.pricing}
                 {pricing.pricing > 0 && <span>&#160;USD</span>}
                 {/* {pricing.pricing === 0 && (
@@ -134,8 +135,13 @@ const ItemPrice = ({ pricing, currentLapse }) => {
               </button>
             </div>
             <div className="col-xl-12 u__no_padding col-12">
-              <Benefits benefits={pricing.benefits} />
+              {/* <Benefits benefits={pricing.benefits} /> */}
             </div>
+            {/* <button
+              className={`${styles.button} blue_light_color u__main_box_shadow`}
+            >
+              Seleccionar {pricing.name}
+            </button> */}
           </div>
         </div>
       </div>

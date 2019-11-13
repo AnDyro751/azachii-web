@@ -46,7 +46,7 @@ const ServicesPage = () => {
         <Value
           title="Siempre aportamos valor"
           text="Comenzamos haciendo preguntas estrategicas y haciendo una lluvia
-          de ideas contigo. Despues armamos un plan para llevar a cabo tu
+          de ideas contigo. Después armamos un plan para llevar a cabo tu
           proyecto, ahorrando tiempo y dinero."
         />
         <Value
@@ -60,9 +60,9 @@ const ServicesPage = () => {
         <Value
           image="work"
           title="Nuestro trabajo nunca termina"
-          text="El lanzamiento del producto no es el fin de la aventura.
-          Recopilamos la información y comportamiento de los
-          usuarios para comprender que funciona y que no. Así
+          text="El lanzamiento del producto no es el final de la aventura.
+          Nos encargamos de recopilar información y comportamiento de los
+          usuarios para comprender que funciona y qué no. Así
           podemos seguir mejorando el producto."
         />
         <Contact />
@@ -70,13 +70,10 @@ const ServicesPage = () => {
           .service_step_grey {
             background-color: rgb(251, 250, 249) !important;
           }
-      
-          
           .service_step {
             padding: 3em 0;
           }
           .service_step_title {
-            font-family: 'Playfair Display', serif; 
             font-size: 2.5em;
             line-height: 1.2em;
             margin-bottom: 1.5em !important;

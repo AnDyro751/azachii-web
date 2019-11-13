@@ -20,9 +20,9 @@ const HeaderSidebar = ({ isOpen, moveToContact }) => (
           <Link to="/services">
             <h5 className="black_color_text sidebar_item">SERVICIOS</h5>
           </Link>
-          <Link to="/pricing">
+          {/* <Link to="/pricing">
             <h5 className="black_color_text sidebar_item">PRECIOS</h5>
-          </Link>
+          </Link> */}
           {/* <h5 onClick={moveToContact} style={{cursor: 'pointer'}} className="black_color_text sidebar_item">CONTACTO</h5> */}
           <Link to="/free">
             <h5 className="black_color_text u__no_margin sidebar_item">

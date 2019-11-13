@@ -80,6 +80,7 @@ module.exports = {
           messaging: false,
           functions: false,
           remoteConfig: true,
+          config: true
         },
       },
     },
