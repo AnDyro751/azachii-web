@@ -6,8 +6,8 @@ import How from "../components/How/index"
 import Contact from "../components/Contact/index"
 import WebPage from "../components/WebPage/index"
 import GetFreePage from "../components/GetFreePage/index"
-import Promo from "../components/Promo/index"
 import SEO from '../components/seo';
+import Tools from '../components/Tools/index';
 
 const FreePage = () => {
   const mixpanel = useMixpanel()
@@ -21,8 +21,8 @@ const FreePage = () => {
 
       <MainFreePage />
       <How />
-
       <WebPage />
+      <Tools />
       {/* <Promo /> */}
       <GetFreePage />
       <Contact />
