@@ -45,7 +45,7 @@ const OurServices = () => (
             className={` ${styles.children}`}
           />
         </ItemService>
-        <ItemService title="Reconocimiento de texto">
+        <ItemService hide title="Reconocimiento de texto">
           <MdTextFields
             color="#181818"
             size={22}
@@ -120,8 +120,8 @@ const OurServices = () => (
   </div>
 )
 
-const ItemService = ({ title, children }) => (
-  <div className="col-xl-3 col-6">
+const ItemService = ({ title, children, hide }) => (
+  <div className={`col-xl-3 col-6 ${hide && "d-none d-xl-block"}`}>
     <div
       className={`row u__no_margin justify-content-center ${styles.main_service}`}
     >
