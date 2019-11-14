@@ -9,10 +9,11 @@ import OurProducts from "../components/OurProducts/index"
 import OurServices from "../components/OurServices/index"
 
 const ServicesPage = () => {
-  const mixpanel = useMixpanel()
+  const mixpanel = useMixpanel();
+  
   useEffect(() => {
     mixpanel.track("services_page")
-  }, [])
+  }, [mixpanel])
 
   return (
     <Layout footer_color="blue_light_color" footer_text="white_color_text">
