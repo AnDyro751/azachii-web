@@ -42,9 +42,9 @@ const TeamPage = () => {
       <div className="row why_work_with_us justify-content-center">
         <div className="col-10 u__no_padding">
           <h2 className="team_page_section_title">Nuestro enfoque</h2>
-          <div className="row u__no_margin justify-content-between">
+          <div className="row u__no_margin justify-content-between align-items-center">
             <div className="col-md-5 col-12 u__no_padding">
-              <p className="team_page_section_message">
+              <p className="team_page_section_message separate_from_bottom_mobile">
                 No importa sí eres una gran o pequeña empresa, podemos ayudarte a seguir adelante creando productos centrados en las personas.
               </p>
             </div>
@@ -53,16 +53,29 @@ const TeamPage = () => {
                 <div className="col-4 team_page_section_item">
                   <div className="row u__no_margin justify-content-center align-items-center">
                     <p className="team_page_section_item_title">Diseño</p>
+                    <div className="col-12 u__no_padding">
+                      <p className="team_page_section_item_label">Experiencia de usuario</p>
+                      <p className="team_page_section_item_label">Interfaz de usuario</p>
+                    </div>
                   </div>
                 </div>
                 <div className="col-4 team_page_section_item">
                   <div className="row u__no_margin justify-content-center align-items-center">
                     <p className="team_page_section_item_title">Tecnología</p>
+                    <div className="col-12 u__no_padding">
+                      <p className="team_page_section_item_label">React Native</p>
+                      <p className="team_page_section_item_label">ReactJS</p>
+                      <p className="team_page_section_item_label">Ruby on Rails</p>
+                      <p className="team_page_section_item_label">Firebase</p>
+                    </div>
                   </div>
                 </div>
                 <div className="col-4 team_page_section_item">
                   <div className="row u__no_margin justify-content-center align-items-center">
                     <p className="team_page_section_item_title">Estrategía</p>
+                    <div className="col-12 u__no_padding">
+                      <p className="team_page_section_item_label">Estrategía de producto</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -99,11 +112,19 @@ const TeamPage = () => {
         }
         .team_page_section_item {
           border: 1px solid rgba(0, 0, 0, 0.06);
-          padding: 1.5em 0;
+          padding: 1.5em 0.2em;
         }
         .team_page_section_item_title {
-          margin: 0;
+          margin-top: 0;
           font-weight: bold;
+          margin-bottom: 1em !important;
+          font-size: 1.5em;
+        }
+        .team_page_section_item_label {
+          text-align: center;
+        }
+        .team_page_section_item_label {
+          margin-bottom: 0.8em !important;
         }
         @media screen and (max-width: 1024px) {
           .team_page_message {
@@ -114,6 +135,9 @@ const TeamPage = () => {
           }
           .why_work_with_us {
             margin-bottom: 15vh !important;
+          }
+          .team_page_section_item_title {
+            font-size: 1.2em;
           }
         }
         @media screen and (max-width: 768px) {
@@ -133,6 +157,15 @@ const TeamPage = () => {
           .why_work_with_us {
             margin-bottom: 20vh !important;
           }
+          .separate_from_bottom_mobile {
+            margin-bottom: 1.5em !important;
+          }
+          .team_page_section_item_title {
+            font-size: 1em;
+          }
+          .team_page_section_item_label {
+            margin-bottom: 0.5em !important;
+          }
         }
         @media(max-width: 374px) {
           .team_page_title {
@@ -148,6 +181,12 @@ const TeamPage = () => {
           }
           .team_page_section_message {
             font-size: 1.2em;
+          }
+          .team_page_section_item_title {
+            font-size: 0.8em;
+          }
+          .team_page_section_item_label {
+            font-size: 0.8em;
           }
         }
       `}</style>
