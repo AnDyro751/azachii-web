@@ -6,19 +6,26 @@ import How from "../components/How/index"
 import Contact from "../components/Contact/index"
 import WebPage from "../components/WebPage/index"
 import GetFreePage from "../components/GetFreePage/index"
-import SEO from '../components/seo';
-import Tools from '../components/Tools/index';
+import SEO from "../components/seo"
+import Tools from "../components/Tools/index"
 
 const FreePage = () => {
   const mixpanel = useMixpanel()
 
   useEffect(() => {
     mixpanel.track("free_page")
-  }, [mixpanel]);
-  
+  }, [mixpanel])
+
   return (
-    <Layout footer_color="blue_light_color" footer_text="white_color_text">
-      <SEO title="Página web gratis" />
+    <Layout
+      // title=""
+      footer_color="blue_light_color"
+      footer_text="white_color_text"
+    >
+      <SEO
+        description="Azachii | Obtén tu sitio web totalmente gratis con la ayuda de Azachii. Paga a 6 meses sin intereses."
+        title="Azachii | Obtén tu sitio web totalmente gratis con Azachii."
+      />
 
       <MainFreePage />
       <How />

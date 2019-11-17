@@ -18,7 +18,9 @@ const ServicesPage = () => {
   return (
     <Layout footer_color="blue_light_color" footer_text="white_color_text">
       <>
-        <SEO title="Servicios" />
+        <SEO
+        description="Azchii | Servicios y productos. Desarrollo web. Desarrollo Móvil. Producción multimedia."
+        title="Servicios" />
         <CollaborationTeam />
         <OurProducts />
         <OurServices />

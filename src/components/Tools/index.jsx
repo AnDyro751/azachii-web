@@ -40,7 +40,9 @@ const Tools = ({ limit = 3, showDescription = true }) => {
   return (
     <div className={`row u__no_margin justify-content-center`}>
       <div className={`col-xl-12 col-12 u__no_padding`}>
-        <div className={`row justify-content-center u__no_margin align-items-center ${styles.main}`}>
+        <div
+          className={`row justify-content-center u__no_margin align-items-center ${styles.main}`}
+        >
           <div className="col-xl-4 offset-xl-1 u__no_padding d-none d-xl-block">
             <Img
               className={styles.image}
@@ -76,8 +78,8 @@ const Tools = ({ limit = 3, showDescription = true }) => {
         <div className="row u__no_margin justify-content-center">
           <div className="col-xl-11 u__no_padding">
             <div className={`row u__no_margin ${styles.main_items}`}>
-              {allPromos.map(tool => (
-                <ToolItem tool={tool} />
+              {allPromos.map((tool, i) => (
+                <ToolItem key={i} tool={tool} />
               ))}
             </div>
             {process.env.NODE_ENV === "development" && (

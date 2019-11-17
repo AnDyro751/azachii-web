@@ -16,12 +16,12 @@ import { Helmet } from "react-helmet"
 
 import Header from "./Header/index"
 import Footer from "./Footer/index"
-import ReactTooltip from 'react-tooltip'
-import WhatsAppCustomer from './WhatsAppCustomer/index';
+import ReactTooltip from "react-tooltip"
+import WhatsAppCustomer from "./WhatsAppCustomer/index"
 
 const Layout = ({
   children,
-  title = "Desarrollo web y móvil",
+  title = "Desarrollo web & móvil. Todo lo que necesitas para empezar con tu negocio online en la nueva er digital",
   light = false,
   footer_color = "white_color",
   footer_text = "black_color_text",
@@ -39,7 +39,7 @@ const Layout = ({
   return (
     <>
       <Helmet
-        title={`${data.site.siteMetadata.title} | ${title}`}
+        // title={`${data.site.siteMetadata.title} | ${title}`}
         defer={false}
       />
       <Header light={light} />

@@ -7,7 +7,9 @@ import Contact from "../components/Contact/index"
 const Pricing = () => {
   return (
     <Layout footer_color="blue_light_color" footer_text="white_color_text">
-      <SEO title="Precios" />
+      <SEO title="Precios"
+      description="Azachii | Consulta precios y servicios. Desarrollo web & móvil"
+      />
       <MainPricing />
       <Contact />
     </Layout>

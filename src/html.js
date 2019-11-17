@@ -15,16 +15,22 @@ export default function HTML(props) {
         <meta name="theme-color" content="#f7fcfc" />
         <meta
           name="description"
-          content="Desarrollo web & móvil. Empieza tu negocio en línea hoy mismo"
+          content="Desarrollo web & móvil. Todo lo que necesitas para empezar con tu negocio online en la nueva er digital"
+        />
+        <meta
+          name="google-site-verification"
+          content="4YllTxUvrtIrzXPabCPTEN5h65zM2xTtGovKtWU17Ws"
         />
         <meta name="robots" content="index, follow" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
+ 
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.
         </noscript>
+        
         <div
           key={`body`}
           id="___gatsby"

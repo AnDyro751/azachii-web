@@ -3,9 +3,16 @@ import styles from "./styles.module.css"
 import { useFirebase } from "gatsby-plugin-firebase"
 import classnames from "classnames"
 import { useMixpanel } from "gatsby-plugin-mixpanel"
-import { Link as LS } from "react-scroll"
 
-const WebPage = ({}) => {
+const MainGetter = ({
+  title,
+  contain,
+  description,
+  blank = false,
+  to_blank = "",
+  tracker,
+  button_text,
+}) => {
   const mixpanel = useMixpanel()
 
   const [benefits, setBenefits] = useState([])
@@ -15,7 +22,7 @@ const WebPage = ({}) => {
     const todoRef = firebase
       .firestore()
       .collection("benefits")
-      .where("kind", "array-contains", "web")
+      .where("kind", "array-contains", contain)
     todoRef.orderBy("name", "asc").onSnapshot(snapshot => {
       let newBenefits = []
       snapshot.docs.forEach(doc => {
@@ -35,36 +42,23 @@ const WebPage = ({}) => {
       className={`row u__small_margin_vertical white_color ${styles.main_container} justify-content-center justify-content-xl-between`}
     >
       <div className="col-xl-5 offset-xl-1 col-11 u__no_padding">
-        <h2 className="black_color_text">Páginas web & E-commerce</h2>
+        <h2 className="black_color_text">{title}</h2>
         <h1 className={`${styles.main_title} black_color_text`}>
-          Todo lo que necesitas para empezar con tu negocio online
+          {description}
         </h1>
-        <div className="row u__big_margin_vertical align-items-center">
+        <div className="row u__big_margin_vertical">
           <div className="col-xl-auto col-12 u__no_padding">
-            <div
-              onClick={() => {
-                window.open("https://forms.gle/jGBNpCnUEoURBPTC7", "_blank")
-                mixpanel.track("go_to_free_form")
-                if (window.fbq) {
-                  window.fbq("track", "CompleteRegistration")
-                }
-              }}
-              className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
-            >
-              QUIERO UNA WEB GRATIS
-            </div>
-          </div>
-          <div className="col-xl-auto">
-            <LS
-              activeClass="blue_light_color_text"
-              to="contact_form"
-              spy={false}
-              smooth={true}
-              duration={500}
-              className={`blue_light_color_text ${styles.request}`}
-            >
-              Solicitar presupuesto
-            </LS>
+            {blank && (
+              <div
+                onClick={() => {
+                  window.open(to_blank, "_blank")
+                  mixpanel.track(tracker)
+                }}
+                className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
+              >
+                {button_text}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -112,4 +106,4 @@ const ItemTag = ({ benefit }) => {
   )
 }
 
-export default WebPage
+export default MainGetter

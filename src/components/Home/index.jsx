@@ -7,6 +7,7 @@ import SimplePayments from "../SimplePayments/index"
 import GetFreePage from "../GetFreePage/index"
 import Contact from "../Contact/index"
 import Tools from "../Tools/index"
+import MainGetter from '../MainGetter/index';
 const MainHome = () => {
   const mixpanel = useMixpanel()
 
@@ -19,6 +20,13 @@ const MainHome = () => {
       <MainBanner />
       <HelpYou />
       <WebPage />
+      <MainGetter 
+      title="Producción multimedia"
+      description="Producción multimedia para tu negocio o marca personal"
+      contain="multimedia"
+      tracker="get_multimedia"
+      button_text="Solicitar presupuesto"
+      />
       <Tools />
       <SimplePayments />
       <GetFreePage />
