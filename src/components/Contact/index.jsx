@@ -13,7 +13,9 @@ const Contact = () => {
       <div className="col-xl-10 col-11 u__no_padding">
         <div className="row u__no_margin justify-content-between align-items-start">
           <div className="col-xl-5 col-11 u__no_padding">
-            <h2 className="black_color_text">Estamos para ayudarte</h2>
+            <h2 className={`black_color_text ${styles.main_title}`}>
+              Estamos para ayudarte
+            </h2>
             <h4 className={`${styles.send} black_color_text u__normal_font`}>
               Responderemos todas tus preguntas con brevedad.
               <br />
@@ -38,7 +40,7 @@ const FormContact = () => {
   const firebase = React.useContext(FirebaseContext)
   const [valid, setValid] = useState(false)
   const [valid_fields, setValidFields] = useState(new Array(5).fill(false))
-  const [edited_fields, setEditedFields] = useState(new Array(5).fill(false));
+  const [edited_fields, setEditedFields] = useState(new Array(5).fill(false))
 
   const handleChange = ({ target }) => {
     setFields(
@@ -48,10 +50,10 @@ const FormContact = () => {
       })
     )
     if (!edited_fields[Number.parseInt(target.id)]) {
-      if (target.value !== '') {
-        const new_edited_fields = edited_fields;
-        new_edited_fields[Number.parseInt(target.id)] = true;
-        setEditedFields(new_edited_fields);
+      if (target.value !== "") {
+        const new_edited_fields = edited_fields
+        new_edited_fields[Number.parseInt(target.id)] = true
+        setEditedFields(new_edited_fields)
       }
     }
     const new_valid_fields = valid_fields
@@ -73,8 +75,8 @@ const FormContact = () => {
           target.value.length >= Number.parseInt(target.minLength) &&
           target.value.length <= Number.parseInt(target.maxLength)
     }
-    setValidFields(new_valid_fields);
-    setValid(new_valid_fields.filter(item => item === false).length === 0);
+    setValidFields(new_valid_fields)
+    setValid(new_valid_fields.filter(item => item === false).length === 0)
   }
 
   return (
@@ -100,7 +102,9 @@ const FormContact = () => {
         <div id="contact_form" className="col-xs-12 u__no_padding">
           <div className="row u__no_margin">
             <div className="col-xl-12">
-              <h1 className="black_color_text">Contáctanos</h1>
+              <h2 className={`black_color_text ${styles.main_title}`}>
+                Contáctanos
+              </h2>
             </div>
             <div className="col-xl-6 col-12">
               <InputType
@@ -166,7 +170,11 @@ const FormContact = () => {
                 onChange={handleChange}
                 name="message"
                 placeholder="¿Como ingreso mi negocio al mundo digital?"
-                className={`${styles.message} ${(!valid_fields[4] && edited_fields[4]) ? styles.main_input_wrong : ''}`}
+                className={`${styles.message} ${
+                  !valid_fields[4] && edited_fields[4]
+                    ? styles.main_input_wrong
+                    : ""
+                }`}
               />
               <button
                 disabled={loading || !valid}
@@ -237,7 +245,7 @@ const InputType = ({
         onChange={onChange}
         minLength={minLength}
         maxLength={maxLength}
-        className={`${(!valid && edited) ? styles.main_input_wrong : ''}`}
+        className={`${!valid && edited ? styles.main_input_wrong : ""}`}
       />
     </div>
   </div>

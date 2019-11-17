@@ -21,7 +21,7 @@ import WhatsAppCustomer from "./WhatsAppCustomer/index"
 
 const Layout = ({
   children,
-  title = "Desarrollo web & móvil. Todo lo que necesitas para empezar con tu negocio online en la nueva er digital",
+  title = "Desarrollo web & móvil. Todo lo que necesitas para empezar con tu negocio online en la nueva era digital",
   light = false,
   footer_color = "white_color",
   footer_text = "black_color_text",

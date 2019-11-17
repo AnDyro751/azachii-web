@@ -25,10 +25,10 @@ const HelpYou = () => {
       <div className="col-xl-12 col-12 u__no_padding">
         <div className="row u__no_margin justify-content-center">
           <div className="col-xl-5 col-11 offset-xl-1 u__no_padding">
-            <h1 className={`main_color_text main_font ${styles.main_title}`}>
+            <h3 className={`main_color_text main_font ${styles.main_title}`}>
               Estamos aquí para <br className="d-none d-xl-block" />
               ayudarte con
-            </h1>
+            </h3>
             <ItemHelpYou
               handleEnter={name => {
                 setCurrent("web")

@@ -1,12 +1,7 @@
 import React from "react"
 import styles from "./styles.module.css"
 import { Link } from "gatsby"
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaGithub,
-  FaTwitter,
-} from "react-icons/fa"
+import { FaInstagram, FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa"
 
 const Footer = ({
   custom_class = "white_color",
@@ -21,7 +16,7 @@ const Footer = ({
 
       <div className="row u__no_margin align-items-center">
         <div className="col-xl-2 col-12 u__no_padding u__small_margin_vertical">
-          <h1 className={`${text_color} ${styles.title}`}>Azachii</h1>
+          <h2 className={`${text_color} ${styles.title}`}>Azachii</h2>
         </div>
         <div className="col-xl-7 col-5 u__no_padding align-items-xl-start align-items-center">
           <div className="row u__no_margin justify-content-xl-center justify-content-start align-items-center">

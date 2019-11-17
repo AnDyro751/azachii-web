@@ -15,7 +15,7 @@ export default function HTML(props) {
         <meta name="theme-color" content="#f7fcfc" />
         <meta
           name="description"
-          content="Desarrollo web & móvil. Todo lo que necesitas para empezar con tu negocio online en la nueva er digital"
+          content="Desarrollo web & móvil. Todo lo que necesitas para empezar con tu negocio online en la nueva era digital"
         />
         <meta
           name="google-site-verification"

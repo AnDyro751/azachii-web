@@ -4,6 +4,9 @@
 	margin-bottom: .5em !important;
 	color: #8e8e8e;
 }
+.main_title{
+	font-size: 2em;
+}
 
 .main_input input {
 	width: 100%;

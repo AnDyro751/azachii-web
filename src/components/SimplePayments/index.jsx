@@ -36,9 +36,9 @@ const SimplePayments = () => {
           <div className="col-xl-6 u__no_padding align-content-end">
             <div className="row u__no_margin">
               <div className="col-xl-12 u__no_padding">
-                <h1 className={`${styles.item_description} black_color_text`}>
+                <h3 className={`${styles.item_description} black_color_text`}>
                   PROCESAMIENTO DE PAGOS
-                </h1>
+                </h3>
               </div>
               <div className="col-xl-12 u__no_padding">
                 <h3 className={`${styles.item} black_color_text`}>

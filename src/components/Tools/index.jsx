@@ -50,9 +50,9 @@ const Tools = ({ limit = 3, showDescription = true }) => {
             />
           </div>
           <div className="col-xl-5 offset-xl-1 col-11 u__no_padding">
-            <h1 className={`main_color_text ${styles.main_title}`}>
+            <h3 className={`main_color_text ${styles.main_title}`}>
               Herramientas que te harán la vida más simple
-            </h1>
+            </h3>
             <h4 className="u__normal_font main_color_text">
               Sin costo por mantenimiento, sin cobros ocultos. Todo lo que tu
               página web necesite creado especialmente para ti.

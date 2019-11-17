@@ -2,9 +2,11 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Azachii`,
-    description: "Agencia digital",
-    author: `AnDyroHM`,
+    title: `Azachii Development`,
+    description: "Todo lo que necesitas para empezar con tu negocio online",
+    author: `Azachii Development`,
+    siteUrl: "https://azachii-develop.web.app",
+    policy: [{ userAgent: "*", allow: "/" }],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -80,7 +82,7 @@ module.exports = {
           messaging: false,
           functions: false,
           remoteConfig: true,
-          config: true
+          config: true,
         },
       },
     },
@@ -103,5 +105,3 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
-
-
