@@ -13,7 +13,7 @@ const Contact = () => {
       <div className="col-xl-10 col-11 u__no_padding">
         <div className="row u__no_margin justify-content-between align-items-start">
           <div className="col-xl-5 col-11 u__no_padding">
-            <h1 className="black_color_text">Estamos para ayudarte</h1>
+            <h2 className="black_color_text">Estamos para ayudarte</h2>
             <h4 className={`${styles.send} black_color_text u__normal_font`}>
               Responderemos todas tus preguntas con brevedad.
               <br />

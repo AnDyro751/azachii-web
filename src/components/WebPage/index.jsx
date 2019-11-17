@@ -35,10 +35,10 @@ const WebPage = ({}) => {
       className={`row u__small_margin_vertical white_color ${styles.main_container} justify-content-center justify-content-xl-between`}
     >
       <div className="col-xl-5 offset-xl-1 col-11 u__no_padding">
-        <h2 className="black_color_text">Páginas web & E-commerce</h2>
-        <h1 className={`${styles.main_title} black_color_text`}>
+        <h2 className={`black_color_text ${styles.title}`}>Páginas web & E-commerce</h2>
+        <h2 className={`${styles.main_title} black_color_text`}>
           Todo lo que necesitas para empezar con tu negocio online
-        </h1>
+        </h2>
         <div className="row u__big_margin_vertical align-items-center">
           <div className="col-xl-auto col-12 u__no_padding">
             <div

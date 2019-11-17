@@ -7,9 +7,9 @@ const GetFreePage = ({}) => {
   return (
     <div className="row u__big_margin_vertical white_color justify-content-center">
       <div className="col-xl-6 col-11 u__no_padding">
-        <h1 className={`black_color_text ${styles.main_title}`}>
+        <h2 className={`black_color_text ${styles.main_title}`}>
           Empieza tu negocio en línea hoy mismo
-        </h1>
+        </h2>
         <h4 className={`${styles.description} black_color_text`}>
           Cada mes realizamos cierta cantidad de páginas web para ayudar a los
           emprendedores a iniciar un nuevo negocio online.

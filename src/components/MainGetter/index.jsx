@@ -42,10 +42,10 @@ const MainGetter = ({
       className={`row u__small_margin_vertical white_color ${styles.main_container} justify-content-center justify-content-xl-between`}
     >
       <div className="col-xl-5 offset-xl-1 col-11 u__no_padding">
-        <h2 className="black_color_text">{title}</h2>
-        <h1 className={`${styles.main_title} black_color_text`}>
+        <h2 className={`black_color_text ${styles.title}`}>{title}</h2>
+        <h2 className={`${styles.main_title} black_color_text`}>
           {description}
-        </h1>
+        </h2>
         <div className="row u__big_margin_vertical">
           <div className="col-xl-auto col-12 u__no_padding">
             {blank && (

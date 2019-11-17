@@ -41,9 +41,9 @@ const SimplePayments = () => {
                 </h1>
               </div>
               <div className="col-xl-12 u__no_padding">
-                <h1 className={`${styles.item} black_color_text`}>
+                <h3 className={`${styles.item} black_color_text`}>
                   Pagos y suscripciones sin configuración alguna
-                </h1>
+                </h3>
                 <h4 className={`black_color_text ${styles.main_description}`}>
                   Acepta tarjetas de crédito de forma rápida y segura en tu
                   tienda en online.
