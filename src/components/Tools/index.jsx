@@ -54,7 +54,7 @@ const Tools = ({ limit = 3, showDescription = true }) => {
               Herramientas que te harán la vida más simple
             </h3>
             <h4 className="u__normal_font main_color_text">
-              Sin costo por mantenimiento, sin cobros ocultos. Todo lo que tu
+              Sin cobros por mantenimiento, sin costos ocultos. Todo lo que tu
               página web necesite creado especialmente para ti.
             </h4>
             <div className="row u__no_margin">

@@ -1,0 +1,67 @@
+.perros_felices_section {
+  height: 90vh;
+}
+.perros_felices_title {
+  font-size: 2.5em;
+  color: rgb(94, 46, 171);
+  margin-bottom: 1em !important;
+  margin-top: 0;
+}
+.perros_felices_phrase {
+  font-weight: bold;
+  color: rgb(94, 46, 171);
+  font-size: 3em;
+}
+.perros_felices_description {
+  color: rgb(94, 46, 171);
+  margin-bottom: 2em !important;
+}
+.dicover_how_button {
+  padding: 1em;
+  color: rgb(94, 46, 171);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  width: 100%;
+  font-size: 1em;
+  background-color: transparent;
+}
+.perros_felices_image {
+  width: 65%;
+  height: auto;
+}
+.perros_felices_image_container {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+@media(max-width: 768px) {
+  .perros_felices_title {
+    font-size: 2em;
+  }
+  .perros_felices_phrase {
+    font-size: 2.5em;
+  }
+  .perros_felices_section {
+    height: auto;
+    padding: 3em 0;
+  }
+  .perros_felices_image {
+    margin-top: 2.5em;
+    width: 80%;
+  }
+  .perros_felices_image_container {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media(max-width: 375px) {
+  .perros_felices_title {
+    font-size: 1.7em;
+  }
+  .perros_felices_phrase {
+    font-size: 2em;
+  }
+}
