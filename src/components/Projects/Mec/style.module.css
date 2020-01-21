@@ -1,0 +1,22 @@
+.mec_color {
+  color: #181818;
+}
+.mec_image {
+  width: 90%;
+  height: auto;
+}
+.mec_image_container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media(max-width: 768px) {
+  .mec_image {
+    margin-top: 2.5em;
+    width: 100%;
+  }
+  .mec_image_container {
+    align-items: center;
+    justify-content: center;
+  }
+}
