@@ -14,7 +14,7 @@ const ProjectsPerrosFelices = ({}) => (
         <div className="col-12 col-sm-7 u__no_padding align-items-center" style={{display: 'flex'}}>
           <div>
             <h3 className={`${styles.perros_felices_color} ${projectStyles.project_title}`}>
-              <a href="https://perros-felices.web.app" target="_blank">
+              <a href="https://perros-felices.web.app" target="_blank" className={styles.perros_felices_color}>
                 Perros Felices
               </a>
             </h3>
