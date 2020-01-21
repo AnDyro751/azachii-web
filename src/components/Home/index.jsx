@@ -22,13 +22,13 @@ const MainHome = () => {
       <MainBanner />
       <HelpYou />
       <WebPage />
-      <PerrosFelices />
-      <MainGetter 
+      {/* <MainGetter 
         title="Producción multimedia"
         description="Producción multimedia para tu negocio o marca personal"
         contain="multimedia"
         tracker="get_multimedia"
-        button_text="Solicitar presupuesto" />
+        button_text="Solicitar presupuesto" /> */}
+      <PerrosFelices />
       <Tools />
       <SimplePayments />
       <GetFreePage />

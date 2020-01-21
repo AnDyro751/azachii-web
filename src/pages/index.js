@@ -1,9 +1,6 @@
 import React from "react"
-// import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-// import Image from '../../components/image';
-import MainHome from "../components/Home/index"
+import MainHome from "../components/Home"
 import SEO from "../components/seo"
 
 const Index = () => (
