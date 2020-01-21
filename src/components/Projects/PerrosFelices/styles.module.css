@@ -27,6 +27,9 @@
   width: 100%;
   font-size: 1em;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .perros_felices_image {
   width: 65%;

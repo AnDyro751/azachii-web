@@ -8,7 +8,8 @@
     "@material-ui/core": "^4.6.1",
     "bootstrap-4-grid": "^3.1.1",
     "classnames": "^2.2.6",
-    "firebase": "^7.2.3",
+    "firebase": "^7.7.0",
+    "firebase-tools": "^7.12.1",
     "gatsby": "^2.17.6",
     "gatsby-background-image": "^0.8.17",
     "gatsby-image": "^2.2.30",
@@ -61,7 +62,8 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "firebase deploy"
   },
   "repository": {
     "type": "git",
