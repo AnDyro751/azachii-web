@@ -1,0 +1,10 @@
+.locations {
+  margin: 2em 0 0 0;
+}
+.city_name {
+  text-align: center;
+}
+.city_name * {
+  font-size: 2em;
+  color: white;
+}

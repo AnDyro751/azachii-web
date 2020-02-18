@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import styles from './styles.module.css';
+import Locations from '../Locations';
 
 function Footer({
   custom_class,
@@ -13,7 +14,7 @@ function Footer({
   divider,
 }) {
   return (
-    <div
+    <footer
       className={`row u__no_margin justify-content-center ${custom_class} ${styles.footer}`}
     >
       <div className="col-xl-10 col-11 u__no_padding">
@@ -78,7 +79,10 @@ function Footer({
           </div>
         </div>
       </div>
-    </div>
+      <div className="col-12 u__no_padding">
+        <Locations />
+      </div>
+    </footer>
   );
 }
 

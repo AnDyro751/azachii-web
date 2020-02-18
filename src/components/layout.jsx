@@ -8,7 +8,6 @@ import Header from './Header';
 import Footer from './Footer';
 import WhatsAppCustomer from './WhatsAppCustomer';
 import Contact from './Contact';
-import Locations from './Locations';
 
 function Layout({
   children,
@@ -29,7 +28,6 @@ function Layout({
       >
         <main>
           {children}
-          <Locations />
           <Contact />
         </main>
       </div>
