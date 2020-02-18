@@ -8,16 +8,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import "./layout.css"
 import { Helmet } from "react-helmet"
 // import MessengerCustomerChat from "react-messenger-customer-chat-beta"
 // import firebase from "firebase/app"
-
 import Header from "./Header/index"
 import Footer from "./Footer/index"
 import ReactTooltip from "react-tooltip"
 import WhatsAppCustomer from "./WhatsAppCustomer/index"
+import Contact from './Contact';
 
 const Layout = ({
   children,
@@ -50,7 +49,10 @@ const Layout = ({
           overflow: "hidden",
         }}
       >
-        <main>{children}</main>
+        <main>
+          {children}
+          <Contact />
+        </main>
         {/* <footer>© {new Date().getFullYear()}, Built with</footer> */}
       </div>
       <WhatsAppCustomer />

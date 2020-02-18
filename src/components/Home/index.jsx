@@ -5,7 +5,6 @@ import WebPage from "../WebPage";
 import {useMixpanel} from "gatsby-plugin-mixpanel";
 import SimplePayments from "../SimplePayments";
 import GetFreePage from "../GetFreePage";
-import Contact from "../Contact";
 import Tools from "../Tools";
 import MainGetter from '../MainGetter';
 import PerrosFelices from '../Projects/PerrosFelices';
@@ -34,7 +33,6 @@ const MainHome = () => {
       <Tools />
       <SimplePayments />
       <GetFreePage />
-      <Contact />
     </>
   )
 };

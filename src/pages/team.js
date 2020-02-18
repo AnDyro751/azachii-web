@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Contact from "../components/Contact"
 import {useMixpanel} from "gatsby-plugin-mixpanel"
 
 const TeamPage = () => {
@@ -85,7 +84,6 @@ const TeamPage = () => {
           </div>
         </div>
       </div>
-      <Contact />
       <style>{`
         .team_page_title {
           font-size: 4.5em;

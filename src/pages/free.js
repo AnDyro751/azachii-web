@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import MainFreePage from "../components/Freepage/MainFreePage/index"
 import { useMixpanel } from "gatsby-plugin-mixpanel"
 import How from "../components/How/index"
-import Contact from "../components/Contact/index"
 import WebPage from "../components/WebPage/index"
 import GetFreePage from "../components/GetFreePage/index"
 import SEO from "../components/seo"
@@ -33,7 +32,6 @@ const FreePage = () => {
       <Tools />
       {/* <Promo /> */}
       <GetFreePage />
-      <Contact />
     </Layout>
   )
 }

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Contact from "../components/Contact"
 import { useMixpanel } from "gatsby-plugin-mixpanel"
 import CollaborationTeam from "../components/CollaborationTeam"
 import Value from "../components/Value/index"
@@ -46,7 +45,6 @@ const ServicesPage = () => {
           usuarios para comprender que funciona y qué no. Así
           podemos seguir mejorando el producto."
         />
-        <Contact />
         <style>{`
           .service_step_grey {
             background-color: rgb(251, 250, 249) !important;
