@@ -133,7 +133,7 @@ a {
 }
 
 .white_color {
-	background: #ffffff;
+	background: #ffffff !important;
 }
 
 .gray_color_text {
@@ -227,6 +227,10 @@ a {
 	width: 50px;
 	margin: 1em 0;
 	border-radius: 10px;
+}
+.separator_big {
+	height: 10px;
+	margin: 0.5em 0;
 }
 
 /* REPONSIVE */

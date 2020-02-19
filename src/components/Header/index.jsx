@@ -3,10 +3,11 @@ import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import { HamburgerElastic } from 'react-animated-burgers';
 import { Link as LS } from 'react-scroll';
+import PropTypes from 'prop-types';
 import Sidebar from './Sidebar';
 import styles from './style.module.css';
 
-function Header({ light = false }) {
+function Header({ light, initialColor }) {
   const [white, setWhite] = useState(light);
   const [openSidebar, setOpenSidebar] = useState(false);
 
@@ -22,7 +23,7 @@ function Header({ light = false }) {
     });
   }, []);
 
-  const getToContact = () => {
+  function getToContact() {
     let newScroll = 0;
     const element = document.querySelector('.contact_form');
     if (element) {
@@ -31,17 +32,18 @@ function Header({ light = false }) {
         window.scrollTo(0, newScroll);
       }
     }
-  };
+  }
 
   const headerClass = classnames({
     [styles.main_header]: true,
     [styles.header_box]: white,
     white_color: white,
+    [styles.main_header_white_content]: initialColor && !white,
   });
 
-  const toggle = () => {
+  function toggle() {
     setOpenSidebar(!openSidebar);
-  };
+  }
 
   return (
     <>
@@ -60,8 +62,6 @@ function Header({ light = false }) {
               </Link>
             </div>
             <ItemHeader text="SERVICIOS" to="/services" />
-            {/* <ItemHeader text="PRECIOS" to="/pricing" /> */}
-            {/* <ItemHeader onContact={getToContact} text="CONTACTO" /> */}
             <ItemHeader text="WEB GRATIS" featured={1} to="/free" />
             <HamburgerElastic
               buttonWidth={25}
@@ -83,6 +83,16 @@ function Header({ light = false }) {
     </>
   );
 }
+
+Header.defaultProps = {
+  light: false,
+  initialColor: undefined,
+};
+
+Header.propTypes = {
+  initialColor: PropTypes.string,
+  light: PropTypes.bool,
+};
 
 const ItemHeader = ({
   text, to = null, featured = 0, onContact,

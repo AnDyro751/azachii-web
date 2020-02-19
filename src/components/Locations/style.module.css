@@ -1,10 +1,20 @@
 .locations {
-  margin: 2em 0 0 0;
+  margin: 1.5em 0 1em 0;
 }
 .city_name {
   text-align: center;
 }
 .city_name * {
-  font-size: 2em;
+  font-size: 3em;
   color: white;
+}
+.city_name_long {
+  font-size: 1.2em;
+  color: rgb(220, 220, 200);
+  text-align: center;
+}
+@media(max-width: 767px) {
+  .city_name * {
+    font-size: 2.5em;
+  }
 }

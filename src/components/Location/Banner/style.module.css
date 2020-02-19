@@ -1,0 +1,11 @@
+.location_name {
+  font-size: 4.5em;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media(max-width: 767px) {
+  .location_name {
+    font-size: 3.5em;
+  }
+}
