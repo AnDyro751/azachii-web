@@ -14,11 +14,12 @@ function Layout({
   light,
   footer_color,
   footer_text,
+  header,
 }) {
   return (
     <>
       <Helmet defer={false} />
-      <Header light={light} />
+      <Header light={light} initialColor={header.color} />
       <div
         style={{
           margin: '0 auto',
@@ -42,6 +43,7 @@ Layout.defaultProps = {
   light: false,
   footer_color: 'white_color',
   footer_text: 'black_color_text',
+  header: {},
 };
 
 Layout.propTypes = {
@@ -49,6 +51,9 @@ Layout.propTypes = {
   light: PropTypes.bool,
   footer_color: PropTypes.string,
   footer_text: PropTypes.string,
+  header: PropTypes.shape({
+    color: PropTypes.string,
+  }),
 };
 
 export default Layout;

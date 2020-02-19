@@ -13,8 +13,8 @@ const TeamPage = () => {
   return (
     <Layout footer_color="blue_light_color" footer_text="white_color_text">
       <SEO 
-      description="Azachii | Nuestros diseñadores e ingenieros saben que la colaboración es la base de todo proyecto. Azachii es para ti."
-      title="Equipo" />
+        description="Azachii | Nuestros diseñadores e ingenieros saben que la colaboración es la base de todo proyecto. Azachii es para ti."
+        title="Equipo" />
       <div className="row u__no_margin align-items-center justify-content-center" style={{height: '100vh'}}>
         <div className="col-11 u__no_padding">
           <div className="row u__no_margin justify-content-center">

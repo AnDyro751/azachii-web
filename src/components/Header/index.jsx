@@ -1,58 +1,47 @@
-import { Link } from "gatsby"
-import React, { useEffect, useState } from "react"
-import styles from "./style.module.css"
-import { FaBars } from "react-icons/fa"
-import classnames from "classnames"
-import Sidebar from "./Sidebar"
-import { IoMdClose } from "react-icons/io"
-import { HamburgerElastic } from "react-animated-burgers"
-import { Link as LS } from "react-scroll";
+import { Link } from 'gatsby';
+import React, { useEffect, useState } from 'react';
+import classnames from 'classnames';
+import { HamburgerElastic } from 'react-animated-burgers';
+import { Link as LS } from 'react-scroll';
+import Sidebar from './Sidebar';
+import styles from './style.module.css';
 
-const Header = ({ siteTitle, light = false }) => {
-  const [scrollX, setScroll] = useState(0)
-  const [white, setWhite] = useState(light)
-  const [openSidebar, setOpenSidebar] = useState(false)
+function Header({ light = false }) {
+  const [white, setWhite] = useState(light);
+  const [openSidebar, setOpenSidebar] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY)
+    window.addEventListener('scroll', () => {
       if (!light) {
         if (window.scrollY >= 20) {
-          setWhite(true)
+          setWhite(true);
         } else {
-          setWhite(false)
+          setWhite(false);
         }
       }
-    })
-  }, [])
+    });
+  }, []);
 
   const getToContact = () => {
-    let newScroll = 0
-    let element = document.querySelector(".contact_form")
+    let newScroll = 0;
+    const element = document.querySelector('.contact_form');
     if (element) {
-      newScroll = element.getBoundingClientRect().y
+      newScroll = element.getBoundingClientRect().y;
       if (newScroll > 0) {
-        window.scrollTo(0, newScroll)
+        window.scrollTo(0, newScroll);
       }
-      // let height = 16 * 5
-      // window.scrollTo({
-      //   top: newScroll,
-      //   left: 0,
-      //   bottom: 0,
-      //   behavior: "smooth",
-      // })
     }
-  }
+  };
 
   const headerClass = classnames({
     [styles.main_header]: true,
     [styles.header_box]: white,
     white_color: white,
-  })
+  });
 
   const toggle = () => {
     setOpenSidebar(!openSidebar);
-  }
+  };
 
   return (
     <>
@@ -64,7 +53,9 @@ const Header = ({ siteTitle, light = false }) => {
             <div className="col-xl-auto col-auto u__no_padding">
               <Link to="/">
                 <h1 className="black_color_text u__no_margin">
-                  Aza<span className="red_color_text">C</span>hii
+                  Aza
+                  <span className="red_color_text">C</span>
+                  hii
                 </h1>
               </Link>
             </div>
@@ -84,38 +75,45 @@ const Header = ({ siteTitle, light = false }) => {
       <Sidebar
         isOpen={openSidebar}
         moveToContact={() => {
-          setOpenSidebar(false)
-          document.documentElement.style.overflowY = "auto"
-          getToContact()
+          setOpenSidebar(false);
+          document.documentElement.style.overflowY = 'auto';
+          getToContact();
         }}
       />
     </>
-  )
+  );
 }
-const ItemHeader = ({ text, to = null, featured = 0, onContact }) =>
-  to ? (
-    <Link to={to}>
-      <div className="col-xl-auto col-auto d-none d-sm-block u__pointer">
-        <h5 className="black_color_text u__no_margin">{text}&#160;&#160;</h5>
-      </div>
-    </Link>
-  ) : (
-    <LS
-      activeClass="blue_light_color_text"
-      to="contact_form"
-      spy={true}
-      smooth={false}
-      offset={50}
-      duration={500}
-      // delay={1000}
-    >
-      <div
-        onClick={onContact}
-        className="col-xl-auto col-auto d-none d-sm-block u__pointer"
-      >
-        <h5 className="black_color_text u__no_margin">{text}&#160;&#160;</h5>
-      </div>
-    </LS>
-  )
 
-export default Header
+const ItemHeader = ({
+  text, to = null, featured = 0, onContact,
+}) => (to ? (
+  <Link to={to}>
+    <div className="col-xl-auto col-auto d-none d-sm-block u__pointer">
+      <h5 className="black_color_text u__no_margin">
+        {text}
+&#160;&#160;
+      </h5>
+    </div>
+  </Link>
+) : (
+  <LS
+    activeClass="blue_light_color_text"
+    to="contact_form"
+    spy
+    smooth={false}
+    offset={50}
+    duration={500}
+  >
+    <div
+      onClick={onContact}
+      className="col-xl-auto col-auto d-none d-sm-block u__pointer"
+    >
+      <h5 className="black_color_text u__no_margin">
+        {text}
+&#160;&#160;
+      </h5>
+    </div>
+  </LS>
+));
+
+export default Header;

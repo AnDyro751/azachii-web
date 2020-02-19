@@ -1,10 +1,10 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: 'Heebo', sans-serif;
-    overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: 'Heebo', sans-serif;
+	overflow-x: hidden;
 }
 
 p,
@@ -18,241 +18,248 @@ button,
 input,
 textarea,
 a {
-    font-family: 'Heebo', sans-serif;
-    margin: 0 !important;
+	font-family: 'Heebo', sans-serif;
+	margin: 0 !important;
 }
 
 .main_font {
-    font-family: 'Heebo', sans-serif;
+	font-family: 'Heebo', sans-serif;
 }
 
 .u__no_margin {
-    margin: 0 !important;
+	margin: 0 !important;
 }
 
 .u__no_padding {
-    padding: 0 !important;
+	padding: 0 !important;
 }
 
 .u__small_margin_vertical {
-    margin: 1em 0;
+	margin: 1em 0;
 }
 
 .u__big_margin_vertical {
-    margin: 3em 0;
+	margin: 3em 0;
 }
 
 .u__small_padding {
-    padding: 1em 0;
+	padding: 1em 0;
 }
 
 .u__small_margin_bottom {
-    margin: 0 0 1em 0;
+	margin: 0 0 1em 0;
 }
 
 .u__text_center {
-    text-align: center;
+	text-align: center;
 }
 
 .u__main_box_shadow {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .u__normal_font {
-    font-weight: normal;
+	font-weight: normal;
 }
-
+.full_height {
+	height: 100vh;
+}
 .lds-ring {
-    display: flex;
-    position: relative;
-    width: 24px;
-    height: 24px;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	position: relative;
+	width: 24px;
+	height: 24px;
+	align-items: center;
+	justify-content: center;
 }
 
 .lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 17px;
-    height: 17px;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fff transparent transparent transparent;
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #fff transparent transparent transparent;
 }
 
 .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
+	animation-delay: -0.45s;
 }
 
 .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
+	animation-delay: -0.3s;
 }
 
 .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
+	animation-delay: -0.15s;
 }
 
 @keyframes lds-ring {
-    0% {
-        transform: rotate(0deg);
-    }
+	0% {
+		transform: rotate(0deg);
+	}
 
-    100% {
-        transform: rotate(360deg);
-    }
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .u__pointer {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .u__default_bg {
-    background-size: 120%;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-color: white;
+	background-size: 120%;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+.background_image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 /* COLORS */
 .transparent_color {
-    background: transparent;
+	background: transparent;
 }
 
 .white_color_text {
-    color: #ffffff;
+	color: #ffffff;
 }
 
 .white_color {
-    background: #ffffff;
+	background: #ffffff;
 }
 
 .gray_color_text {
-    color: #637382;
+	color: #637382;
 }
 
 .blue_light_color_text {
-    color: #3a4da7;
+	color: #3a4da7;
 }
 
 .blue_light_color {
-    background: #3a4da7;
+	background: #3a4da7;
 }
 
 .disabled_color {
-    background-color: rgb(136, 136, 136);
-    color: rgb(240, 240, 240);
+	background-color: rgb(136, 136, 136);
+	color: rgb(240, 240, 240);
 }
 
 .accent_color {
-    background-color: #d5eeed;
+	background-color: #d5eeed;
 }
 
 .accent_color_dark {
-    background: #05363c;
+	background: #05363c;
 }
 
 .accent_color_text_dark {
-    color: #05363c;
+	color: #05363c;
 }
 
 .accent_color_text_light {
-    color: #3cc5b9;
+	color: #3cc5b9;
 }
 
 .blue_light_color_rgba {
-    background: #3a4da76b;
+	background: #3a4da76b;
 }
 
 .accent_light_color {
-    background: #fbfaf9;
+	background: #fbfaf9;
 }
 
 .red_color_text {
-    color: #b71c1c;
+	color: #b71c1c;
 }
 
 .u__no_outline {
-    outline: none !important;
+	outline: none !important;
 }
 
 .red_light_color_color {
-    color: #ff6f60;
+	color: #ff6f60;
 }
 
 .accent_color_light {
-    background-color: #f4e3d7;
+	background-color: #f4e3d7;
 }
 
 .black_color {
-    background: #181818;
+	background: #181818;
 }
 
 .black_color_text {
-    color: #181818;
+	color: #181818;
 }
 
 .red_light_color {
-    background: #ff6f60;
+	background: #ff6f60;
 }
 
 .red_light_color_rgba {
-    background: #ff6f606b;
+	background: #ff6f606b;
 }
 
 .main_color {
-    background: #3A3856;
+	background: #3A3856;
 }
 
 .dark_color {
-    background: #030303;
+	background: #030303;
 }
 
 .main_color_text {
-    color: #3A3856;
+	color: #3A3856;
 }
 
 .separator {
-    background-color: #181818;
-    height: 5px;
-    width: 50px;
-    margin: 1em 0;
-    border-radius: 10px;
+	background-color: #181818;
+	height: 5px;
+	width: 50px;
+	margin: 1em 0;
+	border-radius: 10px;
 }
 
 /* REPONSIVE */
 @media screen and (max-width: 767px) {
-    .u__no_padding_in_mobile {
-        padding: 0 !important;
-    }
-    .u__default_bg {
-        background-size: cover !important;
-    }
-    .hide_on_mobile {
-        display: none !important;
-    }
+	.u__no_padding_in_mobile {
+		padding: 0 !important;
+	}
+	.u__default_bg {
+		background-size: cover !important;
+	}
+	.hide_on_mobile {
+		display: none !important;
+	}
 }
 @media screen and (max-width: 374px) {
-    .hide_on_small_mobile {
-        display: none !important;
-    }
+	.hide_on_small_mobile {
+		display: none !important;
+	}
 }
 
 @media screen and (min-width: 768px) {
-    .only_on_mobile {
-        display: none;
-    }
+	.only_on_mobile {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 1024px) {
-    .u__no_padding_in_tablet {
-        padding: 0 !important;
-    }
+	.u__no_padding_in_tablet {
+		padding: 0 !important;
+	}
 }
 @media screen and (max-width: 1025px) {
-    .only_on_desktop {
-        display: none;
-    }
+	.only_on_desktop {
+		display: none;
+	}
 }
