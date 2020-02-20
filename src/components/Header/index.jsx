@@ -36,9 +36,9 @@ function Header({ light, initialColor }) {
 
   const headerClass = classnames({
     [styles.main_header]: true,
-    [styles.header_box]: white,
+    [styles.header_box]: white && !openSidebar,
     white_color: white,
-    [styles.main_header_white_content]: initialColor && !white,
+    [styles.main_header_white_content]: initialColor && !white && !openSidebar,
   });
 
   function toggle() {
@@ -65,7 +65,7 @@ function Header({ light, initialColor }) {
             <ItemHeader text="WEB GRATIS" featured={1} to="/free" />
             <HamburgerElastic
               buttonWidth={25}
-              className="d-block d-sm-none u__no_outline"
+              className={`d-block d-sm-none u__no_outline ${initialColor && !white && !openSidebar ? styles.menu_button_white : ''}`}
               isActive={openSidebar}
               toggleButton={toggle}
             />

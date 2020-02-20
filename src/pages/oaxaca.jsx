@@ -8,8 +8,16 @@ function Oaxaca() {
   return (
     <Layout footer_color="blue_light_color" footer_text="white_color_text" header={{ color: 'white' }}>
       <>
-        <SEO title="Oaxaca" />
-        <Banner cover={{ desktop: coverDesktop }} name="Oaxaca" />
+        <SEO
+          title="Oaxaca"
+          description="Nuestro compromiso es escalar sus negocios e impulsar la creación de nuevas oportunidades"
+        />
+        <Banner
+          cover={{ desktop: coverDesktop }}
+          name="Oaxaca"
+          message="Nuestro compromiso es escalar sus negocios e impulsar la creación de nuevas oportunidades"
+          buttonText="IMPULSAME"
+        />
       </>
     </Layout>
   );

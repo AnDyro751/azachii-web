@@ -8,7 +8,6 @@ function Queretaro() {
     <Layout footer_color="blue_light_color" footer_text="white_color_text" header={{ color: 'white' }}>
       <>
         <SEO title="Querétaro" />
-        {/* <Banner /> */}
       </>
     </Layout>
   );

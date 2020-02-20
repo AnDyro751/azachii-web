@@ -1,15 +1,17 @@
-import React, { useState } from "react"
-import styles from "./styles.module.css"
-import { FirebaseContext } from "gatsby-plugin-firebase"
-import { Element } from "react-scroll"
+/* eslint-disable radix */
+import React, { useState } from 'react';
+import { FirebaseContext } from 'gatsby-plugin-firebase';
+import { Element } from 'react-scroll';
+import PropTypes from 'prop-types';
+import styles from './styles.module.css';
 
-const Contact = () => {
+function Contact() {
   return (
     <Element
       name="contact_form"
       className={`row u__big_margin_vertical justify-content-center ${styles.box_container}`}
     >
-      <div className={styles.linear}></div>
+      <div className={styles.linear} />
       <div className="col-xl-10 col-11 u__no_padding">
         <div className="row u__no_margin justify-content-between align-items-start">
           <div className="col-xl-5 col-11 u__no_padding">
@@ -30,54 +32,55 @@ const Contact = () => {
         </div>
       </div>
     </Element>
-  )
+  );
 }
 
 const FormContact = () => {
-  const [fields, setFields] = useState({})
-  const [loading, setLoading] = useState(false)
-  const [contact, setContact] = useState(false)
-  const firebase = React.useContext(FirebaseContext)
-  const [valid, setValid] = useState(false)
-  const [valid_fields, setValidFields] = useState(new Array(5).fill(false))
-  const [edited_fields, setEditedFields] = useState(new Array(5).fill(false))
+  const [fields, setFields] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [contact, setContact] = useState(false);
+  const firebase = React.useContext(FirebaseContext);
+  const [valid, setValid] = useState(false);
+  const [validFields, setValidFields] = useState(new Array(5).fill(false));
+  const [editedFields, setEditedFields] = useState(new Array(5).fill(false));
 
   const handleChange = ({ target }) => {
     setFields(
-      Object.assign({
+      {
         ...fields,
         [target.name]: target.value,
-      })
-    )
-    if (!edited_fields[Number.parseInt(target.id)]) {
-      if (target.value !== "") {
-        const new_edited_fields = edited_fields
-        new_edited_fields[Number.parseInt(target.id)] = true
-        setEditedFields(new_edited_fields)
+      },
+    );
+    if (!editedFields[Number.parseInt(target.id)]) {
+      if (target.value !== '') {
+        const newEditedFields = editedFields;
+        newEditedFields[Number.parseInt(target.id)] = true;
+        setEditedFields(newEditedFields);
       }
     }
-    const new_valid_fields = valid_fields
+    const newValidFields = validFields;
     switch (target.type) {
-      case "email":
-        new_valid_fields[
+      case 'email':
+        newValidFields[
           Number.parseInt(target.id)
+        // eslint-disable-next-line no-useless-escape
         ] = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-          target.value
-        )
-        break
-      case "tel":
-        new_valid_fields[Number.parseInt(target.id)] = /^\d{10}$/.test(
-          target.value
-        )
-        break
+          target.value,
+        );
+        break;
+      case 'tel':
+        newValidFields[Number.parseInt(target.id)] = /^\d{10}$/.test(
+          target.value,
+        );
+        break;
       default:
-        new_valid_fields[Number.parseInt(target.id)] =
-          target.value.length >= Number.parseInt(target.minLength) &&
-          target.value.length <= Number.parseInt(target.maxLength)
+        // eslint-disable-next-line max-len
+        newValidFields[Number.parseInt(target.id)] = target.value.length >= Number.parseInt(target.minLength)
+          && target.value.length <= Number.parseInt(target.maxLength);
     }
-    setValidFields(new_valid_fields)
-    setValid(new_valid_fields.filter(item => item === false).length === 0)
-  }
+    setValidFields(newValidFields);
+    setValid(newValidFields.filter((item) => item === false).length === 0);
+  };
 
   return (
     <div className="row u__no_margin contact_form">
@@ -85,21 +88,21 @@ const FormContact = () => {
         <div
           className="col-xl-12"
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
             height: contact
-              ? document.getElementById("contact_form").clientHeight
+              ? document.getElementById('contact_form').clientHeight
               : 0,
           }}
         >
-          <p style={{ fontWeight: "bold", color: "#4e4e4e", fontSize: "2em" }}>
+          <p style={{ fontWeight: 'bold', color: '#4e4e4e', fontSize: '2em' }}>
             Gracias por contactarnos.
             <p>Te atenderemos en breve.</p>
           </p>
         </div>
       ) : (
-        <div id="contact_form" className="col-xs-12 u__no_padding">
+        <div className="col-xs-12 u__no_padding">
           <div className="row u__no_margin">
             <div className="col-xl-12">
               <h2 className={`black_color_text ${styles.main_title}`}>
@@ -116,8 +119,8 @@ const FormContact = () => {
                 id={0}
                 minLength={3}
                 maxLength={20}
-                valid={valid_fields[0]}
-                edited={edited_fields[0]}
+                valid={validFields[0]}
+                edited={editedFields[0]}
               />
             </div>
             <div className="col-xl-6 col-12">
@@ -129,8 +132,8 @@ const FormContact = () => {
                 onChange={handleChange}
                 name="email"
                 id={1}
-                valid={valid_fields[1]}
-                edited={edited_fields[1]}
+                valid={validFields[1]}
+                edited={editedFields[1]}
               />
             </div>
             <div className="col-xl-6 col-12">
@@ -142,8 +145,8 @@ const FormContact = () => {
                 onChange={handleChange}
                 name="phone"
                 id={2}
-                valid={valid_fields[2]}
-                edited={edited_fields[2]}
+                valid={validFields[2]}
+                edited={editedFields[2]}
               />
             </div>
             <div className="col-xl-6 col-12">
@@ -157,8 +160,8 @@ const FormContact = () => {
                 minLength={4}
                 maxLength={30}
                 id={3}
-                valid={valid_fields[3]}
-                edited={edited_fields[3]}
+                valid={validFields[3]}
+                edited={editedFields[3]}
               />
             </div>
             <div className="col-xl-12 col-12">
@@ -171,41 +174,42 @@ const FormContact = () => {
                 name="message"
                 placeholder="¿Como ingreso mi negocio al mundo digital?"
                 className={`${styles.message} ${
-                  !valid_fields[4] && edited_fields[4]
+                  !validFields[4] && editedFields[4]
                     ? styles.main_input_wrong
-                    : ""
+                    : ''
                 }`}
               />
               <button
+                type="button"
                 disabled={loading || !valid}
                 className={`${styles.send_button} ${
-                  valid ? "blue_light_color" : "disabled_color"
+                  valid ? 'blue_light_color' : 'disabled_color'
                 } white_color_text u__main_box_shadow`}
                 style={{
-                  float: "right",
-                  cursor: loading || !valid ? "auto" : "pointer",
+                  float: 'right',
+                  cursor: loading || !valid ? 'auto' : 'pointer',
                 }}
                 onClick={() => {
-                  setLoading(true)
+                  setLoading(true);
                   firebase
                     .firestore()
-                    .collection("contact")
+                    .collection('contact')
                     .add(fields)
                     .then(() => {
-                      setContact(true)
-                    })
-                  setLoading(false)
+                      setContact(true);
+                    });
+                  setLoading(false);
                 }}
               >
                 {loading ? (
                   <div className="lds-ring">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div />
+                    <div />
+                    <div />
+                    <div />
                   </div>
                 ) : (
-                  "ENVIAR"
+                  'ENVIAR'
                 )}
               </button>
             </div>
@@ -213,15 +217,15 @@ const FormContact = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-const InputType = ({
+function InputType({
   label,
-  type = "text",
-  placeholder = "",
-  whiteColor = false,
-  autoComplete = null,
+  type,
+  placeholder,
+  whiteColor,
+  autoComplete,
   onChange,
   name,
   id,
@@ -229,26 +233,52 @@ const InputType = ({
   maxLength,
   valid,
   edited,
-}) => (
-  <div className={`row u__no_margin ${styles.main_input}`}>
-    <div className="col-xl-12 u__no_padding">
-      <p className={`${styles.label} ${whiteColor && styles.white}`}>{label}</p>
+}) {
+  return (
+    <div className={`row u__no_margin ${styles.main_input}`}>
+      <div className="col-xl-12 u__no_padding">
+        <p className={`${styles.label} ${whiteColor && styles.white}`}>{label}</p>
+      </div>
+      <div className="col-xl-12 u__no_padding">
+        <input
+          id={id}
+          name={name}
+          type={type}
+          autoComplete={autoComplete}
+          placeholder={placeholder}
+          spellCheck="false"
+          onChange={onChange}
+          minLength={minLength}
+          maxLength={maxLength}
+          className={`${!valid && edited ? styles.main_input_wrong : ''}`}
+        />
+      </div>
     </div>
-    <div className="col-xl-12 u__no_padding">
-      <input
-        id={id}
-        name={name}
-        type={type}
-        autoComplete={autoComplete}
-        placeholder={placeholder}
-        spellCheck="false"
-        onChange={onChange}
-        minLength={minLength}
-        maxLength={maxLength}
-        className={`${!valid && edited ? styles.main_input_wrong : ""}`}
-      />
-    </div>
-  </div>
-)
+  );
+}
 
-export default Contact
+InputType.defaultProps = {
+  type: 'text',
+  placeholder: '',
+  whiteColor: false,
+  autoComplete: 'off',
+  minLength: 0,
+  maxLength: 300,
+};
+
+InputType.propTypes = {
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  whiteColor: PropTypes.bool,
+  autoComplete: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  minLength: PropTypes.number,
+  maxLength: PropTypes.number,
+  valid: PropTypes.bool.isRequired,
+  edited: PropTypes.bool.isRequired,
+};
+
+export default Contact;
