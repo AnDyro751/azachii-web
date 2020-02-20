@@ -1,0 +1,26 @@
+.main_item {
+	cursor: pointer;
+	transition: all .4s;
+	margin: 2.5em 0;
+}
+.main_item:hover {
+	transform: translateX(5px);
+}
+.main_item:hover .main_icon {
+	border-radius: 10px;
+	transform: scale(1) rotate(0deg) skewY(5deg) skewX(-5deg);
+}
+.main_icon {
+	height: 50px;
+	width: 50px;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	display: flex;
+	border-radius: 100px;
+	transition: all .5s;
+	perspective: 456px;
+}
+.main_item_title {
+	font-size: 1.2em;
+}

@@ -1,62 +1,29 @@
 .main_title {
-    font-size: 3.5em;
+	font-size: 3.5em;
 }
-
-.main_icon {
-    height: 50px;
-    width: 50px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    display: flex;
-    border-radius: 100px;
-    transition: all .5s;
-    perspective: 456px;
-}
-
-.main_item_title {
-    font-size: 1.2em;
-}
-
-.main_item {
-    cursor: pointer;
-
-    transition: all .4s;
-    margin: 3em 0;
-}
-
-.main_item:hover {
-    transform: translateX(5px);
-}
-
-.main_item:hover .main_icon {
-    border-radius: 10px;
-    transform: scale(1) rotate(0deg) skewY(5deg) skewX(-5deg);
-}
-
 .main_data_container {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	display: flex;
 }
-
 .main_data_container img {
-    transition: all 5s;
-    background: transparent;
-    /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
+	transition: all 5s;
+	background: transparent;
 }
-
 .main {
-    transition: all 1s;
+	transition: all 1s;
+}
+.consulting_color {
+	background-color: #c5e0d9;
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE */
 @media screen and (max-width: 1024px) {
-    .main_title {
-        font-size: 2em;
-        margin: 1em 0 !important;
-    }
+	.main_title {
+		font-size: 2em;
+		margin: 1em 0 !important;
+	}
 }

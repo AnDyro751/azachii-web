@@ -19,17 +19,13 @@ const MainHome = () => {
 
   return (
     <>
-      <MainBanner />
-      <HelpYou />
-      <WebPage />
+      
       {/* <MainGetter 
         title="Producción multimedia"
         description="Producción multimedia para tu negocio o marca personal"
         contain="multimedia"
         tracker="get_multimedia"
         button_text="Solicitar presupuesto" /> */}
-      <PerrosFelices />
-      <Mec />
       <Tools />
       <SimplePayments />
       <GetFreePage />

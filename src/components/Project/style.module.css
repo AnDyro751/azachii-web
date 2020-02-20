@@ -1,5 +1,6 @@
 .project_section {
   height: 90vh;
+  margin: 5vh 0 0 0;
 }
 .project_title {
   margin-bottom: 1em !important;
@@ -28,6 +29,12 @@
   padding: 1em;
   color: white;
 }
+.project_image_container {
+  display: inline-flex;
+}
+.project_image {
+  height: auto;
+}
 @media(max-width: 768px) {
   .project_section {
     height: auto;
@@ -38,6 +45,13 @@
   }
   .project_phrase {
     font-size: 2.5em;
+  }
+  .project_image_container {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .project_image {
+    margin-top: 2.5em;
   }
 }
 @media(max-width: 375px) {

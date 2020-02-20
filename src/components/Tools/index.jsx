@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react"
-import { useFirebase } from "gatsby-plugin-firebase"
-import styles from "./styles.module.css"
-import { LazyLoadImage } from "react-lazy-load-image-component"
-import { useStaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import Img from "gatsby-image"
-import { useMixpanel } from "gatsby-plugin-mixpanel"
-const Tools = ({ limit = 3, showDescription = true }) => {
+/* eslint-disable react/no-array-index-key */
+import React, { useState } from 'react';
+import { useFirebase } from 'gatsby-plugin-firebase';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import { useMixpanel } from 'gatsby-plugin-mixpanel';
+import PropTypes from 'prop-types';
+import styles from './styles.module.css';
+
+function Tools({ limit }) {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "laptop-2298286_1280.png" }) {
@@ -17,29 +19,29 @@ const Tools = ({ limit = 3, showDescription = true }) => {
         }
       }
     }
-  `)
-  useFirebase(firebase => {})
-  const [allPromos, setPromos] = useState([])
-  const mixPanel = useMixpanel()
+  `);
 
-  useFirebase(firebase => {
-    let subs = firebase
+  const [allPromos, setPromos] = useState([]);
+  const mixPanel = useMixpanel();
+
+  useFirebase((firebase) => {
+    const subs = firebase
       .firestore()
-      .collection("tools")
+      .collection('tools')
       .limit(limit)
-      .onSnapshot(snaps => {
-        let newTools = []
-        snaps.docs.forEach(doc => {
-          newTools.push({ ...doc.data(), id: doc.id })
-        })
-        setPromos(newTools)
-      })
-    return () => subs()
-  })
+      .onSnapshot((snaps) => {
+        const newTools = [];
+        snaps.docs.forEach((doc) => {
+          newTools.push({ ...doc.data(), id: doc.id });
+        });
+        setPromos(newTools);
+      });
+    return () => subs();
+  }, []);
 
   return (
-    <div className={`row u__no_margin justify-content-center`}>
-      <div className={`col-xl-12 col-12 u__no_padding`}>
+    <div className="row u__no_margin justify-content-center">
+      <div className="col-xl-12 col-12 u__no_padding">
         <div
           className={`row justify-content-center u__no_margin align-items-center ${styles.main}`}
         >
@@ -60,11 +62,12 @@ const Tools = ({ limit = 3, showDescription = true }) => {
             <div className="row u__no_margin">
               <div className="col-xl-5 u__no_padding">
                 <button
+                  type="button"
                   onClick={() => {
-                    window.open("https://forms.gle/jGBNpCnUEoURBPTC7", "_blank")
-                    mixPanel.track("go_to_free_form")
+                    window.open('https://forms.gle/jGBNpCnUEoURBPTC7', '_blank');
+                    mixPanel.track('go_to_free_form');
                     if (window.fbq) {
-                      window.fbq("track", "CompleteRegistration")
+                      window.fbq('track', 'CompleteRegistration');
                     }
                   }}
                   className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
@@ -82,10 +85,11 @@ const Tools = ({ limit = 3, showDescription = true }) => {
                 <ToolItem key={i} tool={tool} />
               ))}
             </div>
-            {process.env.NODE_ENV === "development" && (
+            {process.env.NODE_ENV === 'development' && (
               <div className="row u__big_margin_vertical justify-content-center">
                 <div className="col-xl-2 col-11 u__no_padding">
                   <button
+                    type="button"
                     className={`blue_light_color u__main_box_shadow white_color_text ${styles.button}`}
                   >
                     VER MÁS
@@ -97,8 +101,16 @@ const Tools = ({ limit = 3, showDescription = true }) => {
         </div>
       </div>
     </div>
-  )
+  );
 }
+
+Tools.defaultProps = {
+  limit: 3,
+};
+
+Tools.propTypes = {
+  limit: PropTypes.number,
+};
 
 const ToolItem = ({ tool: { image_url, name, description } }) => (
   <div className="col-xl-4 col-12 u__no_padding">
@@ -115,9 +127,9 @@ const ToolItem = ({ tool: { image_url, name, description } }) => (
         <h1 className={`black_color_text u__normal_font ${styles.title_item}`}>
           {name}
         </h1>
-        <div className="separator"></div>
+        <div className="separator" />
 
-        <p className={`gray_color_text`}>{description}</p>
+        <p className="gray_color_text">{description}</p>
       </div>
       {/* <div className="col-xl-12 u__no_padding">
         <div className="row u__no_margin align-items-center">
@@ -139,17 +151,6 @@ const ToolItem = ({ tool: { image_url, name, description } }) => (
       </div> */}
     </div>
   </div>
-)
+);
 
-const Tag = ({ tag: { name, color, background } }) => (
-  <div
-    style={{
-      background: background,
-    }}
-    className={`col-xl-auto u__main_box_shadow ${styles.main_tag}`}
-  >
-    <p style={{ color: color }}>{name}</p>
-  </div>
-)
-
-export default Tools
+export default Tools;

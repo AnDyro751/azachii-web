@@ -1,0 +1,14 @@
+.perros_felices_image {
+  width: 65%;
+}
+.mec_joyeria_image {
+  width: 90%;
+}
+@media(max-width: 768px) {
+  .perros_felices_image {
+    width: 80%;
+  }
+  .mec_joyeria_image {
+    width: 100%;
+  }
+}

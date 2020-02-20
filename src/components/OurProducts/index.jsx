@@ -2,7 +2,6 @@ import React from "react"
 import styles from "./styles.module.css"
 import { FaAndroid, FaApple, FaShoppingBag } from "react-icons/fa"
 import { AiFillShopping } from "react-icons/ai"
-import MainBanner from "../Home/MainBanner"
 import CodeIcons from "../CodeIcons/index"
 
 const OurProducts = () => (

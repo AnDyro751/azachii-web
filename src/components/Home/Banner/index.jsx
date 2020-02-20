@@ -1,12 +1,10 @@
-import React from "react"
-import BackgroundImage from "gatsby-background-image"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import styles from "./style.module.css"
-import classnames from "classnames"
-
-import { Link } from "gatsby"
-import CodeIcons from '../../CodeIcons/index';
+import React from 'react';
+import BackgroundImage from 'gatsby-background-image';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import styled from 'styled-components';
+import classnames from 'classnames';
+import styles from './style.module.css';
+import CodeIcons from '../../CodeIcons';
 
 const MainBanner = () => {
   const data = useStaticQuery(graphql`
@@ -19,30 +17,32 @@ const MainBanner = () => {
         }
       }
     }
-  `)
-
+  `);
   const imageContainerClass = classnames({
-    "col-xl-6 u__no_padding col-12": true,
+    'col-xl-5 u__no_padding col-12': true,
     [styles.main_image_container]: true,
-  })
+  });
+
   return (
     <div className={`${styles.main_banner} row u__no_margin`}>
       <div className="col-xl-12 u__no_padding">
         <div className="row u__no_margin align-items-center justify-content-center">
-          <div className="col-xl-5 col-12 offset-xl-1 u__no_padding">
+          <div className="col-xl-6 col-12 offset-xl-1 u__no_padding">
             <div className="row u__no_margin justify-content-center">
               <CodeIcons />
               <div className="col-xl-12 u__no_padding col-11 u__small_margin_vertical">
                 <h1
                   className={`${styles.description_text} black_color_text main_font`}
                 >
-                  Desarrollo web & móvil
+                  Consultoría y desarrollo de soluciones digitales
                 </h1>
               </div>
-
               <div className="col-xl-12 u__no_padding d-none d-sm-block col-11 u__small_margin_vertical">
                 <Link to="/services">
-                  <button className={`black_color white_color_text u__main_box_shadow ${styles.button_services}`}>
+                  <button
+                    className={`black_color white_color_text u__main_box_shadow ${styles.button_services}`}
+                    type="button"
+                  >
                     SERVICIOS
                   </button>
                 </Link>
@@ -54,30 +54,25 @@ const MainBanner = () => {
               </div>
             </div>
           </div>
-
-          {/* <Fade right> */}
           <div className={imageContainerClass}>
             <BackgroundImage
               Tag="section"
               className={styles.bg}
               fluid={data.placeholderImage.childImageSharp.fluid}
-              backgroundColor={`#040e18`}
-            ></BackgroundImage>
+              backgroundColor="#040e18"
+            />
           </div>
-          {/* </Fade> */}
         </div>
       </div>
     </div>
-  )
-}
-
-
+  );
+};
 
 const StyledBackgroundSection = styled(MainBanner)`
   width: 100%;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-`
+`;
 
-export default StyledBackgroundSection
+export default StyledBackgroundSection;
