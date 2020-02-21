@@ -1,11 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 import { useFirebase } from 'gatsby-plugin-firebase';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { useMixpanel } from 'gatsby-plugin-mixpanel';
 import PropTypes from 'prop-types';
+import ToolItem from './Item';
 import styles from './styles.module.css';
 
 function Tools({ limit }) {
@@ -56,8 +56,10 @@ function Tools({ limit }) {
               Herramientas que te harán la vida más simple
             </h3>
             <h4 className="u__normal_font main_color_text">
-              Sin cobros por mantenimiento, sin costos ocultos. Todo lo que tu
-              página web necesite creado especialmente para ti.
+              Descubre como las herramientas digitales te ayudan a
+              {' '}
+              impulsar el crecimiento de tu negocio.
+              Conoce a tus clientes y deja que ellos te conozcan.
             </h4>
             <div className="row u__no_margin">
               <div className="col-xl-5 u__no_padding">
@@ -72,7 +74,7 @@ function Tools({ limit }) {
                   }}
                   className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
                 >
-                  QUIERO UNA WEB GRATIS
+                  DESCUBRIR
                 </button>
               </div>
             </div>
@@ -111,46 +113,5 @@ Tools.defaultProps = {
 Tools.propTypes = {
   limit: PropTypes.number,
 };
-
-const ToolItem = ({ tool: { image_url, name, description } }) => (
-  <div className="col-xl-4 col-12 u__no_padding">
-    <div
-      className={`row u__no_margin justify-content-center ${styles.main_item}`}
-    >
-      <div className="col-xl-2 col-2 u__no_padding">
-        <LazyLoadImage
-          className={`${styles.item_image} u__main_box_shadow`}
-          src={image_url}
-        />
-      </div>
-      <div className="col-xl-9 col-9 offset-1 offset-xl-1 u__no_padding">
-        <h1 className={`black_color_text u__normal_font ${styles.title_item}`}>
-          {name}
-        </h1>
-        <div className="separator" />
-
-        <p className="gray_color_text">{description}</p>
-      </div>
-      {/* <div className="col-xl-12 u__no_padding">
-        <div className="row u__no_margin align-items-center">
-          <Tag
-            tag={{
-              name: "Ventas",
-              background: "#f44336",
-              color: "white",
-            }}
-          />
-          <Tag
-            tag={{
-              name: "Ecommerce",
-              background: "blue",
-              color: "white",
-            }}
-          />
-        </div>
-      </div> */}
-    </div>
-  </div>
-);
 
 export default Tools;

@@ -35,6 +35,11 @@
 .project_image {
   height: auto;
 }
+@media(max-width: 1024px) {
+  .project_section {
+    height: 50vh;
+  }
+}
 @media(max-width: 768px) {
   .project_section {
     height: auto;

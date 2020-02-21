@@ -37,21 +37,21 @@ function HelpYou() {
             </h3>
             <ItemHelpYou
               handleEnter={() => {
-                setCurrent('consulting')
-                setCurrentImage(consulting);
-              }}
-              text="Consultoría"
-            >
-              <MdShowChart className="main_color_text" size={20} />
-            </ItemHelpYou>
-            <ItemHelpYou
-              handleEnter={() => {
                 setCurrent('web');
                 setCurrentImage(mac);
               }}
               text="Tu tienda en linea"
             >
               <FaShoppingCart className="main_color_text" size={20} />
+            </ItemHelpYou>
+            <ItemHelpYou
+              handleEnter={() => {
+                setCurrent('consulting')
+                setCurrentImage(consulting);
+              }}
+              text="Consultoría"
+            >
+              <MdShowChart className="main_color_text" size={20} />
             </ItemHelpYou>
             <ItemHelpYou
               handleEnter={() => {
