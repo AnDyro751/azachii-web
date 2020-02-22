@@ -6,7 +6,7 @@ import styles from './style.module.css';
 
 function ToolItem({ tool: { image_url, name, description } }) {
   return (
-    <div className="col-xl-4 col-12 u__no_padding">
+    <div className="col-md-4 col-sm-6 col-12 u__no_padding" style={{ marginTop: '0.5em' }}>
       <div
         className={`row u__no_margin justify-content-center ${styles.main_item}`}
       >

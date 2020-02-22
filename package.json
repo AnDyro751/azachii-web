@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "azachii",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
@@ -45,6 +45,7 @@
     "react-modal": "^3.11.1",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.7.14",
+    "react-toastify": "^5.5.0",
     "react-tooltip": "^3.11.1",
     "styled-components": "^4.4.1"
   },

@@ -1,0 +1,29 @@
+.main_input input {
+	width: 100%;
+	padding: 1em .6em;
+	outline: none;
+	background: #f6f9fc;
+	border-radius: 4px;
+	font-size: 1em;
+	font-weight: normal;
+	color: #8898aa;
+	border: 1px solid transparent;
+}
+.main_input input:focus {
+	background: white;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.main_input input::placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	opacity: 1;
+	font-weight: normal;
+}
+.main_input {
+	margin: 1em 0 !important;
+}
+.label {
+	font-size: .8em;
+	font-weight: normal;
+	margin-bottom: .5em !important;
+	color: #8e8e8e;
+}

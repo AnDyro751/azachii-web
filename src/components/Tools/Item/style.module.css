@@ -19,3 +19,6 @@
   font-size: 1.2em;
   font-weight: normal;
 }
+.separate_from_top {
+  margin-top: 0.5em;
+}

@@ -1,14 +1,13 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useState } from 'react';
-import { useFirebase } from 'gatsby-plugin-firebase';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { useMixpanel } from 'gatsby-plugin-mixpanel';
 import PropTypes from 'prop-types';
 import ToolItem from './Item';
+import { tools } from './tools.json';
 import styles from './styles.module.css';
 
-function Tools({ limit }) {
+function Tools() {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "laptop-2298286_1280.png" }) {
@@ -20,24 +19,6 @@ function Tools({ limit }) {
       }
     }
   `);
-
-  const [allPromos, setPromos] = useState([]);
-  const mixPanel = useMixpanel();
-
-  useFirebase((firebase) => {
-    const subs = firebase
-      .firestore()
-      .collection('tools')
-      .limit(limit)
-      .onSnapshot((snaps) => {
-        const newTools = [];
-        snaps.docs.forEach((doc) => {
-          newTools.push({ ...doc.data(), id: doc.id });
-        });
-        setPromos(newTools);
-      });
-    return () => subs();
-  }, []);
 
   return (
     <div className="row u__no_margin justify-content-center">
@@ -59,18 +40,12 @@ function Tools({ limit }) {
               Descubre como las herramientas digitales te ayudan a
               {' '}
               impulsar el crecimiento de tu negocio.
-              Conoce a tus clientes y deja que ellos te conozcan.
             </h4>
             <div className="row u__no_margin">
               <div className="col-xl-5 u__no_padding">
                 <button
                   type="button"
                   onClick={() => {
-                    window.open('https://forms.gle/jGBNpCnUEoURBPTC7', '_blank');
-                    mixPanel.track('go_to_free_form');
-                    if (window.fbq) {
-                      window.fbq('track', 'CompleteRegistration');
-                    }
                   }}
                   className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
                 >
@@ -82,23 +57,11 @@ function Tools({ limit }) {
         </div>
         <div className="row u__no_margin justify-content-center">
           <div className="col-xl-11 u__no_padding">
-            <div className={`row u__no_margin ${styles.main_items}`}>
-              {allPromos.map((tool, i) => (
+            <div className="row u__no_margin justify-content-center">
+              {tools.map((tool, i) => (
                 <ToolItem key={i} tool={tool} />
               ))}
             </div>
-            {process.env.NODE_ENV === 'development' && (
-              <div className="row u__big_margin_vertical justify-content-center">
-                <div className="col-xl-2 col-11 u__no_padding">
-                  <button
-                    type="button"
-                    className={`blue_light_color u__main_box_shadow white_color_text ${styles.button}`}
-                  >
-                    VER MÁS
-                  </button>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>

@@ -27,6 +27,19 @@
   background-color: white;
   color: #181818;
 }
+.author_section {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.author {
+  color: rgb(220, 220, 220);
+  font-size: 0.9em;
+  font-weight: normal;
+}
+.author span {
+  font-weight: bold;
+}
 @media(max-width: 767px) {
   .location_name {
     font-size: 3em;

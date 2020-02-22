@@ -13,7 +13,12 @@ function Oaxaca() {
           description="Nuestro compromiso es escalar sus negocios e impulsar la creación de nuevas oportunidades"
         />
         <Banner
-          cover={{ desktop: coverDesktop }}
+          cover={{
+            desktop: coverDesktop,
+            author: {
+              name: 'Carlos Vasquez',
+            },
+          }}
           name="Oaxaca"
           message="Nuestro compromiso es escalar sus negocios e impulsar la creación de nuevas oportunidades"
           buttonText="IMPULSAME"

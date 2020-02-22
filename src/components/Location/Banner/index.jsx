@@ -14,7 +14,7 @@ function Banner({
   return (
     <div
       className="row u__no_margin align-items-center justify-content-center full_height background_image"
-      style={{ backgroundImage: `url(${cover.desktop})` }}
+      style={{ backgroundImage: `url(${cover.desktop})`, position: 'relative' }}
     >
       <div className="col-11 u__no_padding">
         <div className="row u__no_margin justify-content-center">
@@ -45,6 +45,15 @@ function Banner({
           </button>
         </div>
       </div>
+      {cover.author && (
+        <div className={styles.author_section}>
+          <h3 className={styles.author}>
+            Foto por:
+            {' '}
+            <span>{cover.author.name}</span>
+          </h3>
+        </div>
+      )}
     </div>
   );
 }
@@ -54,6 +63,9 @@ Banner.propTypes = {
     mobile: PropTypes.string,
     tablet: PropTypes.string,
     desktop: PropTypes.string,
+    author: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }),
   }).isRequired,
   name: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,

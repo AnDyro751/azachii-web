@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import './layout.css';
 import { Helmet } from 'react-helmet';
 import ReactTooltip from 'react-tooltip';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './Header';
 import Footer from './Footer';
 import WhatsAppCustomer from './WhatsAppCustomer';
@@ -35,6 +37,7 @@ function Layout({
       <WhatsAppCustomer />
       <Footer custom_class={footer_color} text_color={footer_text} />
       <ReactTooltip />
+      <ToastContainer />
     </>
   );
 }
