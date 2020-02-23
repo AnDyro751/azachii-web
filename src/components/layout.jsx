@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import './layout.css';
 import { Helmet } from 'react-helmet';
 import ReactTooltip from 'react-tooltip';
 import { ToastContainer } from 'react-toastify';

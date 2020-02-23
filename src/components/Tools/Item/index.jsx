@@ -4,7 +4,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import PropTypes from 'prop-types';
 import styles from './style.module.css';
 
-function ToolItem({ tool: { image_url, name, description } }) {
+function ToolItem({ tool: { image, name, description } }) {
   return (
     <div className="col-md-4 col-sm-6 col-12 u__no_padding" style={{ marginTop: '0.5em' }}>
       <div
@@ -13,7 +13,7 @@ function ToolItem({ tool: { image_url, name, description } }) {
         <div className="col-xl-2 col-2 u__no_padding">
           <LazyLoadImage
             className={`${styles.item_image} u__main_box_shadow`}
-            src={image_url}
+            src={image}
           />
         </div>
         <div className="col-xl-9 col-9 offset-1 offset-xl-1 u__no_padding">
@@ -30,7 +30,7 @@ function ToolItem({ tool: { image_url, name, description } }) {
 
 ToolItem.propTypes = {
   tool: PropTypes.shape({
-    image_url: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
   }).isRequired,

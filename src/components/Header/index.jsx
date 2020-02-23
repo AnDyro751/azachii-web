@@ -49,6 +49,9 @@ function Header({ light, initialColor }) {
     <>
       <header
         className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}
+        style={{
+          padding: white ? '0.1em 0' : '0.7em 0',
+        }}
       >
         <div className="col-11 col-xl-12 offset-xl-2 u__no_padding">
           <div className="row u__no_margin align-items-center justify-content-between justify-content-sm-start">

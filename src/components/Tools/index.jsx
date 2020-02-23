@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import ToolItem from './Item';
-import { tools } from './tools.json';
+import tools from './tools';
 import styles from './styles.module.css';
 
 function Tools() {
