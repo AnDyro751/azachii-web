@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Banner from '../components/services/Banner';
 import Insights from '../components/Insights';
+import Design from '../components/Design';
 import Step from '../components/services/Step';
 
 const ServicesPage = () => {
@@ -35,6 +36,7 @@ const ServicesPage = () => {
           más. Al diseñar pensando en los usuarios, contemplamos sus
           necesidades y construimos algo que amarán usar."
         />
+        <Design />
         <Step
           image="work"
           title="Nuestro trabajo nunca termina"

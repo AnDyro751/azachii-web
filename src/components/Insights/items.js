@@ -7,7 +7,7 @@ export default [
   },
   {
     name: 'Revisiones e informes',
-    description: 'Revisamos constantemente las métricas y te entregamos un informe para que conozcas el crecimiento obtenido',
+    description: 'Revisamos constantemente las métricas y te entregamos un informe para que conozcas el crecimiento obtenido.',
     image: require('../../images/revision.png'),
   },
   {
