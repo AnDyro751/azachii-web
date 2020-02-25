@@ -51,30 +51,42 @@ function Footer({
           </div>
           <div className="col-xl col-7 u__no_padding">
             <div className="row u__no_margin justify-content-end align-items-center">
-              <div
+              <a
+                href="https://github.com/Azachii"
+                target="_blank"
+                rel="noopener noreferrer"
                 data-tip="Repositorios de Github"
                 className="col-xl-auto col-auto u__pointer"
               >
                 <FaGithub className={text_color} size={20} />
-              </div>
-              <div
+              </a>
+              <a
+                href="https://www.facebook.com/az4chii-100360501432809/"
+                target="_blank"
+                rel="noopener noreferrer"
                 data-tip="Síguenos en Facebook"
                 className="col-xl-auto col-auto u__pointer u__no_padding"
               >
                 <FaFacebookF size={20} className={text_color} />
-              </div>
-              <div
+              </a>
+              <a
+                href="https://www.instagram.com/az4chii/"
+                target="_blank"
+                rel="noopener noreferrer"
                 data-tip="Síguenos en Instagram"
                 className="col-xl-auto col-auto u__pointer "
               >
                 <FaInstagram className={text_color} size={20} />
-              </div>
-              <div
+              </a>
+              <a
+                href="https://twitter.com/Azachii1"
+                target="_blank"
+                rel="noopener noreferrer"
                 data-tip="Síguenos en Twitter"
                 className="col-xl-auto col-auto u__no_padding u__pointer"
               >
                 <FaTwitter className={text_color} size={20} />
-              </div>
+              </a>
             </div>
           </div>
         </div>
