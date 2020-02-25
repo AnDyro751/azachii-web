@@ -1,8 +1,12 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import styles from "./styles.module.css"
-const Value = ({ title = "", left = true, text = "", image = "value" }) => {
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import styles from './styles.module.css';
+
+function Step({
+  title, left, text, image,
+}) {
   const data = useStaticQuery(graphql`
     {
       value: file(relativePath: { eq: "workplace-1245776_1280.jpg" }) {
@@ -27,37 +31,33 @@ const Value = ({ title = "", left = true, text = "", image = "value" }) => {
         }
       }
     }
-  `)
-  //   console.log("DATA", data[image])
+  `);
+
   return (
-    <div className={`row u__no_margin justify-content-center service_step`}>
-      <div className={`col-11 col-lg-10 u__no_padding`}>
+    <div className={`row u__no_margin justify-content-center ${styles.service_step}`}>
+      <div className="col-11 col-lg-10 u__no_padding">
         <div className="row u__no_margin align-items-center justify-content-between">
           <div
             className={`col-md-6  col-12 ${
-              left ? "col-xl-6" : "order-xl-last offset-xl-1 col-xl-5"
+              left ? 'col-xl-6' : 'order-xl-last offset-xl-1 col-xl-5'
             } u__no_padding`}
           >
             <div className="row u__no_margin">
               <div className="col-md-12 col-xl-12 u__no_padding">
-                <h2 className="service_step_title black_color_text">
-                  {/* Siempre aportamos valor */}
+                <h2 className={`${styles.service_step_title} black_color_text`}>
                   {title}
                 </h2>
-                <p className="service_step_description black_color_text">
+                <p className={`${styles.service_step_description} black_color_text`}>
                   {text}
-                  {/* Comenzamos haciendo preguntas estrategicas y haciendo una lluvia
-                de ideas contigo. Despues armamos un plan para llevar a cabo tu
-                proyecto, ahorrando tiempo y dinero. */}
                 </p>
               </div>
             </div>
           </div>
           <div
-            className={`col-md-6 u__no_padding col-12 u__small_margin_vertical ${left ? "offset-xl-1 col-xl-5" : "col-xl-6"}`}
+            className={`col-md-6 u__no_padding col-12 u__small_margin_vertical ${left ? 'offset-xl-1 col-xl-5' : 'col-xl-6'}`}
           >
             <Img
-              className={`${styles.image} ${styles[left ? "left" : "right"]}`}
+              className={`${styles.image} ${styles[left ? 'left' : 'right']}`}
               loading="lazy"
               fluid={data[image].childImageSharp.fluid}
             />
@@ -65,7 +65,19 @@ const Value = ({ title = "", left = true, text = "", image = "value" }) => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Value
+Step.defaultProps = {
+  left: true,
+  image: 'value',
+};
+
+Step.propTypes = {
+  title: PropTypes.string.isRequired,
+  left: PropTypes.bool,
+  text: PropTypes.string.isRequired,
+  image: PropTypes.string,
+};
+
+export default Step;

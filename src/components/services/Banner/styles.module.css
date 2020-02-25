@@ -1,0 +1,23 @@
+.service_page_title {
+	font-size: 4.5em;
+	line-height: 1.5em;
+}
+.service_page_message {
+	font-weight: normal;
+	font-size: 1.2em;
+	margin: 1em 0 !important;
+}
+.main {
+	height: 100vh;
+}
+
+@media screen and (max-width: 1024px) {
+	.service_page_message {
+		font-size: 1em;
+	}
+}
+@media screen and (max-width: 768px) {
+	.service_page_title {
+		font-size: 2em;
+	}
+}
