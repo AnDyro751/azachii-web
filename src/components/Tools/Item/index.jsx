@@ -7,9 +7,7 @@ import styles from './style.module.css';
 function ToolItem({ tool: { image, name, description } }) {
   return (
     <div className="col-md-4 col-sm-6 col-12 u__no_padding" style={{ marginTop: '0.5em' }}>
-      <div
-        className={`row u__no_margin justify-content-center ${styles.main_item}`}
-      >
+      <div className={`row u__no_margin justify-content-center ${styles.main_item}`}>
         <div className="col-xl-2 col-2 u__no_padding">
           <LazyLoadImage
             className={`${styles.item_image} u__main_box_shadow`}

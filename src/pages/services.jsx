@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import Banner from '../components/services/Banner';
 import Insights from '../components/Insights';
 import Design from '../components/Design';
+import Development from '../components/Development';
 import Step from '../components/services/Step';
 
 const ServicesPage = () => {
@@ -37,6 +38,7 @@ const ServicesPage = () => {
           necesidades y construimos algo que amarán usar."
         />
         <Design />
+        <Development />
         <Step
           image="work"
           title="Nuestro trabajo nunca termina"
