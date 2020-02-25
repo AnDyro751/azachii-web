@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useMixpanel } from 'gatsby-plugin-mixpanel';
 import Layout from '../components/layout';
 import Banner from '../components/Team/Banner';
+import DiscussYourProject from '../components/DiscussYourProject';
 import Reason from '../components/Team/Reason';
 import SEO from '../components/seo';
 
@@ -24,6 +25,7 @@ function TeamPage() {
           title="¿Por qué trabajar con Azachii?"
           text="No solo es la eficiencia de nuestro proceso y la calidad de nuestros productos. La dedicación de Azachii se ha encargado de entregar verdadero valor a los negocios. Te mostraremos que somos un verdadero socio para impulsar tu exito."
         />
+        <DiscussYourProject />
         <Reason
           title="Nuestro enfoque"
           text="No importa sí eres una gran o pequeña empresa, podemos ayudarte a seguir adelante creando productos centrados en las personas."

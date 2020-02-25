@@ -68,7 +68,7 @@ function Header({ light, initialColor }) {
                 </h1>
               </Link>
             </div>
-            <ItemHeader text="SERVICIOS" to="/services" />
+            <ItemHeader text="SERVICIOS" to="/servicios" />
             <ItemHeader text="EQUIPO" to="/equipo" />
             <HamburgerElastic
               buttonWidth={25}

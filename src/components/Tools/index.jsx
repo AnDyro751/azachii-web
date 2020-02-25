@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import ToolItem from './Item';
 import tools from './tools';
@@ -42,14 +42,14 @@ function Tools() {
             </h4>
             <div className="row u__no_margin">
               <div className="col-xl-5 u__no_padding">
-                <button
-                  type="button"
-                  onClick={() => {
-                  }}
-                  className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
-                >
-                  DESCUBRIR
-                </button>
+                <Link to="/servicios">
+                  <button
+                    type="button"
+                    className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
+                  >
+                    DESCUBRIR
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

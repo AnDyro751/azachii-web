@@ -18,7 +18,7 @@ const HeaderSidebar = ({ isOpen }) => (
         className="row u__no_margin justify-content-center align-items-center"
       >
         <div className="col-auto u__no_padding">
-          <Link to="/services">
+          <Link to="/servicios">
             <h5 className="black_color_text sidebar_item">SERVICIOS</h5>
           </Link>
           <Link to="/equipo">

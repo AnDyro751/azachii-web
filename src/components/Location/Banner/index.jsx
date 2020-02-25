@@ -6,9 +6,8 @@ function Banner({
   cover, name, message, buttonText,
 }) {
   function goToContact() {
-    const YPosition = document.getElementsByClassName('contact_form')[0].getBoundingClientRect().top;
-    const adjust = document.body.clientWidth < 768 ? 7 : 8;
-    window.scrollTo(0, (YPosition / 10) * adjust);
+    const YPosition = document.getElementsByClassName('contact_form')[0].getBoundingClientRect().y + document.getElementsByClassName('contact_form')[0].getBoundingClientRect().top;
+    window.scrollTo(0, YPosition);
   }
 
   return (

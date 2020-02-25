@@ -36,7 +36,7 @@ const MainBanner = () => {
                 </h1>
               </div>
               <div className="col-xl-12 u__no_padding d-none d-sm-block col-11 u__small_margin_vertical">
-                <Link to="/services">
+                <Link to="/servicios">
                   <button
                     className={`black_color white_color_text u__main_box_shadow ${styles.button_services}`}
                     type="button"
