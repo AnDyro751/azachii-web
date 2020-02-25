@@ -1,0 +1,10 @@
+.strategy_title {
+  font-size: 2em;
+  margin: 1em 0 !important;
+}
+@media screen and (max-width: 1024px) {
+  .strategy_title {
+    font-size: 1.8em;
+    margin: 0.5em 0 0 0 !important;
+  }
+}

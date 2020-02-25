@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import Banner from '../components/services/Banner';
 import Insights from '../components/Insights';
 import Design from '../components/Design';
+import Strategy from '../components/Strategy';
 import Development from '../components/Development';
 import Step from '../components/services/Step';
 
@@ -29,6 +30,7 @@ const ServicesPage = () => {
           de ideas contigo. Después armamos un plan para llevar a cabo tu
           proyecto, ahorrando tiempo y dinero."
         />
+        <Strategy />
         <Step
           image="design"
           left={false}
