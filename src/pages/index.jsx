@@ -23,7 +23,7 @@ function Index() {
       <>
         <SEO
           description="Todo lo que necesitas para empezar con tu negocio online. Desarrollo web. Desarrollo móvil. Producción multimedia."
-          title="Lleva tu negocio al mundo digital | Azachii"
+          title="Lleva tu negocio al mundo digital"
         />
         <Banner />
         <HelpYou />
