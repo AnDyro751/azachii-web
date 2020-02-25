@@ -21,6 +21,9 @@ const HeaderSidebar = ({ isOpen }) => (
           <Link to="/services">
             <h5 className="black_color_text sidebar_item">SERVICIOS</h5>
           </Link>
+          <Link to="/equipo">
+            <h5 className="black_color_text sidebar_item">EQUIPO</h5>
+          </Link>
         </div>
       </div>
     </div>

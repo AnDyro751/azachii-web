@@ -1,0 +1,29 @@
+.team_page_title {
+  font-size: 4.5em;
+  line-height: 1.5em;
+}
+.team_page_message {
+  font-weight: normal;
+  font-size: 2em;
+}
+@media screen and (max-width: 1024px) {
+  .team_page_message {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team_page_title {
+    font-size: 2.3em;
+  }
+  .team_page_message {
+    font-size: 1.5em;
+  }
+}
+@media(max-width: 374px) {
+  .team_page_title {
+    font-size: 1.8em;
+  }
+  .team_page_message {
+    font-size: 1.3em;
+  }
+}

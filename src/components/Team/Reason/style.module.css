@@ -1,0 +1,48 @@
+.why_work_with_us {
+  margin-top: 0 !important;
+  margin-bottom: 30vh !important;
+}
+.team_page_section_title {
+  margin-top: 0;
+  margin-bottom: 2.5em !important;
+  font-size: 2.5em;
+  text-align: center;
+}
+.team_page_section_message {
+  margin: 0;
+  font-size: 2em;
+  text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+  .why_work_with_us {
+    margin-bottom: 15vh !important;
+  }
+  .team_page_section_message {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 768px)  {
+  .why_work_with_us {
+    margin-bottom: 20vh !important;
+  }
+  .team_page_section_title {
+    font-size: 2em;
+    margin-bottom: 2.5em !important;
+  }
+  .team_page_section_message {
+    font-size: 1.4em;
+  }
+  .separate_from_bottom_mobile {
+    margin-bottom: 1.5em !important;
+  }
+}
+@media(max-width: 374px) {
+  .team_page_section_title {
+    font-size: 1.5em;
+    margin-bottom: 2em !important;
+  }
+  .team_page_section_message {
+    font-size: 1.2em;
+  }
+}

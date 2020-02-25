@@ -69,6 +69,7 @@ function Header({ light, initialColor }) {
               </Link>
             </div>
             <ItemHeader text="SERVICIOS" to="/services" />
+            <ItemHeader text="EQUIPO" to="/equipo" />
             <HamburgerElastic
               buttonWidth={25}
               className={`d-block d-sm-none u__no_outline ${initialColor && !white && !openSidebar ? styles.menu_button_white : ''}`}

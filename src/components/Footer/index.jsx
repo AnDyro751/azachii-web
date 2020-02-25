@@ -34,7 +34,7 @@ function Footer({
                 Servicios
               </Link>
               <Link
-                to="/team"
+                to="/equipo"
                 className={`col-xl-auto col-12 u__no_padding_in_tablet ${styles.separate_in_tablet} ${text_color} ${styles.item}`}
                 style={{ fontSize: '1.1em' }}
               >
