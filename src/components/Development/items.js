@@ -21,12 +21,20 @@ export default [
     image: require('../../images/nodejs.png'),
   },
   {
+    name: 'GraphQL',
+    image: require('../../images/graphql.png'),
+  },
+  {
     name: 'Firebase',
     image: require('../../images/firebase-1.svg'),
   },
   {
     name: 'Google Cloud',
     image: require('../../images/google-cloud.svg'),
+  },
+  {
+    name: 'Google Analytics',
+    image: require('../../images/google-analytics.png'),
   },
   {
     name: 'Figma',

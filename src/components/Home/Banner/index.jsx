@@ -4,7 +4,6 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import styles from './style.module.css';
-import CodeIcons from '../../CodeIcons';
 
 const MainBanner = () => {
   const data = useStaticQuery(graphql`
@@ -29,7 +28,6 @@ const MainBanner = () => {
         <div className="row u__no_margin align-items-center justify-content-center">
           <div className="col-xl-6 col-12 offset-xl-1 u__no_padding">
             <div className="row u__no_margin justify-content-center">
-              <CodeIcons />
               <div className="col-xl-12 u__no_padding col-11 u__small_margin_vertical">
                 <h1
                   className={`${styles.description_text} black_color_text main_font`}
