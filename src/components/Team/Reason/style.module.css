@@ -1,5 +1,5 @@
 .why_work_with_us {
-  margin: 15vh 0;
+  margin: 10vh 0;
 }
 .team_page_section_title {
   margin-top: 0;
@@ -8,23 +8,16 @@
   text-align: center;
 }
 .team_page_section_message {
-  margin: 0;
   font-size: 2em;
   text-align: left;
 }
 
 @media screen and (max-width: 1024px) {
-  .why_work_with_us {
-    margin-bottom: 15vh !important;
-  }
   .team_page_section_message {
     font-size: 2em;
   }
 }
 @media screen and (max-width: 768px)  {
-  .why_work_with_us {
-    margin-bottom: 20vh !important;
-  }
   .team_page_section_title {
     font-size: 2em;
     margin-bottom: 2.5em !important;

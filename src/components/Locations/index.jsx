@@ -9,6 +9,7 @@ function Locations() {
       <div className="col-xl-10 col-11 u__no_padding">
         <div className="row u__no_margin justify-content-center">
           <Location nameShort="OAX" name="Oaxaca de Juárez, Oaxaca" to="/oaxaca" />
+          <Location nameShort="QRO" name="Querétaro Arteaga, Querétaro" to="/queretaro" />
         </div>
       </div>
     </div>

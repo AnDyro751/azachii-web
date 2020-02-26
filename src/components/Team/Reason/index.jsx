@@ -4,23 +4,21 @@ import PropTypes from 'prop-types';
 import Section from './Section';
 import styles from './style.module.css';
 
-function Reason({
-  title, text, items, leftCols, rightCols,
-}) {
+function Reason({ title, text, items }) {
   return (
     <div className={`row ${styles.why_work_with_us} justify-content-center`}>
       <div className="col-10 u__no_padding">
         <h2 className={styles.team_page_section_title}>
           {title}
         </h2>
-        {items ? (
-          <div className="row u__no_margin justify-content-between">
-            <div className={`u__no_padding ${leftCols}`}>
-              <p className={`${styles.team_page_section_message} ${styles.separate_from_bottom_mobile}`}>
-                {text}
-              </p>
-            </div>
-            <div className={`${rightCols} u__no_padding`}>
+        <div className="row u__no_margin justify-content-between">
+          <div className="u__no_padding col-12">
+            <p className={styles.team_page_section_message}>
+              {text}
+            </p>
+          </div>
+          {items && (
+            <div className="col-12 u__no_padding" style={{ marginTop: '3em' }}>
               <div className="row u__no_margin">
                 {items.map((item, index) => (
                   <Section
@@ -32,12 +30,8 @@ function Reason({
                 ))}
               </div>
             </div>
-          </div>
-        ) : (
-          <p className={styles.team_page_section_message}>
-            {text}
-          </p>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
@@ -45,8 +39,6 @@ function Reason({
 
 Reason.defaultProps = {
   items: undefined,
-  leftCols: '',
-  rightCols: '',
 };
 
 Reason.propTypes = {
@@ -56,8 +48,6 @@ Reason.propTypes = {
     title: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }),
-  leftCols: PropTypes.string,
-  rightCols: PropTypes.string,
 };
 
 export default Reason;

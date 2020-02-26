@@ -10,7 +10,7 @@
 }
 .city_name_long {
   font-size: 1.2em;
-  color: rgb(220, 220, 200);
+  color: rgb(230, 230, 230);
   text-align: center;
 }
 @media(max-width: 767px) {
