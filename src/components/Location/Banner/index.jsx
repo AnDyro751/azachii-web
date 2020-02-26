@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FaInstagram } from 'react-icons/fa';
 import styles from './style.module.css';
 
 function Banner({
@@ -48,8 +49,19 @@ function Banner({
         <div className={styles.author_section}>
           <h3 className={styles.author}>
             Foto por:
-            {' '}
-            <span>{cover.author.name}</span>
+            <span style={{ margin: '0 0.5em' }}>
+              {cover.author.name}
+            </span>
+            {cover.author.instagram && (
+              <a
+                href={cover.author.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'flex' }}
+              >
+                <FaInstagram size={18} color="white" />
+              </a>
+            )}
           </h3>
         </div>
       )}
@@ -64,6 +76,7 @@ Banner.propTypes = {
     desktop: PropTypes.string,
     author: PropTypes.shape({
       name: PropTypes.string.isRequired,
+      instagram: PropTypes.string,
     }),
   }).isRequired,
   name: PropTypes.string.isRequired,

@@ -17,6 +17,7 @@ function Oaxaca() {
             desktop: coverDesktop,
             author: {
               name: 'Carlos Vasquez',
+              instagram: 'https://www.instagram.com/cv_santiago/',
             },
           }}
           name="Oaxaca"

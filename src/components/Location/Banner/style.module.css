@@ -34,8 +34,9 @@
 }
 .author {
   color: rgb(220, 220, 220);
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: normal;
+  display: flex;
 }
 .author span {
   font-weight: bold;
