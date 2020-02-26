@@ -12,3 +12,20 @@
   width: 100%;
   height: 100%;
 }
+.menu {
+  margin: 2em 0 0 0;
+}
+.sidebar_item {
+  font-size: 2.5em;
+}
+.sidebar_item + .sidebar_item h5 {
+  margin-top: 0.5em !important;
+}
+.social_area {
+  width: 100%;
+  position: absolute;
+  bottom: 2em;
+}
+.social_icon {
+  margin-right: 2em !important;
+}

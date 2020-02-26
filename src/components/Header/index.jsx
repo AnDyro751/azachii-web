@@ -54,7 +54,7 @@ function Header({ light, initialColor }) {
       <header
         className={`${headerClass} title_font transparent_color row u__no_margin justify-content-center`}
         style={{
-          padding: (white || openSidebar) ? '0.1em 0' : '0.7em 0',
+          padding: (white && !openSidebar) ? '0.1em 0' : '0.7em 0',
         }}
       >
         <div className="col-11 col-xl-12 offset-xl-2 u__no_padding">
@@ -72,7 +72,7 @@ function Header({ light, initialColor }) {
             <ItemHeader text="EQUIPO" to="/equipo" />
             <HamburgerElastic
               buttonWidth={25}
-              className={`d-block d-sm-none u__no_outline ${initialColor && !white && !openSidebar ? styles.menu_button_white : ''}`}
+              className={`d-block d-sm-none u__no_outline u__no_padding ${initialColor && !white && !openSidebar ? styles.menu_button_white : ''}`}
               isActive={openSidebar}
               toggleButton={toggle}
             />
