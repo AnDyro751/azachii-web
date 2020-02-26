@@ -6,8 +6,11 @@ function Project({
   name, brief, description, image, web, color, inverted,
 }) {
   return (
-    <div className={`row justify-content-center align-items-center ${styles.project_section}`}>
-      <div className="col-11 col-lg-10 u__no_padding">
+    <div
+      className={`row justify-content-center align-items-center ${styles.project_section}`}
+      style={{ backgroundColor: color }}
+    >
+      <div className="col-10 u__no_padding">
         <div className="row u__no_margin">
           <div
             className={`col-12 col-sm-5 ${inverted ? 'order-sm-2' : ''} order-last order-sm-first u__no_padding ${styles.project_image_container}`}
@@ -21,26 +24,25 @@ function Project({
           </div>
           <div className="col-12 col-sm-7 u__no_padding align-items-center" style={{ display: 'flex' }}>
             <div>
-              <h3 className={styles.project_title} style={{ color }}>
+              <h3 className={styles.project_title}>
                 {web ? (
                   <a
                     href={web}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color }}
                   >
                     {name}
                   </a>
                 ) : name}
               </h3>
-              <p className={styles.project_phrase} style={{ color }}>
+              <p className={styles.project_phrase}>
                 {brief}
               </p>
               <div
                 className="separator"
-                style={{ backgroundColor: color, margin: '1em 0' }}
+                style={{ backgroundColor: 'white', margin: '1em 0' }}
               />
-              <p className={styles.project_description} style={{ color }}>
+              <p className={styles.project_description}>
                 {description}
               </p>
               {/* <a

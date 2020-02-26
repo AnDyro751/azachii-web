@@ -33,7 +33,7 @@ function Layout({
           <Contact />
         </main>
       </div>
-      <WhatsAppCustomer />
+      <WhatsAppCustomer initialColor={header.color} />
       <Footer custom_class={footer_color} text_color={footer_text} />
       <ReactTooltip />
       <ToastContainer />

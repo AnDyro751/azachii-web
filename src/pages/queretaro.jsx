@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/layout';
 import Banner from '../components/Location/Banner';
 import SEO from '../components/seo';
-import coverDesktop from '../images/queretaro.jpg';
 
 function Queretaro() {
   return (
@@ -14,7 +13,7 @@ function Queretaro() {
         />
         <Banner
           cover={{
-            desktop: coverDesktop,
+            desktop: 'https://agaccpiiqo.cloudimg.io/v7/https://azachii-develop.web.app/static/queretaro-df6c0dc0d7224c3d90d5aae208190f80.jpg?force_format=webp',
           }}
           name="Querétaro"
           message="Nuestro compromiso es escalar sus negocios e impulsar la creación de nuevas oportunidades"
