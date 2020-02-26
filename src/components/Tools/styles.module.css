@@ -1,6 +1,5 @@
 .main {
 	padding: 4em 0;
-	background: #f4f6f8;
 	margin: 1em 0 !important;
 }
 .main_title {
@@ -36,9 +35,15 @@
 	text-transform: uppercase;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	.main_title {
 		font-size: 1.4em;
 		font-weight: bold;
+	}
+	.main {
+		padding: 2em 0;
+	}
+	.image {
+		margin-bottom: 1.5em;
 	}
 }

@@ -4,7 +4,7 @@
 .service_step_title {
 	font-size: 2.5em;
 	line-height: 1.2em;
-	margin-bottom: 1.5em !important;
+	margin: 1em 0 !important;
 }
 .service_step_description {
 	font-size: 1.2em;
@@ -22,8 +22,11 @@
 	}
 }
 @media screen and (max-width: 768px) {
-	.service_step{
+	.service_step {
 		padding: 1em 0 !important;
+	}
+	.service_step_description {
+		margin-bottom: 1em !important;
 	}
 }
 .image {

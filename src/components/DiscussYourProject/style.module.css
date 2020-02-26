@@ -20,6 +20,9 @@
 }
 
 @media(max-width: 768px) {
+  .discuss_project {
+    padding: 3em 0;
+  }
   .discuss_message {
     font-size: 2em;
   }

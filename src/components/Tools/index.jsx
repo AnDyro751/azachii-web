@@ -20,51 +20,53 @@ function Tools() {
   `);
 
   return (
-    <div className="row u__no_margin justify-content-center">
-      <div className="col-xl-12 col-12 u__no_padding">
-        <div
-          className={`row justify-content-center u__no_margin align-items-center ${styles.main}`}
-        >
-          <div className="col-xl-4 offset-xl-1 u__no_padding d-none d-xl-block">
-            <Img
-              className={styles.image}
-              fluid={data.placeholderImage.childImageSharp.fluid}
-            />
-          </div>
-          <div className="col-xl-5 offset-xl-1 col-11 u__no_padding">
-            <h3 className={`main_color_text ${styles.main_title}`}>
-              Herramientas que te harán la vida más simple
-            </h3>
-            <h4 className="u__normal_font main_color_text">
-              Descubre como las herramientas digitales te ayudan a
-              {' '}
-              impulsar el crecimiento de tu negocio.
-            </h4>
-            <div className="row u__no_margin">
-              <div className="col-xl-5 u__no_padding">
-                <Link to="/servicios">
-                  <button
-                    type="button"
-                    className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
-                  >
-                    DESCUBRIR
-                  </button>
-                </Link>
+    <>
+      <div className="row u__no_margin justify-content-center" style={{ backgroundColor: '#f4f6f8' }}>
+        <div className="col-11 u__no_padding">
+          <div
+            className={`row justify-content-between u__no_margin align-items-center ${styles.main}`}
+          >
+            <div className="col-xl-4 offset-xl-1 col-sm-5 u__no_padding">
+              <Img
+                className={styles.image}
+                fluid={data.placeholderImage.childImageSharp.fluid}
+              />
+            </div>
+            <div className="col-xl-5 col-sm-6 col-12 u__no_padding">
+              <h3 className={`main_color_text ${styles.main_title}`}>
+                Herramientas que te harán la vida más simple
+              </h3>
+              <h4 className="u__normal_font main_color_text">
+                Descubre como las herramientas digitales te ayudan a
+                {' '}
+                impulsar el crecimiento de tu negocio.
+              </h4>
+              <div className="row u__no_margin">
+                <div className="col-xl-5 u__no_padding">
+                  <Link to="/servicios">
+                    <button
+                      type="button"
+                      className={`blue_light_color white_color_text u__main_box_shadow ${styles.button}`}
+                    >
+                      DESCUBRIR
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="row u__no_margin justify-content-center">
-          <div className="col-xl-11 u__no_padding">
-            <div className="row u__no_margin justify-content-center">
-              {tools.map((tool, i) => (
-                <ToolItem key={i} tool={tool} />
-              ))}
-            </div>
+      </div>
+      <div className="row u__no_margin justify-content-center">
+        <div className="col-11 u__no_padding">
+          <div className="row u__no_margin justify-content-center">
+            {tools.map((tool, i) => (
+              <ToolItem key={i} tool={tool} />
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
