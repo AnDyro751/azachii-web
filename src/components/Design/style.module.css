@@ -1,10 +1,12 @@
+.design {
+  padding: 1em 0;
+}
 .design_title {
   font-size: 2em;
-  margin: 1em 0 !important;
+  margin-bottom: 0.5em !important;
 }
 @media screen and (max-width: 1024px) {
   .design_title {
     font-size: 1.8em;
-    margin: 0.5em 0 0 0 !important;
   }
 }

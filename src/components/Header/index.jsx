@@ -33,7 +33,7 @@ function Header({ light, initialColor }) {
     [styles.main_header]: true,
     [styles.header_box]: white && !openSidebar,
     white_color: white && !dark,
-    black_color: white && dark,
+    secondary_black_color: white && dark,
     [styles.main_header_white_content]: initialColor && !white && !openSidebar,
   });
 

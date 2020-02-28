@@ -39,7 +39,9 @@ function Footer() {
         <div className="row u__no_margin align-items-center">
           <div className="col-xl-2 col-12 u__no_padding u__small_margin_vertical">
             <h2 className={titleClass}>
-              Azachii
+              <Link to="/" className="white_color_text">
+                Azachii
+              </Link>
             </h2>
           </div>
           <div className="col-xl-7 col-5 u__no_padding align-items-xl-start align-items-center">

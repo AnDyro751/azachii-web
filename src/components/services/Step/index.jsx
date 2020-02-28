@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import ThemeContext from '../../../contexts/Theme';
 import styles from './styles.module.css';
 
 function Step({
   title, left, text, image,
 }) {
+  const { dark } = useContext(ThemeContext);
   const data = useStaticQuery(graphql`
     {
       value: file(relativePath: { eq: "workplace-1245776_1280.jpg" }) {
@@ -33,8 +36,25 @@ function Step({
     }
   `);
 
+
+  const mainClass = classnames({
+    'row u__no_margin justify-content-center': true,
+    [styles.service_step]: true,
+    black_color: dark,
+  });
+  const titleClass = classnames({
+    [styles.service_step_title]: true,
+    black_color_text: !dark,
+    white_color_text: dark,
+  });
+  const messageClass = classnames({
+    [styles.service_step_description]: true,
+    black_color_text: !dark,
+    white_color_text: dark,
+  });
+
   return (
-    <div className={`row u__no_margin justify-content-center ${styles.service_step}`}>
+    <div className={mainClass}>
       <div className="col-11 col-lg-10 u__no_padding">
         <div className="row u__no_margin align-items-center justify-content-between">
           <div
@@ -44,10 +64,10 @@ function Step({
           >
             <div className="row u__no_margin">
               <div className="col-md-12 col-xl-12 u__no_padding">
-                <h2 className={`${styles.service_step_title} black_color_text`}>
+                <h2 className={titleClass}>
                   {title}
                 </h2>
-                <p className={`${styles.service_step_description} black_color_text`}>
+                <p className={messageClass}>
                   {text}
                 </p>
               </div>
@@ -57,6 +77,7 @@ function Step({
             className={`col-md-6 u__no_padding col-12 u__small_margin_vertical ${left ? 'offset-xl-1 col-xl-5' : 'col-xl-6'}`}
           >
             <Img
+              draggable={false}
               className={`${styles.image} ${styles[left ? 'left' : 'right']}`}
               loading="lazy"
               fluid={data[image].childImageSharp.fluid}

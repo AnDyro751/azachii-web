@@ -40,7 +40,6 @@ const ServicesPage = () => {
           necesidades y construimos algo que amarán usar."
         />
         <Design />
-        <div style={{ margin: '1.5em 0' }} />
         <Development />
         <Step
           image="work"
