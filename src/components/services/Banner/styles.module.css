@@ -5,7 +5,7 @@
 .service_page_message {
 	font-weight: normal;
 	font-size: 1.2em;
-	margin: 1em 0 !important;
+	margin-top: 1em !important;
 }
 .main {
 	height: 100vh;

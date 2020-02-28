@@ -22,6 +22,11 @@ function Banner() {
     black_color_text: !dark,
     white_color_text: dark,
   });
+  const separatorClass = classnames({
+    'separator col-1 u__no_padding': true,
+    black_color: !dark,
+    white_color: dark,
+  });
 
   return (
     <div className={mainClass}>
@@ -31,7 +36,9 @@ function Banner() {
             <h1 className={titleClass}>
               Un proceso basado en colaboración
             </h1>
-            <div className="separator" />
+            <div className="row u__no_margin">
+              <div className={separatorClass} />
+            </div>
             <p className={messageClass}>
               Nuestros servicios de diseño, producción multimedia e ingeniería
               son transparentes y flexibles.

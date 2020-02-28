@@ -4,7 +4,8 @@
 }
 .team_page_message {
   font-weight: normal;
-  font-size: 2em;
+  font-size: 1.2em;
+  margin-top: 1em !important;
 }
 @media screen and (max-width: 1024px) {
   .team_page_message {
