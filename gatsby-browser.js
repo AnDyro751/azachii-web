@@ -1,10 +1,8 @@
-import 'bootstrap-4-grid/css/grid.min.css'
-import "./src/css/global.css"
+import React from 'react';
+import { ThemeProvider } from './src/contexts/Theme';
+import 'bootstrap-4-grid/css/grid.min.css';
+import './src/css/global.css';
 
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-// You can delete this file if you're not using it
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider>{element}</ThemeProvider>
+);

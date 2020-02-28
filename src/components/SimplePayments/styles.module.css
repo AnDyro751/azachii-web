@@ -1,6 +1,6 @@
 .main_container {
 	min-height: 20vh;
-	margin: 2em 0 0 0;
+	padding-top: 2em;
 }
 .item_description {
 	font-size: 1em;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/layout';
+import Layout from '../layouts/Main';
 import Banner from '../components/Location/Banner';
 import SEO from '../components/seo';
 import coverDesktop from '../images/oaxaca.jpg';

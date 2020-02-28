@@ -8,7 +8,7 @@
 	margin-bottom: .4em !important;
 }
 .button {
-	margin: 1em 0 !important;
+	margin: 2em 0 0 0 !important;
 	padding: 1em;
 	border-radius: 4px;
 	cursor: pointer;
@@ -33,6 +33,10 @@
 	margin-right: .4em !important;
 	font-size: .8em;
 	text-transform: uppercase;
+}
+.tools_section {
+	padding-bottom: 2.5em;
+	padding-top: 1em;
 }
 
 @media screen and (max-width: 768px) {

@@ -5,16 +5,14 @@ import { Helmet } from 'react-helmet';
 import ReactTooltip from 'react-tooltip';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Header from './Header';
-import Footer from './Footer';
-import WhatsAppCustomer from './WhatsAppCustomer';
-import Contact from './Contact';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import WhatsAppCustomer from '../components/WhatsAppCustomer';
+import Contact from '../components/Contact';
 
 function Layout({
   children,
   light,
-  footer_color,
-  footer_text,
   header,
 }) {
   return (
@@ -34,7 +32,7 @@ function Layout({
         </main>
       </div>
       <WhatsAppCustomer initialColor={header.color} />
-      <Footer custom_class={footer_color} text_color={footer_text} />
+      <Footer />
       <ReactTooltip />
       <ToastContainer />
     </>
@@ -43,16 +41,12 @@ function Layout({
 
 Layout.defaultProps = {
   light: false,
-  footer_color: 'white_color',
-  footer_text: 'black_color_text',
   header: {},
 };
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   light: PropTypes.bool,
-  footer_color: PropTypes.string,
-  footer_text: PropTypes.string,
   header: PropTypes.shape({
     color: PropTypes.string,
   }),

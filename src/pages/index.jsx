@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useMixpanel } from 'gatsby-plugin-mixpanel';
-import Layout from '../components/layout';
+import Layout from '../layouts/Main';
 import SEO from '../components/seo';
 import Banner from '../components/Home/Banner';
 import HelpYou from '../components/HelpYou';
@@ -19,7 +19,7 @@ function Index() {
   }, []);
 
   return (
-    <Layout footer_color="blue_light_color" footer_text="white_color_text">
+    <Layout>
       <>
         <SEO
           description="Todo lo que necesitas para empezar con tu negocio online. Desarrollo web. Desarrollo móvil. Producción multimedia."

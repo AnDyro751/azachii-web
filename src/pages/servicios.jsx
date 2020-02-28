@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useMixpanel } from 'gatsby-plugin-mixpanel';
-import Layout from '../components/layout';
+import Layout from '../layouts/Main';
 import SEO from '../components/seo';
 import Banner from '../components/services/Banner';
 import Insights from '../components/Insights';

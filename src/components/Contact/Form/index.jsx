@@ -2,10 +2,12 @@
 import React, { useState, useContext } from 'react';
 import { FirebaseContext } from 'gatsby-plugin-firebase';
 import { toast } from 'react-toastify';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import InputType from './Input';
 import styles from './style.module.css';
 
-function Form() {
+function Form({ dark }) {
   const [fields, setFields] = useState({
     name: '',
     email: '',
@@ -16,6 +18,27 @@ function Form() {
   const [loading, setLoading] = useState(false);
   const [contact, setContact] = useState(false);
   const firebase = useContext(FirebaseContext);
+
+  const contactedClass = classnames({
+    black_color_text: !dark,
+    white_color_text: dark,
+  });
+  const titleClass = classnames({
+    [styles.main_title]: true,
+    black_color_text: !dark,
+    white_color_text: dark,
+  });
+  const labelClass = classnames({
+    main_color_dark_text: dark,
+    main_color_text: !dark,
+    [styles.label]: true,
+  });
+  const buttonClass = classnames({
+    'white_color_text u__main_box_shadow': true,
+    blue_light_color: !dark,
+    red_color: dark,
+    [styles.send_button]: true,
+  });
 
   function handleChange({ target }) {
     setFields(
@@ -77,11 +100,17 @@ function Form() {
             justifyContent: 'center',
             alignItems: 'center',
             height: contact
-              ? document.getElementsByName('contact_form')[0].clientHeight
+              ? (document.getElementsByName('contact_form')[0].clientHeight / 3) * 2
               : 0,
           }}
         >
-          <p style={{ fontWeight: 'bold', color: '#4e4e4e', fontSize: '2em' }}>
+          <p
+            className={contactedClass}
+            style={{
+              fontWeight: 'bold',
+              fontSize: '2em',
+            }}
+          >
             Gracias por contactarnos.
             <p>Te atenderemos en breve.</p>
           </p>
@@ -90,12 +119,13 @@ function Form() {
         <div className="col-xs-12 u__no_padding">
           <div className="row u__no_margin">
             <div className="col-xl-12">
-              <h2 className={`black_color_text ${styles.main_title}`}>
+              <h2 className={titleClass}>
                 Contáctanos
               </h2>
             </div>
             <div className="col-xl-6 col-12">
               <InputType
+                dark={dark}
                 autoComplete="name"
                 label="Nombre"
                 placeholder="Richard Hendricks"
@@ -107,6 +137,7 @@ function Form() {
             </div>
             <div className="col-xl-6 col-12">
               <InputType
+                dark={dark}
                 label="Email"
                 type="email"
                 autoComplete="email"
@@ -118,6 +149,7 @@ function Form() {
             <div className="col-xl-6 col-12">
               <InputType
                 label="Télefoto"
+                dark={dark}
                 type="tel"
                 autoComplete="tel"
                 placeholder="xxxxxxxxxx"
@@ -128,6 +160,7 @@ function Form() {
             <div className="col-xl-6 col-12">
               <InputType
                 autoComplete="subject"
+                dark={dark}
                 label="Asunto"
                 type="text"
                 placeholder="Tu mensaje..."
@@ -138,7 +171,7 @@ function Form() {
               />
             </div>
             <div className="col-xl-12 col-12">
-              <p className={`${styles.label}`}>Mensaje</p>
+              <p className={labelClass}>Mensaje</p>
               <textarea
                 minLength={4}
                 maxLength={300}
@@ -150,7 +183,7 @@ function Form() {
               <button
                 type="button"
                 disabled={loading}
-                className={`${styles.send_button} blue_light_color white_color_text u__main_box_shadow`}
+                className={buttonClass}
                 style={{
                   float: 'right',
                   cursor: loading ? 'auto' : 'pointer',
@@ -175,5 +208,9 @@ function Form() {
     </div>
   );
 }
+
+Form.propTypes = {
+  dark: PropTypes.bool.isRequired,
+};
 
 export default Form;
