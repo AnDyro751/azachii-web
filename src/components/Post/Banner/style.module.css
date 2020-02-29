@@ -1,0 +1,18 @@
+.post_title {
+	font-size: 4.5em;
+	line-height: 1.5em;
+}
+.post_author {
+  font-weight: normal;
+	font-size: 1.2em;
+	margin-top: 1em !important;
+}
+
+@media screen and (max-width: 768px) {
+  .post_author {
+		font-size: 1em;
+	}
+	.post_title {
+		font-size: 2em;
+	}
+}

@@ -1,0 +1,6 @@
+.post_content_dark * {
+  color: white;
+}
+.post_content {
+  padding-bottom: 2em !important;
+}
