@@ -1,39 +1,39 @@
-const path = require('path');
+// const path = require('path');
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+// exports.createPages = ({ graphql, actions }) => {
+//   const { createPage } = actions;
 
-  return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve('src/templates/Post/index.jsx');
+//   return new Promise((resolve, reject) => {
+//     const postTemplate = path.resolve('src/templates/Post/index.jsx');
 
-    resolve(
-      graphql(`
-        query {
-          allMarkdownRemark {
-            edges {
-              node {
-                frontmatter {
-                  path
-                }
-              }
-            }
-          }
-        }
-      `).then(({ data }) => {
-        data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const pathSlug = node.frontmatter.path;
+//     resolve(
+//       graphql(`
+//         query {
+//           allMarkdownRemark {
+//             edges {
+//               node {
+//                 frontmatter {
+//                   path
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       `).then(({ data }) => {
+//         data.allMarkdownRemark.edges.forEach(({ node }) => {
+//           const pathSlug = node.frontmatter.path;
 
-          createPage({
-            path: pathSlug,
-            component: postTemplate,
-            context: {
-              pathSlug,
-            },
-          });
+//           createPage({
+//             path: pathSlug,
+//             component: postTemplate,
+//             context: {
+//               pathSlug,
+//             },
+//           });
 
-          resolve();
-        });
-      }),
-    );
-  });
-};
+//           resolve();
+//         });
+//       }),
+//     );
+//   });
+// };

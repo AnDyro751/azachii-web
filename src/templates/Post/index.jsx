@@ -41,17 +41,17 @@ function Post({ data }) {
   );
 }
 
-export const query = graphql`
-  query($pathSlug: String!) {
-    markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
-      html
-      frontmatter {
-        title
-        author
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query($pathSlug: String!) {
+//     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
+//       html
+//       frontmatter {
+//         title
+//         author
+//       }
+//     }
+//   }
+// `;
 
 Post.propTypes = {
   data: PropTypes.shape({
