@@ -14,7 +14,7 @@ function TeamPage() {
   }, [mixpanel]);
 
   return (
-    <Layout footer_color="blue_light_color" footer_text="white_color_text">
+    <Layout>
       <>
         <SEO
           description="Azachii | Nuestros diseñadores e ingenieros saben que la colaboración es la base de todo proyecto. Azachii es para ti."

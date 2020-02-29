@@ -1,7 +1,7 @@
 import React, { createContext, Component } from 'react';
 
 const defaultState = {
-  dark: true,
+  dark: false,
   toggleDark: () => {},
 }
 const ThemeContext = createContext(defaultState);
@@ -10,7 +10,7 @@ const supportsDarkMode = () =>
 
 class ThemeProvider extends Component {
   state = {
-    dark: true,
+    dark: false,
   }
 
   toggleDark = () => {
@@ -20,13 +20,12 @@ class ThemeProvider extends Component {
   }
 
   componentDidMount() {
-    // const lsDark = JSON.parse(localStorage.getItem("dark"))
-    // if (lsDark) {
-    //   this.setState({ dark: lsDark })
-    // }
-    // } else if (supportsDarkMode()) {
-    //   this.setState({ dark: true })
-    // }
+    const lsDark = JSON.parse(localStorage.getItem("dark"))
+    if (lsDark) {
+      this.setState({ dark: lsDark })
+    } else if (supportsDarkMode() && lsDark === undefined) {
+      this.setState({ dark: true })
+    }
   }
 
   render() {

@@ -1,0 +1,15 @@
+.post {
+  padding: 0 0.5em;
+}
+.post_content {
+  padding: 1em;
+  cursor: pointer;
+}
+.post_content:hover {
+  background-color: white;
+  transform: translate(0, -5px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.post_content_black:hover {
+  background-color: #0B0907 !important;
+}

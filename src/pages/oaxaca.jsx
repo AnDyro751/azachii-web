@@ -6,7 +6,7 @@ import coverDesktop from '../images/oaxaca.jpg';
 
 function Oaxaca() {
   return (
-    <Layout footer_color="blue_light_color" footer_text="white_color_text" header={{ color: 'white' }}>
+    <Layout header={{ color: 'white' }}>
       <>
         <SEO
           title="Oaxaca"

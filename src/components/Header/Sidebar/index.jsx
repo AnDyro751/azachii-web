@@ -49,6 +49,11 @@ function HeaderSidebar({ isOpen, dark }) {
                 EQUIPO
               </h5>
             </Link>
+            <Link to="/blog" className={sidebarItem}>
+              <h5>
+                BLOG
+              </h5>
+            </Link>
           </div>
         </div>
         <div className={styles.social_area}>

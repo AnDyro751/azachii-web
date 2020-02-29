@@ -28,7 +28,7 @@ function Contact() {
     'col-md-7 col-11 u__no_padding': true,
     [styles.form_container]: true,
     secondary_black_color: dark,
-    secondary_white_color: !dark,
+    white_color: !dark,
   });
 
   return (

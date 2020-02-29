@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 
 function Queretaro() {
   return (
-    <Layout footer_color="blue_light_color" footer_text="white_color_text" header={{ color: 'white' }}>
+    <Layout header={{ color: 'white' }}>
       <>
         <SEO
           title="Querétaro"

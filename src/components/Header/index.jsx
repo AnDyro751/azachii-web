@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { HamburgerElastic } from 'react-animated-burgers';
 import PropTypes from 'prop-types';
 import ThemeContext from '../../contexts/Theme';
+import DarkToggle from '../DarkToggle';
 import ItemHeader from './Item';
 import Sidebar from './Sidebar';
 import styles from './style.module.css';
@@ -33,7 +34,7 @@ function Header({ light, initialColor }) {
     [styles.main_header]: true,
     [styles.header_box]: white && !openSidebar,
     white_color: white && !dark,
-    secondary_black_color: white && dark,
+    secondary_black_color: white && dark && !openSidebar,
     [styles.main_header_white_content]: initialColor && !white && !openSidebar,
   });
 
@@ -62,6 +63,10 @@ function Header({ light, initialColor }) {
             </div>
             <ItemHeader dark={dark} text="SERVICIOS" to="/servicios" />
             <ItemHeader dark={dark} text="EQUIPO" to="/equipo" />
+            <ItemHeader dark={dark} text="BLOG" to="/blog" />
+            <div className="col-auto">
+              <DarkToggle />
+            </div>
             <HamburgerElastic
               buttonWidth={25}
               className={`d-block d-sm-none u__no_outline u__no_padding ${(initialColor && !white && !openSidebar) || dark ? styles.menu_button_white : ''}`}

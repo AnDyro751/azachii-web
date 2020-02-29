@@ -17,7 +17,7 @@ const ServicesPage = () => {
   }, [mixpanel]);
 
   return (
-    <Layout footer_color="blue_light_color" footer_text="white_color_text">
+    <Layout>
       <>
         <SEO
           description="Azchii | Servicios y productos. Desarrollo web. Desarrollo Móvil. Producción multimedia."

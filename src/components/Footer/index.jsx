@@ -61,6 +61,13 @@ function Footer() {
                 Equipo
               </Link>
               <Link
+                to="/blog"
+                className={itemClass}
+                style={{ fontSize: '1.1em' }}
+              >
+                Blog
+              </Link>
+              <Link
                 to="/"
                 className={itemClass}
                 style={{ fontSize: '1.1em' }}

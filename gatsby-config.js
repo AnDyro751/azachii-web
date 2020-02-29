@@ -1,51 +1,52 @@
-require("dotenv").config()
+require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `Azachii Development`,
-    description: "Todo lo que necesitas para empezar con tu negocio online",
-    author: `Azachii Development`,
-    siteUrl: "https://azachii-develop.web.app",
-    policy: [{ userAgent: "*", allow: "/" }],
+    title: 'Azachii Development',
+    description: 'Todo lo que necesitas para empezar con tu negocio online',
+    author: 'Azachii',
+    siteUrl: 'https://azachii-develop.web.app',
+    policy: [{ userAgent: '*', allow: '/' }],
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-catch-links`,
-    // {
-    //   resolve: `gatsby-plugin-remote-images`,
-    //   options: {
-    //     nodeType: "myNodes",
-    //     imagePath: "imageUrl",
-    //   },
-    // },
+    'gatsby-transformer-remark',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'posts',
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-catch-links',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-plugin-facebook-pixel`,
+      resolve: 'gatsby-plugin-facebook-pixel',
       options: {
-        pixelId: "2470687473147176",
+        pixelId: '2470687473147176',
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
         fonts: [
           {
-            family: `Heebo`,
+            family: 'Heebo',
           },
           {
-            family: `Playfair Display`,
+            family: 'Playfair Display',
           },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-purgecss`,
+      resolve: 'gatsby-plugin-purgecss',
       options: {
         printRejected: true, // Print removed selectors and processed file names
         // develop: true, // Enable while using `gatsby develop`
@@ -56,23 +57,23 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-nprogress`,
+      resolve: 'gatsby-plugin-nprogress',
       options: {
         // Setting a color is optional.
-        color: `#3a4da7`,
+        color: '#3a4da7',
         // Disable the loading spinner.
         showSpinner: false,
       },
     },
     {
-      resolve: "gatsby-plugin-mixpanel",
+      resolve: 'gatsby-plugin-mixpanel',
       options: {
-        apiToken: "37e1f139e0e83b2a589375cdfe7eab0e",
+        apiToken: '37e1f139e0e83b2a589375cdfe7eab0e',
         enableOnDevMode: true, // required
       },
     },
     {
-      resolve: "gatsby-plugin-firebase",
+      resolve: 'gatsby-plugin-firebase',
       options: {
         features: {
           auth: true,
@@ -86,22 +87,22 @@ module.exports = {
         },
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        name: 'gatsby-starter-default',
+        short_name: 'starter',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
