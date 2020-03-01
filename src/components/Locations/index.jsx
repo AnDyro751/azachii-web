@@ -18,7 +18,7 @@ function Locations() {
 
 function Location({ nameShort, name, to }) {
   return (
-    <div className="col-12 col-sm-6 col-md-4 u__no_padding">
+    <div className="col-6 col-md-4 u__no_padding">
       <h2 className={styles.city_name}>
         <Link to={to}>
           {nameShort}

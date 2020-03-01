@@ -2,14 +2,30 @@
   padding: 0 0.5em;
 }
 .post_content {
-  padding: 1em;
   cursor: pointer;
+  border-radius: 4px;
 }
 .post_content:hover {
   background-color: white;
-  transform: translate(0, -5px);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 .post_content_black:hover {
   background-color: #0B0907 !important;
+}
+.post_title {
+  margin: 0.5em 0 !important;
+}
+.post_cover {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.post_info {
+  padding: 0.8em 1em;
+}
+.post_author {
+  font-size: 0.9em;
+}
+.post_tags {
+  font-size: 0.9em;
+  text-align: center;
 }

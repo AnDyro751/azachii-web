@@ -1,0 +1,12 @@
+.share_icon {
+  margin-left: 0.5em;
+}
+.share_icon + .share_icon {
+  margin-left: 1.5em;
+}
+
+@media(max-width: 767px) {
+  .share_icon + .share_icon {
+    margin-left: 1em;
+  }
+}

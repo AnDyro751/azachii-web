@@ -4,3 +4,24 @@
 .post_content {
   padding-bottom: 2em !important;
 }
+.share_section {
+  margin: 2em 0 1em 0;
+}
+.post_content * {
+  margin-bottom: 0.5em !important;
+}
+.post_content h2 {
+  font-size: 2.5em; 
+}
+.post_content p {
+  font-size: 1.5em;
+}
+
+@media(max-width: 768px) {
+  .post_content h2 {
+    font-size: 2.2em; 
+  }
+  .post_content p {
+    font-size: 1.3em;
+  }
+}

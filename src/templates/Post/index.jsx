@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import ThemeContext from '../../contexts/Theme';
+import Share from '../../components/Share';
 import styles from '../../css/post.module.css';
 import Banner from '../../components/Post/Banner';
 import SEO from '../../components/seo';
@@ -25,33 +26,59 @@ function Post({ data }) {
   return (
     <Layout>
       <>
-        <SEO title={data.markdownRemark.frontmatter.title} />
+        <SEO
+          title={data.markdownRemark.frontmatter.title}
+          description={data.markdownRemark.frontmatter.excerpt}
+        />
         <Banner
           title={data.markdownRemark.frontmatter.title}
-          author={data.markdownRemark.frontmatter.author}
+          author={{
+            name: data.markdownRemark.frontmatter.author,
+            avatar: data.avatarImage,
+          }}
+          createdAt={data.markdownRemark.frontmatter.date}
         />
         <div className={mainClass}>
           <div
             dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
             className={contentClass}
           />
+          <div className={`col-11 col-xl-10 u__no_padding ${styles.share_section}`}>
+            <Share
+              url={data.markdownRemark.frontmatter.path}
+              title={data.markdownRemark.frontmatter.title}
+              message={`Checa este articulo de ${data.markdownRemark.frontmatter.title} que encontre en Azachii, te será de mucha ayuda`}
+            />
+          </div>
         </div>
       </>
     </Layout>
   );
 }
 
-// export const query = graphql`
-//   query($pathSlug: String!) {
-//     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
-//       html
-//       frontmatter {
-//         title
-//         author
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query($pathSlug: String!, $avatar: String!) {
+    markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
+      html
+      frontmatter {
+        title
+        author
+        avatar
+        tags
+        date
+        path
+        excerpt
+      }
+    }
+    avatarImage: file(relativePath: { eq: $avatar }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 Post.propTypes = {
   data: PropTypes.shape({
@@ -60,6 +87,17 @@ Post.propTypes = {
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
         author: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
+        excerpt: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+    avatarImage: PropTypes.shape({
+      childImageSharp: PropTypes.shape({
+        fluid: PropTypes.shape({
+          base64: PropTypes.string.isRequired,
+        }).isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,

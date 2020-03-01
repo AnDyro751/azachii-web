@@ -9,22 +9,36 @@ import Post from '../components/Post';
 import SEO from '../components/seo';
 import Layout from '../layouts/Main';
 
-// export const query = graphql`
-//   query getPosts {
-//     allMarkdownRemark(sort: {
-//       order: DESC, fields: [frontmatter___date]
-//     }) {
-//       edges {
-//         node {
-//           frontmatter {
-//             title
-//             path
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query getPosts {
+    allMarkdownRemark(sort: {
+      order: DESC, fields: [frontmatter___date]
+    }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            excerpt
+            cover
+            author
+            tags
+          }
+        }
+      }
+    }
+    allFile(filter: { relativeDirectory: { eq: "posts" } }) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 400, quality: 100) {
+            ...GatsbyImageSharpFluid
+            originalName
+          }
+        }
+      }
+    }
+  }
+`;
 
 function Blog({ data }) {
   const { dark } = useContext(ThemeContext);
@@ -47,9 +61,14 @@ function Blog({ data }) {
         <div className={mainClass}>
           <div className="col-11 col-xl-10 u__no_padding">
             <div className="row u__no_margin">
-              {/* {data.allMarkdownRemark.edges.map((post) => (
-                <Post data={post.node.frontmatter} key={post.node.path} dark={dark} />
-              ))} */}
+              {data.allMarkdownRemark.edges.map((post) => (
+                <Post
+                  data={post.node.frontmatter}
+                  key={post.node.frontmatter.path}
+                  dark={dark}
+                  cover={data.allFile.nodes.filter((item) => item.childImageSharp.fluid.originalName === post.node.frontmatter.cover)[0]}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -58,21 +77,38 @@ function Blog({ data }) {
   );
 }
 
-// Blog.propTypes = {
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       edges: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           node: PropTypes.shape({
-//             frontmatter: PropTypes.shape({
-//               title: PropTypes.string.isRequired,
-//               path: PropTypes.string.isRequired,
-//             }).isRequired,
-//           }),
-//         }),
-//       ).isRequired,
-//     }).isRequired,
-//   }).isRequired,
-// };
+Blog.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              path: PropTypes.string.isRequired,
+              excerpt: PropTypes.string.isRequired,
+              cover: PropTypes.string.isRequired,
+              author: PropTypes.string.isRequired,
+              tags: PropTypes.arrayOf(
+                PropTypes.string.isRequired,
+              ).isRequired,
+            }).isRequired,
+          }),
+        }),
+      ).isRequired,
+    }).isRequired,
+    allFile: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          childImageSharp: PropTypes.shape({
+            fluid: PropTypes.shape({
+              base64: PropTypes.string.isRequired,
+            }).isRequired,
+          }).isRequired,
+        }).isRequired,
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default Blog;

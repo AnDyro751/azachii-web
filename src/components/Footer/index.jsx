@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import {
-  FaInstagram, FaFacebookF, FaGithub, FaTwitter,
+  FaInstagram, FaFacebookF, FaGithub, FaTwitter, FaLinkedin,
 } from 'react-icons/fa';
 import classnames from 'classnames';
 import ThemeContext from '../../contexts/Theme';
@@ -83,9 +83,18 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-tip="Repositorios de Github"
-                className="col-xl-auto col-auto u__pointer"
+                className="col-xl-auto col-auto u__no_padding u__pointer"
               >
                 <FaGithub className="white_color_text" size={20} />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tip="Siguenos en LinkedIn"
+                className="col-xl-auto col-auto u__pointer"
+              >
+                <FaLinkedin className="white_color_text" size={20} />
               </a>
               <a
                 href="https://www.facebook.com/az4chii-100360501432809/"
