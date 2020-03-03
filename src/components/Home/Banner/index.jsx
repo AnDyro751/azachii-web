@@ -35,10 +35,20 @@ const MainBanner = () => {
     [styles.description_text]: true,
   });
   const buttonClass = classnames({
-    u__main_box_shadow: true,
-    [styles.button_services]: true,
-    'black_color white_color_text': !dark,
-    'white_color black_color_text': dark,
+    'u__main_box_shadow col-12 col-sm-auto': true,
+    [styles.our_services_button]: true,
+    blue_light_color: !dark,
+    red_color: dark,
+  });
+  const separatorClass = classnames({
+    'separator col-1 u__no_padding': true,
+    black_color: !dark,
+    white_color: dark,
+  });
+  const messageClass = classnames({
+    [styles.message]: true,
+    black_color_text: !dark,
+    white_color_text: dark,
   });
 
   return (
@@ -47,16 +57,19 @@ const MainBanner = () => {
         <div className="row u__no_margin justify-content-center">
           <div className="col-11 col-sm-10 col-md-9 u__no_padding">
             <h1 className={titleClass}>
-              Consultoría y desarrollo de soluciones digitales
+              Desarrollo de soluciones digitales
             </h1>
-            <Link to="/servicios">
-              <button
-                className={buttonClass}
-                type="button"
-              >
-                SERVICIOS
-              </button>
-            </Link>
+            <div className="row u__no_margin">
+              <div className={separatorClass} />
+            </div>
+            <p className={messageClass}>
+              Tienes la idea y la visión. Nosotros el equipo necesario para llevarla acabo.
+            </p>
+            <div className="row u__no_margin">
+              <Link to="/services" className={buttonClass}>
+                DESAROLLA MI IDEA
+              </Link>
+            </div>
           </div>
         </div>
       </div>

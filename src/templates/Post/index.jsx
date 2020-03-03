@@ -23,12 +23,21 @@ function Post({ data }) {
     [styles.post_content]: true,
   });
 
+
+  console.log(data.coverPost);
+
   return (
     <Layout>
       <>
         <SEO
           title={data.markdownRemark.frontmatter.title}
           description={data.markdownRemark.frontmatter.excerpt}
+          meta={[
+            {
+              name: 'og:image',
+              content: data.coverPost.childImageSharp.fluid.src,
+            },
+          ]}
         />
         <Banner
           title={data.markdownRemark.frontmatter.title}
@@ -57,7 +66,7 @@ function Post({ data }) {
 }
 
 export const query = graphql`
-  query($pathSlug: String!, $avatar: String!) {
+  query($pathSlug: String!, $avatar: String!, $cover: String!) {
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       html
       frontmatter {
@@ -68,6 +77,13 @@ export const query = graphql`
         date
         path
         excerpt
+      }
+    }
+    coverPost: file(relativePath: { eq: $cover }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 100) {
+          src
+        }
       }
     }
     avatarImage: file(relativePath: { eq: $avatar }) {
@@ -97,6 +113,13 @@ Post.propTypes = {
       childImageSharp: PropTypes.shape({
         fluid: PropTypes.shape({
           base64: PropTypes.string.isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
+    coverPost: PropTypes.shape({
+      childImageSharp: PropTypes.shape({
+        fluid: PropTypes.shape({
+          src: PropTypes.string.isRequired,
         }).isRequired,
       }).isRequired,
     }).isRequired,

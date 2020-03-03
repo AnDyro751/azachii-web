@@ -20,7 +20,7 @@ class ThemeProvider extends Component {
   }
 
   componentDidMount() {
-    const lsDark = JSON.parse(localStorage.getItem("dark"))
+    const lsDark = localStorage.getItem("dark") && localStorage.getItem("dark") !== "undefined" ? JSON.parse(localStorage.getItem("dark")) : false;
     if (lsDark) {
       this.setState({ dark: lsDark })
     } else if (supportsDarkMode() && lsDark === undefined) {

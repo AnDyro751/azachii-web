@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import ReactTooltip from 'react-tooltip';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import WhatsAppCustomer from '../components/WhatsAppCustomer';

@@ -15,6 +15,7 @@ exports.createPages = ({ graphql, actions }) => {
                 frontmatter {
                   path
                   avatar
+                  coverFull
                 }
               }
             }
@@ -30,6 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               pathSlug,
               avatar: node.frontmatter.avatar,
+              cover: node.frontmatter.coverFull,
             },
           });
 
