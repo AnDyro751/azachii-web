@@ -37,8 +37,6 @@ function Banner({ title, author, createdAt }) {
     [styles.post_created_at]: true,
   });
 
-  console.log(month)
-
   return (
     <div className={mainClass}>
       <div className="col-11 col-xl-10 u__no_padding">

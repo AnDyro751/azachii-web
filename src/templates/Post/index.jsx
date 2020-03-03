@@ -23,9 +23,6 @@ function Post({ data }) {
     [styles.post_content]: true,
   });
 
-
-  console.log(data.coverPost);
-
   return (
     <Layout>
       <>
