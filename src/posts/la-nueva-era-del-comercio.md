@@ -47,7 +47,7 @@ Con todos los datos que nos brindan las analíticas, podemos saber como mejorar 
 
 ## Pruebas A/B
 
-Las plataformas de pago como Facebook, nos da la posibilidad de realizar pruebas A/B. Pero… y ¿Qué signfica esto? Bueno, en pocas palabras, nos da la capacidad de generar multiples anuncios con el mismo objetivo para poder probar cual tiene una mejor efectividad. Esto nos puede ayudar a probar varias propuestas del anuncio con un bajo presupuesto antes de lanzar un anuncio con un presupuesto mayor.
+Las plataformas de pago como Facebook, nos dan la posibilidad de realizar pruebas A/B. Pero… y ¿Qué signfica esto? Bueno, en pocas palabras, nos da la capacidad de generar multiples anuncios con el mismo objetivo para poder probar cual tiene una mejor efectividad. Esto nos puede ayudar a probar varias propuestas del anuncio con un bajo presupuesto antes de lanzar un anuncio con un presupuesto mayor.
 
 ---
 

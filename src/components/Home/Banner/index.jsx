@@ -66,7 +66,7 @@ const MainBanner = () => {
               Tienes la idea y la visión. Nosotros el equipo necesario para llevarla acabo.
             </p>
             <div className="row u__no_margin">
-              <Link to="/services" className={buttonClass}>
+              <Link to="/servicios" className={buttonClass}>
                 DESAROLLA MI IDEA
               </Link>
             </div>
